@@ -1,5 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
-import { useSearchContent } from "@workspace/api-client-react";
+import { useSearchContent, getSearchContentQueryKey } from "@workspace/api-client-react";
 import { useLocation, Link } from "wouter";
 import { Search as SearchIcon, BookOpen, Sigma, FileText, BookA } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -12,7 +12,8 @@ export default function Search() {
 
   const { data: results, isLoading } = useSearchContent({ q: query }, {
     query: {
-      enabled: query.length > 0
+      enabled: query.length > 0,
+      queryKey: getSearchContentQueryKey({ q: query }),
     }
   });
 
