@@ -57,66 +57,66 @@ type ChapterData = {
 };
 
 const CHAPTER_TITLES: Record<number, string> = {
-  1: "Introduction to Reservoir Petrophysics",
-  2: "Fundamentals of Reservoir Petrophysics",
-  3: "Fluid Saturation, Wettability & Capillary Pressure",
-  4: "Well Log Interpretation",
-  5: "Hydrocarbon PVT Properties & Phase Behavior",
-  6: "Integration of Petrophysics & Phase Behavior",
-  7: "Application in Reservoir Engineering",
+  1: "Panimula sa Reservoir Petrophysics",
+  2: "Mga Pangunahing Kaalaman sa Reservoir Petrophysics",
+  3: "Fluid Saturation, Wettability at Capillary Pressure",
+  4: "Interpretasyon ng Well Logs",
+  5: "Mga PVT Properties at Phase Behavior ng Hydrocarbon",
+  6: "Integrasyon ng Petrophysics at Phase Behavior",
+  7: "Aplikasyon sa Reservoir Engineering",
 };
 
 const CHAPTER_CONTENT: Record<number, ChapterData> = {
   1: {
-    title: "Introduction to Reservoir Petrophysics",
+    title: "Panimula sa Reservoir Petrophysics",
     overview:
-      "An introduction to the study of reservoir rocks and hydrocarbon phase behavior — the two pillars of reservoir engineering that together determine how much oil and gas is stored and how it flows.",
+      "Isang panimula sa pag-aaral ng mga reservoir rocks at hydrocarbon phase behavior — ang dalawang haligi ng reservoir engineering na magkasamang nagtatakda kung gaano karaming langis at gas ang nakaimbak at kung paano ito dumadaloy.",
     sections: [
       {
         id: "sec-1-1",
-        title: "What Is Reservoir Petrophysics?",
+        title: "Ano ang Reservoir Petrophysics?",
         content: [
-          "Reservoir petrophysics is the study of the physical and chemical properties of reservoir rocks that control how much hydrocarbon (oil and gas) can be stored and how easily it can flow. It covers the measurement of porosity — the fraction of space available to store fluids — and permeability — the rock's ability to transmit those fluids.",
-          "Alongside petrophysics, hydrocarbon phase behavior explains how oil and gas change depending on pressure and temperature conditions. It tells us whether the fluid exists as a liquid, a gas, or a mixture of both at any given point in the reservoir, and how that state changes as the reservoir is produced.",
-          "The two disciplines are inseparable in modern reservoir engineering: petrophysics answers 'how much fluid is stored and how does it move?' while phase behavior answers 'what form is the fluid in and how will it behave?' Together they form the scientific foundation of all reserves estimation and production forecasting.",
+          "Ang reservoir petrophysics ay ang pag-aaral ng pisikal at kemikal na katangian ng mga reservoir rocks na kumokontrol kung gaano karaming hydrocarbon (langis at gas) ang kayang iimbak at kung gaano kadaling dumadaloy ang mga ito. Saklaw nito ang pagsukat ng porosity — ang bahagi ng espasyo na available para mag-imbak ng mga fluid — at permeability — ang kakayahan ng bato na ihatid ang mga fluid na iyon.",
+          "Katabi ng petrophysics, ang hydrocarbon phase behavior ay nagpapaliwanag kung paano nagbabago ang langis at gas depende sa kondisyon ng pressure at temperatura. Sinasabi nito kung ang fluid ay umiiral bilang likido, gas, o pinagsamang dalawa sa anumang punto ng reservoir, at kung paano nagbabago ang estado nito habang ginagamit ang reservoir.",
+          "Ang dalawang disiplina ay hindi mapaghihiwalay sa modernong reservoir engineering: sumasagot ang petrophysics sa 'gaano karaming fluid ang nakaimbak at paano ito gumagalaw?' habang sumasagot ang phase behavior sa 'anong anyo ang fluid at paano ito kikilos?' Magkasama, bumubuo sila ng siyentipikong pundasyon ng lahat ng reserves estimation at production forecasting.",
         ],
         noteBox: {
-          title: "The Engineering Foundation",
+          title: "Pundasyon ng Engineering",
           items: [
-            "Porosity → Storage capacity (how much fluid the reservoir holds)",
-            "Permeability → Flow capacity (how fast fluid can move toward the well)",
-            "Phase Behavior → Production behavior (how the fluid changes during production)",
-            "Without these three, reservoir engineering is nothing more than guesswork.",
+            "Porosity → Kapasidad ng imbakan (gaano karaming fluid ang kayang hawakan ng reservoir)",
+            "Permeability → Kapasidad ng daloy (gaano kabilis maaaring gumalaw ang fluid papunta sa balon)",
+            "Phase Behavior → Gawi ng produksyon (paano nagbabago ang fluid sa panahon ng produksyon)",
+            "Kung wala ang tatlong ito, ang reservoir engineering ay wala nang ibang mapagbabatayan kundi hula.",
           ],
         },
       },
       {
         id: "sec-1-2",
-        title: "Types of Reservoir Rocks",
+        title: "Mga Uri ng Reservoir Rocks",
         content: [
-          "Most hydrocarbon reservoirs are found in two broad categories of sedimentary rock: clastics (primarily sandstone) and carbonates (limestone and dolomite). Each rock type has fundamentally different pore architectures, and this difference controls how predictable their reservoir properties are.",
+          "Karamihan sa mga hydrocarbon reservoir ay matatagpuan sa dalawang pangunahing kategorya ng sedimentary rock: clastics (pangunahin ang sandstone) at carbonates (limestone at dolomite). Ang bawat uri ng bato ay may pundamental na magkaibang pore architecture, at ang pagkakaibang ito ang kumokontrol kung gaano kaprediktibo ang kanilang mga katangian bilang reservoir.",
         ],
         subsections: [
           {
             id: "sec-1-2-a",
             title: "Clastic Rocks (Sandstone)",
             content: [
-              "Clastic rocks are formed from fragments of older rocks that have been eroded, transported, and deposited. They primarily consist of quartz grains cemented together. Their pore system is predominantly intergranular — meaning pores exist between the grains — and this makes the relationship between porosity and permeability relatively predictable and consistent.",
-              "Sandstone reservoirs are well-sorted when all grains are of similar size, giving higher and more uniform porosity. They are easier to model and characterize than carbonates, and the vast majority of early oil-field reservoir engineering methods were developed specifically for sandstone systems.",
+              "Ang mga clastic rocks ay nabuo mula sa mga piraso ng mas lumang bato na kinain ng erosyon, dinadala, at ini-deposit. Pangunahin itong binubuo ng mga butil ng quartz na pinagsama ng simento. Ang kanilang pore system ay pangunahing intergranular — ibig sabihin, ang mga pores ay nasa pagitan ng mga butil — at ito ay nagpapahintulot ng relatibong predictable at konsistenteng relasyon sa pagitan ng porosity at permeability.",
+              "Ang mga sandstone reservoir ay well-sorted kapag ang lahat ng butil ay pareho ang laki, na nagbibigay ng mas mataas at mas pantay na porosity. Mas madali itong i-model at suriin kaysa sa carbonates, at ang karamihan sa mga maagang paraan ng reservoir engineering ay partikular na binuo para sa mga sandstone system.",
             ],
           },
           {
             id: "sec-1-2-b",
-            title: "Carbonate Rocks (Limestone and Dolomite)",
+            title: "Carbonate Rocks (Limestone at Dolomite)",
             content: [
-              "Carbonates are formed through chemical and biological processes — marine organisms precipitate calcium carbonate, which compacts and lithifies into limestone. After deposition, diagenetic processes (dissolution, dolomitization, fracturing) can create complex secondary pore systems including vugs (large dissolution cavities), moldic pores, and fracture networks.",
-              "The porosity-permeability relationship in carbonates is highly unpredictable: two samples may have identical porosities yet vastly different permeabilities because one is fractured and the other is not. This heterogeneity makes carbonate reservoir characterization a significant engineering challenge.",
+              "Ang mga carbonate ay nabuo sa pamamagitan ng kemikal at biolohikal na proseso — ang mga organismo sa dagat ay nagde-deposit ng calcium carbonate, na nag-iimpit at nag-li-lithify sa limestone. Pagkatapos ng deposisyon, ang mga diagenetic na proseso (dissolution, dolomitization, fracturing) ay maaaring lumikha ng mga kumplikadong secondary pore system kabilang ang mga vugs (malalaking cavity mula sa dissolution), moldic pores, at fracture network.",
+              "Ang relasyon ng porosity-permeability sa mga carbonate ay lubhang hindi mapanghuhulaan: maaaring magkapareho ang porosity ng dalawang sample ngunit malaki ang pagkakaiba ng permeability dahil ang isa ay fractured at ang isa ay hindi. Ang heterogeneity na ito ay ginagawang malaking hamon sa engineering ang pag-characterize ng carbonate reservoir.",
             ],
             noteBox: {
-              title: "Critical Distinction",
+              title: "Kritikal na Pagkakaiba",
               items: [
-                "In clastics: high porosity generally means high permeability — the relationship is predictable.",
-                "In carbonates: high porosity does NOT guarantee high permeability — the pore connectivity (fractures, vugs) controls flow, not just the pore volume.",
+                "Sa clastics: ang mataas na porosity ay karaniwang nangangahulugang mataas na permeability — predictable ang relasyon.",
+                "Sa carbonates: ang mataas na porosity ay HINDI garantiya ng mataas na permeability — ang pore connectivity (fractures, vugs) ang kumokontrol sa daloy, hindi lang ang pore volume.",
               ],
             },
           },
@@ -124,159 +124,159 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
       },
       {
         id: "sec-1-3",
-        title: "Pore Systems and Flow Behavior",
+        title: "Pore Systems at Flow Behavior",
         content: [
-          "Not all porosity contributes equally to fluid production. The architecture of the pore network — how pores are connected, how large the pore throats are — ultimately determines whether hydrocarbons can actually be extracted from the rock.",
+          "Hindi pantay ang kontribusyon ng lahat ng porosity sa produksyon ng fluid. Ang arkitektura ng pore network — kung paano konektado ang mga pores, kung gaano kalaki ang mga pore throat — ang nagtatakda kung talaga bang maaaring ma-extract ang mga hydrocarbon mula sa bato.",
         ],
         subsections: [
           {
             id: "sec-1-3-a",
-            title: "Connected vs. Isolated Pores",
+            title: "Konektado vs. Nakahiwalay na Pores",
             content: [
-              "Connected pores allow fluids to flow through the rock toward the wellbore. Isolated (or dead-end) pores store fluid but cannot contribute to production because there is no continuous pathway for that fluid to move. Only the connected (effective) pore volume counts toward producible hydrocarbon volumes.",
+              "Ang mga konektadong pore ay nagpapahintulot sa mga fluid na dumating sa wellbore. Ang mga nakahiwalay (o dead-end) na pore ay nag-iimbak ng fluid ngunit hindi makakatulong sa produksyon dahil walang tuloy-tuloy na daan para gumalaw ang fluid na iyon. Tanging ang konektadong (effective) pore volume lamang ang binibilang sa mga ma-produce na volume ng hydrocarbon.",
             ],
           },
           {
             id: "sec-1-3-b",
-            title: "Types of Pore Systems",
+            title: "Mga Uri ng Pore System",
             content: [
-              "Intergranular pores (sandstone) represent the most common and predictable pore type. Flow is relatively uniform and multidirectional. Vuggy pores (carbonate) are large, sometimes poorly connected cavities formed by dissolution. They can store large volumes of fluid but may not be hydraulically connected. Fractured reservoirs can have very high permeability along fracture planes, creating fast pathways for fluid flow, but the matrix blocks between fractures may still hold the bulk of the stored hydrocarbon.",
+              "Ang intergranular pores (sandstone) ay kumakatawan sa pinaka-karaniwang at pinaka-predictable na uri ng pore. Ang daloy ay medyo pantay at multi-directional. Ang vuggy pores (carbonate) ay malalaking cavity na minsan ay mahirap konektahin, na nabuo sa pamamagitan ng dissolution. Maaari itong mag-imbak ng malaking volume ng fluid ngunit maaaring hindi hydraulically connected. Ang mga fractured reservoir ay maaaring may napakataas na permeability sa seperated ng fracture, na lumilikha ng mabilis na daan para sa daloy ng fluid, ngunit ang matrix blocks sa pagitan ng mga fracture ay maaari pa ring humawak ng karamihan ng nakaimbak na hydrocarbon.",
             ],
           },
         ],
       },
       {
         id: "sec-1-4",
-        title: "Methods of Reservoir Data Collection",
+        title: "Mga Paraan ng Pagkuha ng Reservoir Data",
         content: [
-          "Reliable reservoir characterization depends on integrating two complementary data sources: core analysis from the laboratory and well log measurements from downhole tools. Each has its own strengths and limitations.",
+          "Ang maaasahang reservoir characterization ay nakasalalay sa pagsasama ng dalawang komplementaryong pinagkukunan ng data: core analysis mula sa laboratoryo at well log measurements mula sa mga downhole tool. Ang bawat isa ay may sariling kalakasan at limitasyon.",
         ],
         subsections: [
           {
             id: "sec-1-4-a",
             title: "Core Analysis",
             content: [
-              "Core analysis involves cutting physical rock samples from the wellbore and analyzing them in the laboratory. Routine Core Analysis (RCAL) provides direct measurements of porosity and permeability under controlled conditions. Special Core Analysis (SCAL) covers more advanced measurements including capillary pressure curves, wettability indices, and relative permeability — data essential for reservoir simulation.",
-              "Core data is the most direct and accurate reservoir measurement available, but it is expensive, time-consuming, and limited to specific depth intervals. It serves as the ground truth against which well log interpretations are calibrated.",
+              "Ang core analysis ay kinabibilangan ng pagputol ng mga pisikal na sample ng bato mula sa wellbore at pag-analisa ng mga ito sa laboratoryo. Ang Routine Core Analysis (RCAL) ay nagbibigay ng direktang sukat ng porosity at permeability sa kontroladong kondisyon. Ang Special Core Analysis (SCAL) ay sumasaklaw ng mas advanced na mga sukat kabilang ang capillary pressure curves, wettability indices, at relative permeability — data na mahalaga para sa reservoir simulation.",
+              "Ang core data ay ang pinaka-direkta at pinaka-tumpak na sukat ng reservoir na available, ngunit mahal, matagal, at limitado sa mga tiyak na depth interval. Ito ang nagsisilbing ground truth kung saan nica-calibrate ang mga interpretasyon ng well log.",
             ],
           },
           {
             id: "sec-1-4-b",
             title: "Well Logs",
             content: [
-              "Well logs provide continuous measurements of formation properties over the entire drilled interval using downhole sensing tools. Common logs include Gamma Ray (lithology and shale content), Density and Neutron (porosity), and Resistivity (fluid type and saturation). The key limitation of well logs is that they measure indirect responses — the formation's physical reaction to energy pulses — which must be interpreted using models and assumptions.",
-              "The optimal approach is always to combine core and log data. Core data calibrates the log interpretation models, and logs provide spatial coverage that sparse core samples cannot. Together they produce a far more reliable reservoir description than either alone.",
+              "Ang mga well log ay nagbibigay ng tuloy-tuloy na sukat ng mga katangian ng formation sa buong na-drill na interval gamit ang mga downhole sensing tool. Ang mga karaniwang log ay kinabibilangan ng Gamma Ray (lithology at shale content), Density at Neutron (porosity), at Resistivity (uri ng fluid at saturation). Ang pangunahing limitasyon ng mga well log ay nagsusukat sila ng mga indirect na tugon — ang pisikal na reaksyon ng formation sa mga energy pulse — na dapat i-interpret gamit ang mga modelo at pagpapalagay.",
+              "Ang pinakamabuting paraan ay palaging pinagsasama ang core at log data. Nica-calibrate ng core data ang mga modelo ng interpretasyon ng log, at ang mga log ay nagbibigay ng spatial coverage na hindi magagawa ng mga sparse core sample. Magkasama, gumagawa sila ng mas maaasahang paglalarawan ng reservoir kaysa sa alinman na mag-isa.",
             ],
           },
         ],
       },
       {
         id: "sec-1-5",
-        title: "Effect of Clay on Reservoir Quality",
+        title: "Epekto ng Clay sa Kalidad ng Reservoir",
         content: [
-          "Clay minerals are among the most significant controls on reservoir quality in clastic reservoirs. Even small amounts of clay can dramatically reduce porosity and permeability, complicate log interpretation, and lead to significant formation damage if improperly managed during drilling or completion.",
+          "Ang mga mineral na clay ay isa sa mga pinakamahalagang kontrol sa kalidad ng reservoir sa mga clastic reservoir. Kahit maliit na halaga ng clay ay maaaring dramatikong bawasan ang porosity at permeability, kumplikado ang interpretasyon ng log, at magdulot ng malaking formation damage kung hindi maayos na pinamamahalaan sa panahon ng drilling o completion.",
         ],
         subsections: [
           {
             id: "sec-1-5-a",
-            title: "Types of Clay Distribution",
+            title: "Mga Uri ng Distribusyon ng Clay",
             content: [],
             list: [
               {
                 term: "Dispersed Clay",
                 description:
-                  "Clay fills and coats the pore throats, causing the most severe reduction in permeability. Even a small volume of dispersed clay can block fluid flow almost entirely.",
+                  "Pinupuno at binabalutan ng clay ang mga pore throat, na nagdudulot ng pinaka-malubhang pagbaba ng permeability. Kahit maliit na volume ng dispersed clay ay maaaring halos ganap na harangin ang daloy ng fluid.",
               },
               {
                 term: "Laminated Clay",
                 description:
-                  "Clay occurs as thin layers or laminates between sand beds, primarily restricting vertical flow and creating barriers to vertical permeability (kv).",
+                  "Nagaganap ang clay bilang mga manipis na layer o laminate sa pagitan ng mga sand bed, na pangunahing naghihigpit sa vertical flow at lumilikha ng mga hadlang sa vertical permeability (kv).",
               },
               {
                 term: "Structural Clay",
                 description:
-                  "Clay forms part of the rock matrix as grains or nodules. It is more stable and has a less severe impact on flow properties than dispersed clay.",
+                  "Nabubuo ang clay bilang bahagi ng rock matrix bilang mga butil o nodule. Ito ay mas matatag at may mas kaunting epekto sa mga katangian ng daloy kaysa sa dispersed clay.",
               },
             ],
           },
           {
             id: "sec-1-5-b",
-            title: "Effects of Clay on Reservoir Properties",
+            title: "Mga Epekto ng Clay sa mga Katangian ng Reservoir",
             content: [
-              "Clay affects virtually every important reservoir property. It reduces porosity by filling pore spaces, reduces permeability by blocking pore throats, and when swelling clays contact fresh water during drilling operations, they can cause severe and sometimes irreversible formation damage. Clay also complicates log interpretation: clay minerals carry bound water and have high natural radioactivity, which inflates apparent water saturation readings if not properly corrected.",
+              "Nakakaapekto ang clay sa halos bawat mahalagang katangian ng reservoir. Binabawasan nito ang porosity sa pamamagitan ng pagpuno ng pore space, binabawasan ang permeability sa pamamagitan ng pagharang ng pore throat, at kapag ang mga swelling clay ay nakakontak sa fresh water sa panahon ng drilling operations, maaari itong magdulot ng malubha at minsan ay hindi na mababalik na formation damage. Kino-complicate din ng clay ang interpretasyon ng log: ang mga mineral na clay ay may bound water at mataas na natural radioactivity, na nagpapalaki ng mga apparent water saturation readings kung hindi maayos na itinama.",
             ],
           },
         ],
       },
       {
         id: "sec-1-6",
-        title: "Hydrocarbon Phase Behavior and Fluid Types",
+        title: "Hydrocarbon Phase Behavior at mga Uri ng Fluid",
         content: [
-          "Oil and gas are not fixed substances — they change phase depending on the pressure and temperature of their environment. Understanding this phase behavior is critical for predicting what will flow from a well and what it will look like when it arrives at the surface.",
+          "Ang langis at gas ay hindi mga naayos na sangkap — nagbabago ang kanilang phase depende sa pressure at temperatura ng kanilang kapaligiran. Ang pag-unawa sa phase behavior na ito ay kritikal para hulaan kung ano ang dadaloy mula sa balon at kung ano ang hitsura nito kapag dumating na sa ibabaw.",
         ],
         subsections: [
           {
             id: "sec-1-6-a",
-            title: "Key Phase Behavior Concepts",
+            title: "Mga Pangunahing Konsepto ng Phase Behavior",
             content: [],
             list: [
               {
                 term: "Bubble Point",
                 description:
-                  "The pressure at which the first bubble of gas comes out of solution from an oil. Above bubble point, the oil is single-phase (undersaturated). Below it, free gas begins to form.",
+                  "Ang pressure kung saan lumalabas ang unang bula ng gas mula sa solusyon ng langis. Sa itaas ng bubble point, ang langis ay single-phase (undersaturated). Sa ibaba nito, nagsisimulang bumuo ang free gas.",
               },
               {
                 term: "Dew Point",
                 description:
-                  "The pressure at which the first drop of liquid condenses from a gas. Critical in gas condensate reservoirs where pressure depletion causes liquid dropout in the reservoir itself.",
+                  "Ang pressure kung saan nag-ko-condense ang unang patak ng likido mula sa isang gas. Kritikal sa mga gas condensate reservoir kung saan ang pagbaba ng pressure ay nagdudulot ng liquid dropout sa mismong reservoir.",
               },
               {
                 term: "Critical Point",
                 description:
-                  "The unique temperature and pressure at which the properties of liquid and gas become identical and indistinguishable. The bubble point curve and dew point curve meet here.",
+                  "Ang natatanging temperatura at pressure kung saan nagiging magkaparehong hindi na makilala ang mga katangian ng likido at gas. Dito nagtatagpo ang bubble point curve at dew point curve.",
               },
             ],
           },
           {
             id: "sec-1-6-b",
-            title: "Classification of Reservoir Fluids",
+            title: "Klasipikasyon ng mga Reservoir Fluid",
             content: [
-              "Reservoir fluids are classified based on their composition, their position relative to the critical point on the phase diagram, and their behavior during production. The five main types span a continuum from heavy crude oil to dry gas.",
+              "Ang mga reservoir fluid ay iklasipika batay sa kanilang komposisyon, posisyon nila kaugnay ng critical point sa phase diagram, at gawi nila sa panahon ng produksyon. Ang limang pangunahing uri ay sumasaklaw ng isang continuum mula sa mabigat na crude oil hanggang sa dry gas.",
             ],
             list: [
               {
                 term: "Black Oil",
                 description:
-                  "The most common reservoir fluid. Heavy crude with low GOR (gas-oil ratio) and low API gravity. Stable and predictable; its initial conditions are well to the left of the critical temperature on the phase diagram.",
+                  "Ang pinakakaraniwang reservoir fluid. Mabigat na crude na may mababang GOR (gas-oil ratio) at mababang API gravity. Matatag at predictable; ang paunang kondisyon nito ay nasa kaliwa ng critical temperature sa phase diagram.",
               },
               {
                 term: "Volatile Oil",
                 description:
-                  "Lighter crude oil with a high concentration of intermediate hydrocarbons. High GOR and higher API gravity than black oil. Near the critical point, so significant liquid shrinkage occurs when pressure falls below bubble point.",
+                  "Mas magaang na crude oil na may mataas na konsentrasyon ng intermediate hydrocarbons. Mataas na GOR at mas mataas na API gravity kaysa sa black oil. Malapit sa critical point, kaya malaking liquid shrinkage ang nagaganap kapag bumaba ang pressure sa ibaba ng bubble point.",
               },
               {
                 term: "Gas Condensate",
                 description:
-                  "Exists as a single-phase gas in the reservoir, but liquid (condensate) forms as pressure drops below the dew point — retrograde condensation. The liquid deposits in the reservoir and may not be recoverable.",
+                  "Umiiral bilang single-phase gas sa reservoir, ngunit nabubuo ang likido (condensate) kapag bumaba ang pressure sa ibaba ng dew point — retrograde condensation. Ang likidong ito ay nagde-deposit sa reservoir at maaaring hindi na mababawi.",
               },
               {
                 term: "Wet Gas",
                 description:
-                  "Gas in the reservoir that produces some liquid (condensate) at surface conditions, but remains entirely gas in the reservoir throughout production (never crosses the dew point in the reservoir).",
+                  "Gas sa reservoir na gumagawa ng ilang likido (condensate) sa surface conditions, ngunit nananatiling ganap na gas sa reservoir sa buong produksyon (hindi kailanman tumatawid sa dew point sa loob ng reservoir).",
               },
               {
                 term: "Dry Gas",
                 description:
-                  "Essentially pure methane with very little heavier components. Produces no liquid at surface. The simplest fluid system to analyze and produce.",
+                  "Karaniwang purong methane na may napakakaunting mas mabibigat na sangkap. Walang likidong nagagawa sa surface. Ang pinakasimpleng fluid system na suriin at gamitin.",
               },
             ],
           },
           {
             id: "sec-1-6-c",
-            title: "Z-Factor and Vapor-Liquid Equilibrium",
+            title: "Z-Factor at Vapor-Liquid Equilibrium",
             content: [
-              "Real gases deviate from ideal gas behavior at high pressures and temperatures. The Z-factor (gas compressibility factor) corrects the ideal gas law for this deviation: PV = ZnRT. When Z = 1, the gas behaves ideally; for real reservoir gases, Z varies with pressure and temperature and must be determined from correlations (such as the Standing-Katz chart) or equations of state.",
-              "Vapor-Liquid Equilibrium (VLE) describes the condition where gas and liquid phases coexist in thermodynamic equilibrium. VLE theory is the scientific foundation underpinning all bubble point and dew point calculations, and all PVT laboratory analysis is designed to characterize these equilibrium states under reservoir conditions.",
+              "Ang mga tunay na gas ay lumilihis mula sa ideal gas behavior sa mataas na pressure at temperatura. Ang Z-factor (gas compressibility factor) ay nagwawasto ng ideal gas law para sa paglihis na ito: PV = ZnRT. Kapag ang Z = 1, ang gas ay kumikilos nang ideyal; para sa mga tunay na reservoir gas, nagbabago ang Z depende sa pressure at temperatura at dapat matukoy mula sa mga correlation (tulad ng Standing-Katz chart) o equations of state.",
+              "Ang Vapor-Liquid Equilibrium (VLE) ay naglalarawan ng kondisyon kung saan magkasamang umiiral ang gas at liquid phase sa thermodynamic equilibrium. Ang VLE theory ang siyentipikong pundasyon ng lahat ng bubble point at dew point calculations, at ang lahat ng PVT laboratory analysis ay idinisenyo para i-characterize ang mga equilibrium state na ito sa ilalim ng reservoir conditions.",
             ],
           },
         ],
@@ -284,24 +284,24 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
     ],
     formulas: [
       {
-        name: "Porosity Definition",
+        name: "Kahulugan ng Porosity",
         eq: "φ = Vp / Vb",
-        desc: "Ratio of pore volume (Vp) to bulk volume (Vb). Expressed as a decimal or percentage.",
+        desc: "Ratio ng pore volume (Vp) sa bulk volume (Vb). Ipinahayag bilang decimal o porsyento.",
       },
       {
         name: "Real Gas Law (Z-factor)",
         eq: "PV = ZnRT",
-        desc: "Z-factor corrects the ideal gas law for real gas behavior. Z = 1 for ideal gas, Z ≠ 1 for real gases.",
+        desc: "Ang Z-factor ay nagwawasto ng ideal gas law para sa tunay na gawi ng gas. Z = 1 para sa ideal gas, Z ≠ 1 para sa mga tunay na gas.",
       },
       {
         name: "Original Oil in Place (OOIP)",
         eq: "N = 7758 × A × h × φ × (1 − Sw) / Bo",
-        desc: "Volumetric estimate of original oil in place (STB), where A = area (acres), h = thickness (ft), φ = porosity, Sw = water saturation, Bo = oil formation volume factor.",
+        desc: "Volumetric na tantya ng original oil in place (STB), kung saan A = lugar (acres), h = kapal (ft), φ = porosity, Sw = water saturation, Bo = oil formation volume factor.",
       },
       {
         name: "Original Gas in Place (OGIP)",
         eq: "G = 43,560 × A × h × φ × (1 − Sw) / Bg",
-        desc: "Volumetric estimate of original gas in place (scf), where Bg = gas formation volume factor.",
+        desc: "Volumetric na tantya ng original gas in place (scf), kung saan Bg = gas formation volume factor.",
       },
     ],
     terms: [
@@ -319,76 +319,76 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
   },
 
   2: {
-    title: "Fundamentals of Reservoir Petrophysics",
+    title: "Mga Pangunahing Kaalaman sa Reservoir Petrophysics",
     overview:
-      "A deep dive into the four core petrophysical properties that every reservoir engineer must master: porosity, permeability, their interrelationship, and rock compressibility.",
+      "Isang malalim na pag-aaral ng apat na pangunahing petrophysical na katangian na dapat araling-aral ng bawat reservoir engineer: porosity, permeability, ang kanilang kaugnayan sa isa't isa, at rock compressibility.",
     sections: [
       {
         id: "sec-2-1",
         title: "2.1 Porosity",
         content: [
-          "Porosity is the primary property of a reservoir rock that defines its capacity to store fluids. It represents the fraction of total rock volume occupied by void spaces — pores — that can hold oil, gas, and water. Think of it like a sponge: more holes means more fluid storage capacity.",
-          "Mathematically, porosity (φ) equals pore volume divided by bulk volume. It is expressed either as a decimal (e.g., 0.25) or a percentage (e.g., 25%). Not all porosity contributes equally to production, however, which leads to the critical distinction between total and effective porosity.",
+          "Ang porosity ay ang pangunahing katangian ng isang reservoir rock na nagtatakda ng kapasidad nitong mag-imbak ng mga fluid. Kinakatawan nito ang bahagi ng kabuuang volume ng bato na inookupahan ng mga void space — pores — na maaaring humawak ng langis, gas, at tubig. Isipin ito na parang espongha: mas maraming butas ay nangangahulugang mas maraming kapasidad para mag-imbak ng fluid.",
+          "Sa matematika, ang porosity (φ) ay katumbas ng pore volume na hinati sa bulk volume. Ipinahayag ito bilang decimal (hal., 0.25) o porsyento (hal., 25%). Hindi lahat ng porosity ay pantay ang kontribusyon sa produksyon, gayunpaman, na nagdadala sa kritikal na pagkakaiba sa pagitan ng total at effective porosity.",
         ],
         subsections: [
           {
             id: "sec-2-1-a",
             title: "Total vs. Effective Porosity",
             content: [
-              "Total porosity includes every void space in the rock, whether connected to other pores or not. This includes both connected pores through which fluids can flow, and isolated pores that are sealed off from the flow network.",
-              "Effective porosity counts only the interconnected pores that can contribute to fluid flow and production. In most engineering calculations, effective porosity is the parameter that matters, because isolated pores cannot be drained. In tight carbonates, the difference between total and effective porosity can be large and has a major impact on reserves calculations.",
+              "Ang total porosity ay kinabibilangan ng bawat void space sa bato, konektado man sa ibang pores o hindi. Kabilang dito ang parehong konektadong pores kung saan maaaring dumalan ang mga fluid, at mga nakahiwalay na pores na sealed off mula sa flow network.",
+              "Ang effective porosity ay nagbibilang lamang ng mga interconnected pores na maaaring makatulong sa daloy at produksyon ng fluid. Sa karamihan ng kalkulasyon sa engineering, ang effective porosity ang parameter na mahalaga, dahil hindi maaaring ma-drain ang mga nakahiwalay na pores. Sa mga tight carbonate, ang pagkakaiba sa pagitan ng total at effective porosity ay maaaring malaki at may malaking epekto sa mga kalkulasyon ng reserves.",
             ],
           },
           {
             id: "sec-2-1-b",
             title: "Primary vs. Secondary Porosity",
             content: [
-              "Primary (or depositional) porosity is formed at the time the sediment is deposited. In sandstones, this is the intergranular space between grains that remains after compaction and cementation. It reflects the original packing arrangement of the sediment particles.",
-              "Secondary porosity develops after the rock has been lithified, through diagenetic processes. The three main mechanisms are fracturing (tectonic stress opens cracks through the rock), dissolution (acidic groundwater dissolves soluble minerals, creating vugs and enlarged pore channels), and dolomitization (replacement of calcite by dolomite, which has a smaller molar volume and therefore creates new pore space). Secondary porosity dominates the productive capacity of most carbonate reservoirs.",
+              "Ang primary (o depositional) porosity ay nabubuo sa panahon ng deposisyon ng sediment. Sa mga sandstone, ito ang intergranular space sa pagitan ng mga butil na nananatili pagkatapos ng compaction at cementation. Repleksyon ito ng orihinal na pag-aayos ng mga sediment particle.",
+              "Ang secondary porosity ay nabubuo pagkatapos ma-lithify ang bato, sa pamamagitan ng mga diagenetic na proseso. Ang tatlong pangunahing mekanismo ay: fracturing (ang tectonic stress ay nagbubukas ng mga bitak sa buong bato), dissolution (ang acidic groundwater ay nagtatunaw ng mga soluble mineral, na lumilikha ng mga vugs at pinalaking pore channel), at dolomitization (ang pagpapalit ng calcite ng dolomite, na may mas maliit na molar volume at kaya lumilikha ng bagong pore space). Ang secondary porosity ang nagdodominyo ng productive capacity ng karamihan sa mga carbonate reservoir.",
             ],
           },
           {
             id: "sec-2-1-c",
-            title: "Measurement of Porosity",
+            title: "Pagsukat ng Porosity",
             content: [
-              "Core analysis provides the most direct and accurate porosity measurements. The standard approach measures bulk volume and grain volume separately, then computes pore volume from their difference. The helium porosimeter is the most widely used instrument: helium gas is injected into the core sample under controlled pressure, and Boyle's Law is used to calculate the pore volume from the pressure response.",
-              "Fluid saturation methods weigh the core sample dry, then saturate it with a fluid of known density and weigh it again. The difference gives the pore volume directly. Both methods are well-established in routine core analysis and serve as calibration standards for log-derived porosity.",
+              "Ang core analysis ay nagbibigay ng pinaka-direkta at pinaka-tumpak na sukat ng porosity. Ang karaniwang paraan ay hiwalay na sinusukat ang bulk volume at grain volume, pagkatapos ay kinakalkula ang pore volume mula sa kanilang pagkakaiba. Ang helium porosimeter ang pinaka-malawakang ginagamit na instrumento: ang helium gas ay ini-inject sa core sample sa ilalim ng kontroladong pressure, at ginagamit ang Boyle's Law para kalkulahin ang pore volume mula sa pressure response.",
+              "Ang mga paraan ng fluid saturation ay tinitimbang ang core sample nang tuyo, pagkatapos ay binababad ito sa fluid na may kilalang density at tinitimbang muli. Ang pagkakaiba ay direktang nagbibigay ng pore volume. Parehong mga pamamaraan ay well-established sa routine core analysis at nagsisilbing calibration standard para sa log-derived porosity.",
             ],
           },
           {
             id: "sec-2-1-d",
-            title: "Factors Controlling Porosity",
+            title: "Mga Salik na Kumokontrol sa Porosity",
             content: [],
             list: [
               {
-                term: "Grain Size and Sorting",
+                term: "Grain Size at Sorting",
                 description:
-                  "Well-sorted sediments (uniform grain size) have higher porosity than poorly sorted sediments because small grains fill the spaces between larger ones. Grain size itself has little direct effect on porosity but strongly affects pore throat size and therefore permeability.",
+                  "Ang well-sorted sediment (pantay na laki ng butil) ay may mas mataas na porosity kaysa sa poorly sorted sediment dahil pinupuno ng maliliit na butil ang mga espasyo sa pagitan ng malalaking butil. Ang laki ng butil mismo ay may kaunting direktang epekto sa porosity ngunit lubos na nakakaapekto sa laki ng pore throat at kaya sa permeability.",
               },
               {
                 term: "Cementation",
                 description:
-                  "Cement minerals (calcite, quartz, clay) precipitate in pore spaces during diagenesis, reducing porosity. Heavy cementation can reduce a reservoir's porosity from 30% to less than 5%.",
+                  "Ang mga mineral na simento (calcite, quartz, clay) ay nagde-deposit sa mga pore space sa panahon ng diagenesis, na nagbabawas ng porosity. Ang mabigat na cementation ay maaaring magbawas ng porosity ng reservoir mula 30% hanggang mas mababa sa 5%.",
               },
               {
                 term: "Compaction",
                 description:
-                  "Overburden pressure crushes sediment grains together as burial depth increases, reducing pore space. Porosity typically decreases with burial depth at a rate controlled by the rock's grain strength and ductility.",
+                  "Pinipiga ng overburden pressure ang mga butil ng sediment habang tumitindi ang depth ng paglibing, na nagbabawas ng pore space. Ang porosity ay karaniwang bumababa kasabay ng depth ng paglibing sa rate na kontrolado ng lakas at ductility ng butil ng bato.",
               },
               {
-                term: "Dissolution and Dolomitization",
+                term: "Dissolution at Dolomitization",
                 description:
-                  "In carbonates, dissolution of soluble minerals (calcite) by acidic fluids creates new pore space. Dolomitization replaces calcite with dolomite, a mineral with smaller molar volume, also creating new pore space.",
+                  "Sa mga carbonate, ang dissolution ng mga soluble mineral (calcite) ng mga acidic na fluid ay lumilikha ng bagong pore space. Ang dolomitization ay nagpapalit ng calcite ng dolomite, isang mineral na may mas maliit na molar volume, na lumilikha rin ng bagong pore space.",
               },
               {
                 term: "Clay Content",
                 description:
-                  "Clay minerals occupy pore space, reducing effective porosity. Swelling clays (smectite) absorb water and expand dramatically, severely reducing permeability.",
+                  "Ang mga mineral na clay ay inookupahan ang pore space, na nagbabawas ng effective porosity. Ang mga swelling clay (smectite) ay sumasipsip ng tubig at lubos na lumalaki, na malubhang nagbabawas ng permeability.",
               },
               {
                 term: "Diagenesis",
                 description:
-                  "All post-depositional physical, chemical, and biological changes to the sediment collectively alter porosity. Diagenesis can both reduce porosity (cementation, compaction) and increase it (dissolution, fracturing).",
+                  "Ang lahat ng post-depositional na pisikal, kemikal, at biolohikal na pagbabago sa sediment ay magkasamang nagbabago ng porosity. Ang diagenesis ay maaaring magbawas ng porosity (cementation, compaction) at magpataas nito (dissolution, fracturing).",
               },
             ],
           },
@@ -399,29 +399,29 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
         id: "sec-2-2",
         title: "2.2 Permeability",
         content: [
-          "While porosity measures how much fluid a rock can store, permeability measures how easily that fluid can flow through the rock. A reservoir can have excellent porosity but remain economically unproductive if permeability is too low to allow fluid to flow to the wellbore at commercial rates.",
-          "Permeability (k) is measured in Darcies (D) or milliDarcies (mD). Most commercial oil and gas reservoirs have permeabilities ranging from 1 mD to several thousand mD. Tight gas formations may have permeabilities measured in microDarcies (μD) or nanoDarcies (nD), requiring hydraulic fracturing to be economic.",
+          "Habang sinusukat ng porosity kung gaano karaming fluid ang kayang iimbak ng bato, sinusukat ng permeability kung gaano kadaling dumadaloy ang fluid na iyon sa pamamagitan ng bato. Ang isang reservoir ay maaaring may napakagandang porosity ngunit mananatiling hindi ekonomikong produktibo kung ang permeability ay napakababa para payagan ang fluid na dumaling sa wellbore sa komersyal na rate.",
+          "Ang permeability (k) ay sinusukat sa Darcies (D) o milliDarcies (mD). Karamihan sa mga komersyal na reservoir ng langis at gas ay may permeability na mula 1 mD hanggang ilang libong mD. Ang mga tight gas formation ay maaaring may permeability na sinusukat sa microDarcies (μD) o nanoDarcies (nD), na nangangailangan ng hydraulic fracturing para maging ekonomiko.",
         ],
         subsections: [
           {
             id: "sec-2-2-a",
-            title: "Types of Permeability",
+            title: "Mga Uri ng Permeability",
             content: [],
             list: [
               {
                 term: "Absolute Permeability (k)",
                 description:
-                  "The permeability of the rock when 100% saturated with a single fluid. It is a pure rock property, independent of the fluid type. Measured on dry core samples using gas or brine.",
+                  "Ang permeability ng bato kapag 100% saturated ng isang fluid. Ito ay purong katangian ng bato, independyente sa uri ng fluid. Sinusukat sa mga tuyo na core sample gamit ang gas o brine.",
               },
               {
                 term: "Effective Permeability (k_eff)",
                 description:
-                  "The permeability to a specific fluid (oil, water, or gas) when two or more fluids are present simultaneously. Always less than absolute permeability. Depends on both rock properties and fluid saturations.",
+                  "Ang permeability sa isang tiyak na fluid (langis, tubig, o gas) kapag dalawa o higit pang fluid ang sabay na naroroon. Palaging mas mababa kaysa sa absolute permeability. Nakadepende sa parehong katangian ng bato at fluid saturation.",
               },
               {
                 term: "Relative Permeability (k_r)",
                 description:
-                  "The ratio of effective permeability to absolute permeability: k_r = k_eff / k. A dimensionless number between 0 and 1 that quantifies how the presence of one fluid phase impedes the flow of another. Fundamental to all multiphase reservoir engineering calculations.",
+                  "Ang ratio ng effective permeability sa absolute permeability: k_r = k_eff / k. Isang dimensionless na numero sa pagitan ng 0 at 1 na nagkukuntas kung paano hinihiwa ng presensya ng isang fluid phase ang daloy ng iba. Pundamental sa lahat ng multiphase reservoir engineering calculations.",
               },
             ],
           },
@@ -429,99 +429,99 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
             id: "sec-2-2-b",
             title: "Darcy's Law",
             content: [
-              "Darcy's Law, established experimentally by Henry Darcy in 1856, is the fundamental equation governing fluid flow through porous media. It states that flow rate is directly proportional to permeability and pressure gradient, and inversely proportional to fluid viscosity.",
-              "In its linear form: Q = (k × A × ΔP) / (μ × L), where Q is the volumetric flow rate, k is permeability, A is cross-sectional area perpendicular to flow, ΔP is the pressure difference across the flow path, μ is fluid viscosity, and L is the length of the flow path. Darcy's Law assumes laminar, single-phase, incompressible flow — conditions that hold for most practical reservoir engineering calculations.",
+              "Ang Darcy's Law, na experimentally na itinakda ni Henry Darcy noong 1856, ay ang pundamental na equation na namamahala sa daloy ng fluid sa pamamagitan ng porous media. Sinasabi nito na ang flow rate ay direktang proporsyonal sa permeability at pressure gradient, at inversely proporsyonal sa viscosity ng fluid.",
+              "Sa linear form nito: Q = (k × A × ΔP) / (μ × L), kung saan ang Q ay ang volumetric flow rate, k ay ang permeability, A ay ang cross-sectional area na perpendicular sa daloy, ΔP ay ang pressure difference sa buong flow path, μ ay ang viscosity ng fluid, at L ay ang haba ng flow path. Ipinapalagay ng Darcy's Law ang laminar, single-phase, incompressible flow — mga kondisyon na nangunguna sa karamihan ng praktikal na reservoir engineering calculations.",
             ],
           },
           {
             id: "sec-2-2-c",
             title: "Directional Permeability",
             content: [
-              "Permeability is not always the same in all directions. In layered sediments, horizontal permeability (k_h) — measured parallel to the sedimentary layers — is typically much higher than vertical permeability (k_v). The ratio k_v/k_h can range from 0.1 in well-bedded sandstones to nearly 0 in thinly laminated formations with clay-rich barriers.",
-              "Vertical permeability critically controls water and gas coning — the tendency of underlying water or overlying gas cap gas to be drawn into the producing well. Low k_v reduces coning tendency and extends the economic production life of the well.",
+              "Ang permeability ay hindi palaging pareho sa lahat ng direksyon. Sa mga layered sediment, ang horizontal permeability (k_h) — sinusukat nang parallel sa mga sedimentary layer — ay karaniwang mas mataas kaysa sa vertical permeability (k_v). Ang ratio na k_v/k_h ay maaaring mag-range mula 0.1 sa well-bedded sandstone hanggang halos 0 sa thinly laminated na mga formation na may clay-rich barrier.",
+              "Ang vertical permeability ay kritikal na kumokontrol sa water at gas coning — ang tendensiyang mag-akit ng underlying water o overlying gas cap gas papunta sa produksyon ng balon. Ang mababang k_v ay nagbabawas ng tendensiyang mag-cone at nagpapalawig ng ekonomikong buhay ng produksyon ng balon.",
             ],
           },
           {
             id: "sec-2-2-d",
-            title: "Factors Affecting Permeability",
+            title: "Mga Salik na Nakakaapekto sa Permeability",
             content: [],
             list: [
               {
-                term: "Grain Size and Sorting",
+                term: "Grain Size at Sorting",
                 description:
-                  "Larger, well-sorted grains create larger pore throats and higher permeability. Fine-grained, poorly sorted sediments have small, tortuous pore throats and low permeability.",
+                  "Ang malalaki, well-sorted na butil ay lumilikha ng mas malaking pore throat at mas mataas na permeability. Ang fine-grained, poorly sorted na sediment ay may maliit, tortuous na pore throat at mababang permeability.",
               },
               {
                 term: "Cementation",
                 description:
-                  "Cement bridges pore throats and dramatically reduces permeability even when porosity remains moderate. Permeability is far more sensitive to cementation than porosity.",
+                  "Ang simento ay nagtutulungan sa mga pore throat at dramatikong nagbabawas ng permeability kahit nananatiling katamtaman ang porosity. Ang permeability ay mas sensitive sa cementation kaysa sa porosity.",
               },
               {
                 term: "Clay Content",
                 description:
-                  "Dispersed clay in pore throats is the most damaging. Swelling clays can reduce permeability by orders of magnitude when they contact fresh water during drilling or workover operations.",
+                  "Ang dispersed clay sa mga pore throat ay pinaka-mapanira. Ang mga swelling clay ay maaaring magbawas ng permeability ng ilang order ng magnitude kapag nakipagkontak sa fresh water sa panahon ng drilling o workover operations.",
               },
               {
                 term: "Fractures",
                 description:
-                  "Natural fractures can increase bulk permeability by several orders of magnitude, dominating fluid flow in tight matrix carbonates. Fracture permeability is highly sensitive to effective stress changes during production.",
+                  "Ang mga natural na fracture ay maaaring magpataas ng bulk permeability ng ilang order ng magnitude, na nangunguna sa daloy ng fluid sa mga tight matrix carbonate. Ang fracture permeability ay lubos na sensitive sa mga pagbabago ng effective stress sa panahon ng produksyon.",
               },
             ],
           },
           {
             id: "sec-2-2-e",
-            title: "Laboratory Measurement of Permeability",
+            title: "Laboratoryo na Pagsukat ng Permeability",
             content: [
-              "The steady-state core flooding method is the standard technique: fluid is injected at a constant rate until pressure drop stabilizes, then Darcy's Law is applied to calculate permeability. Parameters measured include flow rate (Q), pressure drop (ΔP), fluid viscosity (μ), and core dimensions (cross-sectional area A and length L).",
-              "Gas permeability measurements require a correction for the Klinkenberg effect: at low pressures, gas molecules slip along pore walls (gas slippage), resulting in apparent permeability higher than the true liquid-equivalent permeability. Liquid permeability is always the more representative value for reservoir conditions and is obtained by correcting gas measurements to infinite pressure or by measuring directly with brine.",
+              "Ang steady-state core flooding method ay ang karaniwang teknik: ang fluid ay ini-inject sa pare-parehong rate hanggang manatag ang pressure drop, pagkatapos ay inilalapat ang Darcy's Law para kalkulahin ang permeability. Ang mga parameter na sinusukat ay kinabibilangan ng flow rate (Q), pressure drop (ΔP), viscosity ng fluid (μ), at dimensyon ng core (cross-sectional area A at haba L).",
+              "Ang mga sukat ng gas permeability ay nangangailangan ng pagwawasto para sa Klinkenberg effect: sa mababang pressure, ang mga molekulo ng gas ay dumadampi sa mga dingding ng pore (gas slippage), na nagresulta sa apparent permeability na mas mataas kaysa sa tunay na liquid-equivalent permeability. Ang liquid permeability ay palaging mas kinatawan para sa reservoir conditions at nakukuha sa pamamagitan ng pagwawasto ng mga gas measurement sa infinite pressure o sa pamamagitan ng direktang pagsukat gamit ang brine.",
             ],
           },
         ],
         noteBox: {
-          title: "Engineering Significance of Permeability",
+          title: "Kahalagahan ng Permeability sa Engineering",
           items: [
-            "Well productivity index (PI) — how much oil per day per psi of drawdown",
-            "Pressure transient behavior — shape of pressure buildup/drawdown curves",
-            "Recovery efficiency — how completely hydrocarbons can be swept from the reservoir",
-            "Stimulation needs — reservoirs with k < 1 mD typically require hydraulic fracturing to produce commercially",
+            "Well productivity index (PI) — gaano karaming langis bawat araw bawat psi ng drawdown",
+            "Pressure transient behavior — hugis ng pressure buildup/drawdown curves",
+            "Recovery efficiency — kung gaano kabuo ang pagtanggal ng hydrocarbon mula sa reservoir",
+            "Pangangailangan ng stimulation — ang mga reservoir na may k < 1 mD ay karaniwang nangangailangan ng hydraulic fracturing para makapag-produce nang komersyal",
           ],
         },
       },
       {
         id: "sec-2-3",
-        title: "2.3 Porosity-Permeability Relationships",
+        title: "2.3 Relasyon ng Porosity-Permeability",
         content: [
-          "The relationship between porosity and permeability is one of the most studied — and most misunderstood — topics in petrophysics. While the two properties are correlated in many rock types, the strength of that correlation varies dramatically between sandstones and carbonates.",
+          "Ang relasyon sa pagitan ng porosity at permeability ay isa sa mga pinaka-pinag-aralan — at pinaka-maling naiintindihan — na paksa sa petrophysics. Habang ang dalawang katangian ay nag-co-correlate sa maraming uri ng bato, ang lakas ng correlation na iyon ay malaki ang pagkakaiba sa pagitan ng sandstone at carbonate.",
         ],
         subsections: [
           {
             id: "sec-2-3-a",
-            title: "Empirical Correlations in Sandstones",
+            title: "Empirical Correlations sa Sandstone",
             content: [
-              "In clean sandstones, permeability and porosity are typically strongly correlated and often follow an exponential relationship when plotted on a semi-logarithmic scale. This allows the creation of reliable empirical models that can predict permeability from porosity logs in the absence of core data.",
-              "The physical reason for this correlation is that both properties are controlled by the same underlying rock fabric — grain size and packing arrangement. Larger, more uniformly packed grains simultaneously create more pore volume (higher porosity) and larger pore throats (higher permeability).",
+              "Sa mga malinis na sandstone, ang permeability at porosity ay karaniwang may malakas na correlation at madalas na sumusunod sa exponential na relasyon kapag ini-plot sa semi-logarithmic scale. Nagpapahintulot ito ng paglikha ng maaasahang empirical model na maaaring hulaan ang permeability mula sa porosity logs sa kawalan ng core data.",
+              "Ang pisikal na dahilan para sa correlation na ito ay ang parehong katangian ay kinokontrol ng parehong underlying rock fabric — ang laki ng butil at pag-aayos ng packing. Ang mas malalaki, mas pantay na na-pack na mga butil ay sabay-sabay na lumilikha ng mas maraming pore volume (mas mataas na porosity) at mas malalaking pore throat (mas mataas na permeability).",
             ],
           },
           {
             id: "sec-2-3-b",
-            title: "Carbonate Complexity",
+            title: "Kumplikasyon sa Carbonate",
             content: [
-              "In carbonates, the porosity-permeability correlation is notoriously unreliable. Two core samples from the same formation can have identical porosities yet differ by four orders of magnitude in permeability. This occurs because permeability in carbonates is controlled primarily by pore geometry and connectivity — the size and tortuosity of pore throats — rather than by total pore volume.",
-              "A vuggy carbonate may have 20% porosity but very low permeability if the vugs are isolated and not connected by permeable pore throats. Conversely, a fractured carbonate with only 5% porosity can have extremely high permeability because fractures provide high-conductivity flow pathways.",
+              "Sa mga carbonate, ang porosity-permeability correlation ay kilalang-kilala sa pagiging hindi mapagkakatiwalaan. Ang dalawang core sample mula sa parehong formation ay maaaring magkapareho ang porosity ngunit magkaibang apat na order ng magnitude sa permeability. Nangyayari ito dahil ang permeability sa mga carbonate ay pangunahing kontrolado ng pore geometry at connectivity — ang laki at tortuosity ng mga pore throat — kaysa sa kabuuang pore volume.",
+              "Ang isang vuggy carbonate ay maaaring may 20% porosity ngunit napakababang permeability kung ang mga vugs ay nakahiwalay at hindi konektado ng mga permeable pore throat. Sa kabilang banda, ang isang fractured carbonate na may 5% porosity lamang ay maaaring may napakataas na permeability dahil ang mga fracture ay nagbibigay ng high-conductivity na daan ng daloy.",
             ],
           },
           {
             id: "sec-2-3-c",
-            title: "Rock Fabric and Pore Geometry Controls",
+            title: "Mga Kontrol ng Rock Fabric at Pore Geometry",
             content: [
-              "The most important controls on permeability are not the total amount of pore space, but rather the geometry of the pore network: pore throat size distribution, the tortuosity of flow paths, and the arrangement of grains (grain packing). Rock fabric — the microscopic arrangement of grains and pores — determines pore throat sizes, which in turn govern both permeability and capillary pressure behavior.",
+              "Ang pinaka-mahalagang kontrol sa permeability ay hindi ang kabuuang halaga ng pore space, kundi ang geometry ng pore network: distribusyon ng laki ng pore throat, ang tortuosity ng mga daan ng daloy, at ang pag-aayos ng mga butil (grain packing). Ang rock fabric — ang mikroskopikong pag-aayos ng mga butil at pores — ang nagtatakda ng laki ng pore throat, na siyang nagpapamahala ng parehong permeability at capillary pressure behavior.",
             ],
             noteBox: {
-              title: "Clastics vs. Carbonates Summary",
+              title: "Buod: Clastics vs. Carbonates",
               items: [
-                "Clastics: Intergranular pore system → High predictability → Strong porosity-permeability correlation",
-                "Carbonates: Vug/fracture pore system → Low predictability → Weak or absent correlation",
-                "Rule: Rock fabric controls permeability more than pore volume does.",
+                "Clastics: Intergranular pore system → Mataas na predictability → Malakas na porosity-permeability correlation",
+                "Carbonates: Vug/fracture pore system → Mababang predictability → Mahina o walang correlation",
+                "Panuntunan: Ang rock fabric ang kumokontrol sa permeability nang higit pa kaysa sa pore volume.",
               ],
             },
           },
@@ -531,54 +531,54 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
         id: "sec-2-4",
         title: "2.4 Rock Compressibility",
         content: [
-          "Rock compressibility is the fractional change in pore volume per unit change in reservoir pressure. As fluid is produced and reservoir pressure declines, the effective overburden stress on the rock matrix increases, causing the pore space to compact. This mechanism, although small on a per-pore basis, can become a significant energy source in large reservoirs — the compaction drive mechanism.",
+          "Ang rock compressibility ay ang fractional na pagbabago sa pore volume bawat unit na pagbabago sa reservoir pressure. Habang nag-produce ang fluid at bumababa ang reservoir pressure, tumataas ang epektibong overburden stress sa rock matrix, na nagdudulot ng compaction sa pore space. Ang mekanismong ito, bagaman maliit sa bawat pore, ay maaaring maging mahalagang pinagkukunan ng enerhiya sa malalaking reservoir — ang compaction drive mechanism.",
         ],
         subsections: [
           {
             id: "sec-2-4-a",
-            title: "Types of Compressibility",
+            title: "Mga Uri ng Compressibility",
             content: [],
             list: [
               {
                 term: "Grain Compressibility",
                 description:
-                  "The compressibility of the solid mineral grains themselves under stress. Typically very small and often neglected in engineering calculations.",
+                  "Ang compressibility ng mismong solid mineral grain sa ilalim ng stress. Karaniwang napakaliit at madalas na hindi pinag-aaralan sa mga kalkulasyon sa engineering.",
               },
               {
                 term: "Pore Volume Compressibility (cf)",
                 description:
-                  "The fractional reduction in pore volume per unit decrease in reservoir pressure. This is the most important compressibility parameter in reservoir engineering: cf = (1/Vp)(dVp/dP). Typical values range from 3 × 10⁻⁶ psi⁻¹ for hard, consolidated rocks to 15 × 10⁻⁶ psi⁻¹ for soft, unconsolidated sands.",
+                  "Ang fractional na pagbaba ng pore volume bawat unit na pagbaba sa reservoir pressure. Ito ang pinaka-mahalagang parameter ng compressibility sa reservoir engineering: cf = (1/Vp)(dVp/dP). Ang karaniwang halaga ay mula 3 × 10⁻⁶ psi⁻¹ para sa matigas, consolidated na bato hanggang 15 × 10⁻⁶ psi⁻¹ para sa malambot, unconsolidated na buhangin.",
               },
               {
                 term: "Bulk Compressibility",
                 description:
-                  "The total fractional volume change of the rock (solid + pores) under a change in pressure. Includes contributions from both grain and pore compressibility.",
+                  "Ang kabuuang fractional na pagbabago ng volume ng bato (solid + pores) sa ilalim ng pagbabago ng pressure. Kabilang ang mga kontribusyon mula sa parehong grain at pore compressibility.",
               },
             ],
           },
           {
             id: "sec-2-4-b",
-            title: "Compaction Mechanisms",
+            title: "Mga Mekanismo ng Compaction",
             content: [
-              "As reservoir pressure declines, several micro-scale mechanisms compact the rock. Grain rotation and closer packing reduces pore space. Ductile grains (such as clay minerals or mica) deform plastically under stress. At high stresses, brittle grains fracture and the fragments fill pore space. Pressure solution at grain contacts causes local dissolution and grain compaction.",
+              "Habang bumababa ang reservoir pressure, ilang micro-scale na mekanismo ang nag-co-compact ng bato. Ang grain rotation at mas malapit na packing ay nagbabawas ng pore space. Ang mga ductile grain (tulad ng mga mineral na clay o mica) ay plastically deform sa ilalim ng stress. Sa mataas na stress, ang mga brittle grain ay nagbabali at ang mga piraso ay pumupuno ng pore space. Ang pressure solution sa mga grain contact ay nagdudulot ng lokal na dissolution at grain compaction.",
             ],
           },
           {
             id: "sec-2-4-c",
-            title: "Engineering Importance",
+            title: "Kahalagahan sa Engineering",
             content: [
-              "Rock compressibility enters the material balance equation as an energy term. In highly compressible formations (chalk reservoirs, unconsolidated sands), compaction provides a substantial fraction of reservoir drive energy. The Ekofisk chalk field in the North Sea is the classic example — compaction drive contributed dramatically to production and also caused several meters of seafloor subsidence above the field, requiring platform raising operations.",
-              "For most conventional reservoirs, the combined compressibility of oil, gas, and water dominates, and rock compressibility is a secondary effect. However, it must never be ignored in undersaturated oil reservoirs above bubble point, where rock and water expansion are the only drive mechanisms.",
+              "Ang rock compressibility ay pumapasok sa material balance equation bilang isang energy term. Sa mga highly compressible na formation (chalk reservoir, unconsolidated sand), ang compaction ay nagbibigay ng malaking bahagi ng reservoir drive energy. Ang Ekofisk chalk field sa North Sea ang klasikong halimbawa — ang compaction drive ay malaki ang kontribusyon sa produksyon at nagdulot din ng ilang metro ng subsidence ng sea floor sa itaas ng field, na nangangailangan ng operasyon ng pagpapataas ng platform.",
+              "Para sa karamihan ng conventional reservoir, ang pinagsama-samang compressibility ng langis, gas, at tubig ang dominado, at ang rock compressibility ay isang secondary effect. Gayunpaman, hindi ito dapat balewalain sa mga undersaturated oil reservoir sa itaas ng bubble point, kung saan ang pagpapalawak ng bato at tubig ang tanging drive mechanism.",
             ],
           },
         ],
         noteBox: {
-          title: "Chapter Key Relationships",
+          title: "Mga Pangunahing Relasyon ng Kabanata",
           items: [
-            "Porosity → measures fluid storage capacity (how much can it hold?)",
-            "Permeability → measures fluid flow capacity (how fast can it flow?)",
-            "Compressibility → controls pore volume change with pressure (how does it compress?)",
-            "High porosity does NOT guarantee high permeability — pore connectivity is what matters.",
+            "Porosity → sinusukat ang kapasidad ng pag-iimbak ng fluid (gaano karami ang kayang hawakan?)",
+            "Permeability → sinusukat ang kapasidad ng daloy ng fluid (gaano kabilis maaaring dumaan?)",
+            "Compressibility → kumokontrol sa pagbabago ng pore volume kasabay ng pressure (paano ito nag-ko-compress?)",
+            "Ang mataas na porosity ay HINDI garantiya ng mataas na permeability — ang pore connectivity ang mahalaga.",
           ],
         },
       },
@@ -587,27 +587,27 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
       {
         name: "Porosity",
         eq: "φ = Vp / Vb = (Vb − Vg) / Vb",
-        desc: "Pore volume (Vp) divided by bulk volume (Vb). Grain volume Vg = Vb − Vp.",
+        desc: "Pore volume (Vp) na hinati sa bulk volume (Vb). Grain volume Vg = Vb − Vp.",
       },
       {
-        name: "Pore Volume from Grain Volume",
+        name: "Pore Volume mula sa Grain Volume",
         eq: "Vp = Vb − Vg",
-        desc: "Pore volume is the difference between bulk volume and grain volume.",
+        desc: "Ang pore volume ay ang pagkakaiba sa pagitan ng bulk volume at grain volume.",
       },
       {
         name: "Darcy's Law (Linear Flow)",
         eq: "Q = −(k × A / μ) × (ΔP / L)",
-        desc: "Q = flow rate (cm³/s), k = permeability (Darcy), A = area (cm²), μ = viscosity (cP), ΔP = pressure drop (atm), L = length (cm).",
+        desc: "Q = flow rate (cm³/s), k = permeability (Darcy), A = lugar (cm²), μ = viscosity (cP), ΔP = pressure drop (atm), L = haba (cm).",
       },
       {
         name: "Relative Permeability",
         eq: "k_r = k_eff / k_abs",
-        desc: "Dimensionless ratio (0–1) of effective permeability to absolute permeability at a given fluid saturation.",
+        desc: "Dimensionless ratio (0–1) ng effective permeability sa absolute permeability sa isang tiyak na fluid saturation.",
       },
       {
         name: "Pore Volume Compressibility",
         eq: "c_f = (1 / Vp) × (dVp / dP)",
-        desc: "Fractional change in pore volume per unit change in reservoir pressure. Units: psi⁻¹.",
+        desc: "Fractional na pagbabago ng pore volume bawat unit na pagbabago ng reservoir pressure. Yunit: psi⁻¹.",
       },
     ],
     terms: [
@@ -627,63 +627,63 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
   },
 
   3: {
-    title: "Fluid Saturation, Wettability, and Capillary Pressure",
+    title: "Fluid Saturation, Wettability, at Capillary Pressure",
     overview:
-      "Understanding how oil, water, and gas compete for pore space — the saturation concept — and the surface forces that control fluid distribution, displacement, and ultimate recovery.",
+      "Pag-unawa sa kung paano nakikipagkumpetensya ang langis, tubig, at gas para sa pore space — ang konsepto ng saturation — at ang mga surface force na kumokontrol sa distribusyon, displacement, at ultimate recovery ng fluid.",
     sections: [
       {
         id: "sec-3-1",
-        title: "Fluid Saturation Fundamentals",
+        title: "Mga Pangunahing Kaalaman sa Fluid Saturation",
         content: [
-          "Fluid saturation describes the fraction of the pore volume occupied by each fluid phase. Since the total pore volume is fixed, the saturations of all fluids present must always sum to 1.0 (100%). Understanding saturation at every point in the reservoir is essential for calculating hydrocarbon volumes and predicting production behavior.",
+          "Inilalarawan ng fluid saturation ang bahagi ng pore volume na inookupahan ng bawat fluid phase. Dahil naayos ang kabuuang pore volume, ang mga saturation ng lahat ng fluid na naroroon ay dapat palaging magsama-sama sa 1.0 (100%). Ang pag-unawa sa saturation sa bawat punto ng reservoir ay mahalaga para sa pagkalkula ng mga volume ng hydrocarbon at paghula ng gawi ng produksyon.",
         ],
         subsections: [
           {
             id: "sec-3-1-a",
-            title: "Saturation Definitions",
+            title: "Mga Kahulugan ng Saturation",
             content: [],
             list: [
               {
                 term: "Water Saturation (Sw)",
                 description:
-                  "Fraction of pore volume occupied by water. The most important saturation parameter — directly used to calculate hydrocarbon volume from the relation: Sh = 1 − Sw.",
+                  "Bahagi ng pore volume na inookupahan ng tubig. Ang pinaka-mahalagang parameter ng saturation — direktang ginagamit para kalkulahin ang volume ng hydrocarbon mula sa relasyon: Sh = 1 − Sw.",
               },
               {
                 term: "Oil Saturation (So)",
                 description:
-                  "Fraction of pore volume occupied by oil. In the oil pay zone, So is high (and Sw is low). So decreases during water flooding as water displaces oil.",
+                  "Bahagi ng pore volume na inookupahan ng langis. Sa oil pay zone, mataas ang So (at mababa ang Sw). Bumababa ang So sa panahon ng water flooding habang pinapalitan ng tubig ang langis.",
               },
               {
                 term: "Gas Saturation (Sg)",
                 description:
-                  "Fraction of pore volume occupied by gas. Increases as reservoir pressure drops below the bubble point and free gas forms from solution.",
+                  "Bahagi ng pore volume na inookupahan ng gas. Tumataas habang bumababa ang reservoir pressure sa ibaba ng bubble point at nabubuo ang free gas mula sa solusyon.",
               },
               {
                 term: "Saturation Balance",
                 description:
-                  "Sw + So + Sg = 1.0. Since pore volume is fixed, an increase in any one phase must be accompanied by a decrease in at least one other. This constraint drives all material balance calculations.",
+                  "Sw + So + Sg = 1.0. Dahil naayos ang pore volume, ang pagtaas ng alinmang phase ay dapat samahan ng pagbaba ng kahit isa sa iba. Ang constraint na ito ang nagtutulak sa lahat ng material balance calculations.",
               },
             ],
           },
           {
             id: "sec-3-1-b",
-            title: "Critical and Residual Saturations",
+            title: "Critical at Residual Saturation",
             content: [],
             list: [
               {
                 term: "Irreducible (Connate) Water Saturation (Swirr)",
                 description:
-                  "The minimum water saturation retained in the rock by capillary and adsorptive forces, which cannot be displaced regardless of the pressure applied. It occupies the smallest pore throats and grain surface films. Swirr is the initial water saturation in the oil and gas pay zone.",
+                  "Ang minimum na water saturation na napanatili sa bato ng capillary at adsorptive forces, na hindi maaaring mapalis anuman ang inilapat na pressure. Inookupahan nito ang pinakamaliit na pore throat at grain surface film. Ang Swirr ay ang paunang water saturation sa oil at gas pay zone.",
               },
               {
                 term: "Residual Oil Saturation (Sor)",
                 description:
-                  "The oil remaining trapped in pore spaces after water flooding, as isolated ganglia held by capillary forces. Sor represents oil that cannot be produced by conventional waterflooding — it is the target of Enhanced Oil Recovery (EOR) methods.",
+                  "Ang langis na nanatiling nakulong sa mga pore space pagkatapos ng water flooding, bilang mga isolated ganglia na hawak ng capillary forces. Ang Sor ay kumakatawan sa langis na hindi maaaring gamitin ng conventional waterflooding — ito ang target ng Enhanced Oil Recovery (EOR) methods.",
               },
               {
                 term: "Critical Gas Saturation (Sgc)",
                 description:
-                  "The minimum gas saturation required before gas becomes hydraulically continuous and begins to flow. Below Sgc, gas exists as isolated bubbles and cannot be produced.",
+                  "Ang minimum na gas saturation na kinakailangan bago maging hydraulically continuous ang gas at magsimulang dumaling. Sa ibaba ng Sgc, ang gas ay umiiral bilang mga isolated na bula at hindi maaaring ma-produce.",
               },
             ],
           },
@@ -693,36 +693,36 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
         id: "sec-3-2",
         title: "Wettability",
         content: [
-          "Wettability is the tendency of a rock surface to preferentially contact one fluid over another in a multiphase system. It is arguably the single most important rock-fluid interaction parameter because it controls initial fluid distribution in the pore space, the shapes of relative permeability curves, and the efficiency of waterflood displacement.",
+          "Ang wettability ay ang tendensiyang preferentially makipagkontak ang rock surface sa isang fluid kaysa sa isa pa sa isang multiphase system. Ito ay marahil ang pinaka-mahalagang parameter ng rock-fluid interaction dahil kumokontrol ito sa paunang distribusyon ng fluid sa pore space, sa mga hugis ng relative permeability curve, at sa kahusayan ng waterflood displacement.",
         ],
         subsections: [
           {
             id: "sec-3-2-a",
-            title: "Wettability States",
+            title: "Mga Estado ng Wettability",
             content: [],
             list: [
               {
                 term: "Water-Wet System",
                 description:
-                  "Water coats the grain surfaces and fills the smaller pore spaces. Oil occupies the centers of the larger pores. Most clastic reservoir rocks are naturally water-wet. Waterflood recovery is typically most efficient in water-wet systems.",
+                  "Ang tubig ay nagbabalot sa mga surface ng butil at pinupuno ang mga mas maliit na pore space. Inookupahan ng langis ang mga sentro ng mas malalaking pores. Karamihan sa mga clastic reservoir rock ay natural na water-wet. Ang waterflood recovery ay karaniwang pinaka-mahusay sa mga water-wet system.",
               },
               {
                 term: "Oil-Wet System",
                 description:
-                  "Oil coats the grain surfaces. The wettability has been altered by polar organic compounds in the crude oil adsorbing onto rock surfaces. Many carbonate reservoirs exhibit oil-wet or mixed-wet behavior, complicating waterflood design.",
+                  "Ang langis ay nagbabalot sa mga surface ng butil. Ang wettability ay nabago ng mga polar na organic compound sa crude oil na nagsa-adsorb sa mga surface ng bato. Maraming carbonate reservoir ang nagpapakita ng oil-wet o mixed-wet na gawi, na nagko-complicate sa disenyo ng waterflood.",
               },
               {
                 term: "Mixed-Wet System",
                 description:
-                  "Parts of the pore system are water-wet and parts are oil-wet. Larger pores contacted by oil tend to become oil-wet; smaller pores always water-wet. Mixed wettability is actually the most common state found in real reservoirs after oil migration.",
+                  "Ang ilang bahagi ng pore system ay water-wet at ang iba ay oil-wet. Ang mga mas malalaking pore na nakipagkontak sa langis ay may tendensiyang maging oil-wet; ang mga mas maliit na pore ay palaging water-wet. Ang mixed wettability ay tunay na pinaka-karaniwang estado na matatagpuan sa mga tunay na reservoir pagkatapos ng oil migration.",
               },
             ],
           },
           {
             id: "sec-3-2-b",
-            title: "Measuring Wettability",
+            title: "Pagsukat ng Wettability",
             content: [
-              "The contact angle (θ) measured through the denser fluid at the solid–fluid–fluid interface quantifies wettability. θ < 75° indicates water-wet, θ > 105° indicates oil-wet, and 75° < θ < 105° is intermediate. The Amott wettability index and the USBM (US Bureau of Mines) index are the standard laboratory measurements used on core samples, integrating spontaneous and forced imbibition/drainage tests.",
+              "Ang contact angle (θ) na sinusukat sa pamamagitan ng mas masiksik na fluid sa solid-fluid-fluid interface ay nagkukuntas ng wettability. Ang θ < 75° ay nagpapahiwatig ng water-wet, ang θ > 105° ay nagpapahiwatig ng oil-wet, at ang 75° < θ < 105° ay intermediate. Ang Amott wettability index at ang USBM (US Bureau of Mines) index ang mga karaniwang laboratory measurement na ginagamit sa mga core sample, na nag-iintegrate ng spontaneous at forced imbibition/drainage test.",
             ],
           },
         ],
@@ -731,31 +731,31 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
         id: "sec-3-3",
         title: "Capillary Pressure",
         content: [
-          "Capillary pressure (Pc) is the pressure difference across the curved interface between two immiscible fluids in a pore space. It arises from interfacial tension (σ) — the surface energy at the fluid-fluid interface — and the curvature of that interface, which is controlled by pore throat radius and wettability.",
-          "Capillary pressure governs the initial distribution of fluids in the reservoir before production, controls the height of the transition zone between water and hydrocarbon zones, and determines the minimum pore throat size through which hydrocarbons can enter (the entry pressure).",
+          "Ang capillary pressure (Pc) ay ang pagkakaiba ng pressure sa buong curved interface sa pagitan ng dalawang immiscible fluid sa pore space. Nagmumula ito sa interfacial tension (σ) — ang surface energy sa fluid-fluid interface — at sa curvature ng interface na iyon, na kontrolado ng pore throat radius at wettability.",
+          "Ang capillary pressure ang namamahala sa paunang distribusyon ng fluid sa reservoir bago ang produksyon, kumokontrol sa taas ng transition zone sa pagitan ng water at hydrocarbon zone, at nagtatakda ng minimum na laki ng pore throat kung saan maaaring pumasok ang mga hydrocarbon (ang entry pressure).",
         ],
         subsections: [
           {
             id: "sec-3-3-a",
-            title: "The Capillary Pressure Curve",
+            title: "Ang Capillary Pressure Curve",
             content: [
-              "A capillary pressure curve relates Pc to water saturation (Sw). It is measured in the laboratory using mercury injection (MICP), porous plate, or centrifuge methods. The shape of the curve reveals the pore size distribution: a steep, narrow curve indicates a well-sorted rock with uniform pore throats; a gradual, broad curve indicates a poorly sorted rock with a wide range of pore throat sizes.",
-              "The entry pressure (displacement pressure, Pd) is the minimum capillary pressure at which the non-wetting phase (oil or gas) can first enter the largest pore throats. Seal integrity is determined by the entry pressure of the caprock — gas or oil cannot migrate through the seal until Pc exceeds the caprock entry pressure.",
+              "Ang capillary pressure curve ay naguugnay ng Pc sa water saturation (Sw). Sinusukat ito sa laboratoryo gamit ang mercury injection (MICP), porous plate, o centrifuge na mga pamamaraan. Ang hugis ng curve ay nagpapakita ng distribusyon ng laki ng pore: ang isang matarik, makitid na curve ay nagpapahiwatig ng well-sorted na bato na may pantay na pore throat; ang isang unti-unti, maluwag na curve ay nagpapahiwatig ng poorly sorted na bato na may malawak na hanay ng laki ng pore throat.",
+              "Ang entry pressure (displacement pressure, Pd) ay ang minimum na capillary pressure kung saan maaaring pumasok ang non-wetting phase (langis o gas) sa mga pinakamalaking pore throat. Ang seal integrity ay tinutukoy ng entry pressure ng caprock — ang gas o langis ay hindi maaaring mag-migrate sa pamamagitan ng seal hanggang ang Pc ay lumampas sa caprock entry pressure.",
             ],
           },
           {
             id: "sec-3-3-b",
-            title: "Free Water Level and Transition Zone",
+            title: "Free Water Level at Transition Zone",
             content: [
-              "The Free Water Level (FWL) is the depth in the reservoir where capillary pressure is zero — where oil and water are in pressure equilibrium. The Oil-Water Contact (OWC) is typically several feet above the FWL, at the depth where Pc equals the entry pressure of the reservoir rock.",
-              "Between the FWL and the top of the transition zone, water saturation decreases progressively from 100% upward. The thickness of the transition zone depends on the rock's capillary pressure curve and the density difference between oil and water. Fine-grained rocks with high capillary pressures have thick transition zones; coarse-grained rocks have thin, sharp contacts.",
+              "Ang Free Water Level (FWL) ay ang lalim sa reservoir kung saan ang capillary pressure ay zero — kung saan ang langis at tubig ay nasa pressure equilibrium. Ang Oil-Water Contact (OWC) ay karaniwang ilang talampakan sa itaas ng FWL, sa lalim kung saan ang Pc ay katumbas ng entry pressure ng reservoir rock.",
+              "Sa pagitan ng FWL at ng tuktok ng transition zone, ang water saturation ay unti-unting bumababa mula 100% paakyat. Ang kapal ng transition zone ay nakasalalay sa capillary pressure curve ng bato at sa pagkakaiba ng density sa pagitan ng langis at tubig. Ang mga fine-grained rock na may mataas na capillary pressure ay may makapal na transition zone; ang mga coarse-grained rock ay may manipis, malinaw na mga contact.",
             ],
           },
           {
             id: "sec-3-3-c",
-            title: "The Leverett J-Function",
+            title: "Ang Leverett J-Function",
             content: [
-              "The Leverett J-function normalizes capillary pressure data from different rock samples by accounting for the effects of permeability, porosity, interfacial tension, and contact angle. This allows capillary pressure curves from different samples in the same reservoir to be compared and merged into a single representative curve for the reservoir.",
+              "Ang Leverett J-function ay nino-normalize ang capillary pressure data mula sa iba't ibang sample ng bato sa pamamagitan ng pag-account sa mga epekto ng permeability, porosity, interfacial tension, at contact angle. Nagpapahintulot ito ng paghahambing at pagsasama ng mga capillary pressure curve mula sa iba't ibang sample sa parehong reservoir sa isang solong representative curve para sa reservoir.",
             ],
           },
         ],
@@ -764,105 +764,105 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
         id: "sec-3-4",
         title: "Relative Permeability",
         content: [
-          "Relative permeability (kr) quantifies the ability of one fluid phase to flow through a porous medium in the presence of other fluid phases. It is defined as the ratio of the effective permeability to a given phase at a specific saturation to the absolute permeability of the rock. Values range from 0 (that phase cannot flow) to 1 (single-phase flow, no other fluid present).",
-          "Relative permeability curves are fundamental inputs to reservoir simulation and govern the economics of oil production. They determine water-oil and gas-oil ratios produced from wells, the efficiency of water flooding, and the timing of water breakthrough.",
+          "Ang relative permeability (kr) ay nagkukuntas ng kakayahan ng isang fluid phase na dumating sa pamamagitan ng porous medium sa presensya ng iba pang fluid phase. Ito ay tinukoy bilang ratio ng effective permeability sa isang tiyak na phase sa isang tiyak na saturation sa absolute permeability ng bato. Ang mga halaga ay mula 0 (ang phase na iyon ay hindi maaaring dumaan) hanggang 1 (single-phase flow, walang ibang fluid na naroroon).",
+          "Ang mga relative permeability curve ay pundamental na input sa reservoir simulation at namamahala sa ekonomika ng produksyon ng langis. Tinutukoy nila ang water-oil at gas-oil ratio na ginagawa ng mga balon, ang kahusayan ng water flooding, at ang timing ng water breakthrough.",
         ],
         subsections: [
           {
             id: "sec-3-4-a",
-            title: "Key Features of Relative Permeability Curves",
+            title: "Mga Pangunahing Katangian ng Relative Permeability Curves",
             content: [],
             list: [
               {
-                term: "Endpoint k_ro at Swirr",
+                term: "Endpoint k_ro sa Swirr",
                 description:
-                  "The maximum relative permeability to oil, occurring when water saturation is at its irreducible minimum. This endpoint directly reflects the quality of the reservoir rock for oil production.",
+                  "Ang maximum na relative permeability sa langis, na nagaganap kapag ang water saturation ay nasa pinakamababa nitong irreducible level. Ang endpoint na ito ay direktang repleksyon ng kalidad ng reservoir rock para sa produksyon ng langis.",
               },
               {
-                term: "Endpoint k_rw at Sor",
+                term: "Endpoint k_rw sa Sor",
                 description:
-                  "The maximum relative permeability to water, occurring when residual oil saturation is reached. High values indicate efficient water flow at the end of flooding.",
+                  "Ang maximum na relative permeability sa tubig, na nagaganap kapang naaabot na ang residual oil saturation. Ang mataas na halaga ay nagpapahiwatig ng mahusay na daloy ng tubig sa pagtatapos ng flooding.",
               },
               {
                 term: "Crossover Point",
                 description:
-                  "The saturation at which k_ro and k_rw are equal. At saturations above the crossover point, more water than oil flows. The crossover saturation correlates with wettability — oil-wet rocks cross over at low water saturations.",
+                  "Ang saturation kung saan pantay ang k_ro at k_rw. Sa mga saturation na mas mataas kaysa sa crossover point, mas maraming tubig kaysa langis ang dumadating. Ang crossover saturation ay nag-co-correlate sa wettability — ang mga oil-wet rock ay nag-co-cross over sa mababang water saturation.",
               },
             ],
           },
           {
             id: "sec-3-4-b",
-            title: "Drainage and Imbibition",
+            title: "Drainage at Imbibition",
             content: [
-              "Drainage refers to processes where the non-wetting phase (oil or gas) displaces the wetting phase (water). This occurred naturally during hydrocarbon migration into the reservoir and also describes gas injection processes. Imbibition is the reverse — the wetting phase displaces the non-wetting phase. Waterflooding is an imbibition process in water-wet reservoirs.",
-              "Hysteresis means that the relative permeability and capillary pressure curves for drainage and imbibition are different — the rock does not return to its original state when the process is reversed. This has important implications for EOR processes and reservoir simulation.",
+              "Ang drainage ay tumutukoy sa mga proseso kung saan ang non-wetting phase (langis o gas) ay pumapalit sa wetting phase (tubig). Ito ay natural na naganap sa panahon ng hydrocarbon migration papasok sa reservoir at naglarawain din ng mga proseso ng gas injection. Ang imbibition ay ang kabaligtaran — ang wetting phase ay pumapalit sa non-wetting phase. Ang waterflooding ay isang imbibition na proseso sa water-wet reservoir.",
+              "Ang hysteresis ay nangangahulugang ang mga relative permeability at capillary pressure curve para sa drainage at imbibition ay magkaiba — ang bato ay hindi bumabalik sa orihinal na estado nito kapag binaliktad ang proseso. Ito ay may mahahalagang implikasyon para sa mga proseso ng EOR at reservoir simulation.",
             ],
           },
         ],
       },
       {
         id: "sec-3-5",
-        title: "Mobility and Displacement Efficiency",
+        title: "Mobility at Displacement Efficiency",
         content: [
-          "Mobility (λ) of a fluid phase is defined as its relative permeability divided by its viscosity. It determines how easily that fluid flows relative to other phases present in the reservoir.",
+          "Ang mobility (λ) ng isang fluid phase ay tinukoy bilang ang relative permeability nito na hinati sa viscosity nito. Tinutukoy nito kung gaano kadaling dumadaling ang fluid na iyon kaugnay ng iba pang phase na naroroon sa reservoir.",
         ],
         subsections: [
           {
             id: "sec-3-5-a",
-            title: "Mobility Ratio and Its Consequences",
+            title: "Mobility Ratio at ang mga Kahihinatnan Nito",
             content: [
-              "The Mobility Ratio (M) compares the mobility of the displacing fluid (typically water or gas) to the mobility of the displaced fluid (oil). M = λ_displacing / λ_displaced.",
-              "When M < 1, the displaced fluid (oil) is more mobile than the displacing fluid — the displacement front is stable, and the oil is swept out efficiently ahead of the waterfront. When M > 1, the displacing fluid is more mobile than the oil — the front is unstable and breaks into irregular 'fingers' that bypass unswept oil. This fingering leads to early water breakthrough and poor sweep efficiency.",
+              "Ang Mobility Ratio (M) ay inihahambing ang mobility ng displacing fluid (karaniwang tubig o gas) sa mobility ng displaced fluid (langis). M = λ_displacing / λ_displaced.",
+              "Kapag ang M < 1, ang displaced fluid (langis) ay mas mobile kaysa sa displacing fluid — ang displacement front ay matatag, at ang langis ay mahusay na nasasalis nang maaga sa waterfront. Kapag ang M > 1, ang displacing fluid ay mas mobile kaysa sa langis — ang front ay hindi matatag at nahahati sa mga irregular na 'daliri' na lumalampas sa hindi nasaling langis. Ang fingering na ito ay nagdudulot ng maagang water breakthrough at mahinang sweep efficiency.",
             ],
             list: [
               {
                 term: "Favorable Mobility Ratio (M < 1)",
                 description:
-                  "Stable displacement front. Water moves evenly through the reservoir, sweeping oil ahead of it efficiently. Achieved when oil viscosity is low or when polymer is added to increase water viscosity.",
+                  "Matatag na displacement front. Ang tubig ay pantay-pantay na gumagalaw sa buong reservoir, mahusay na nasasalis ang langis nang mauna nito. Naaabot kapag mababa ang viscosity ng langis o kapag ang polymer ay idinagdag para mapataas ang viscosity ng tubig.",
               },
               {
                 term: "Unfavorable Mobility Ratio (M > 1)",
                 description:
-                  "Viscous fingering occurs — water breaks through to the producing well prematurely while large volumes of oil remain unswept. Common in heavy oil reservoirs. Leads to high water-oil ratios and poor recovery efficiency.",
+                  "Nagaganap ang viscous fingering — ang tubig ay bumabasag hanggang sa produksyon ng balon nang maaga habang malaking volume ng langis ay nananatiling hindi nasaling. Karaniwang nangyayari sa mga heavy oil reservoir. Nagdudulot ng mataas na water-oil ratio at mahinang recovery efficiency.",
               },
             ],
           },
           {
             id: "sec-3-5-b",
-            title: "Sweep Efficiency and EOR",
+            title: "Sweep Efficiency at EOR",
             content: [
-              "Sweep efficiency measures the fraction of the reservoir volume contacted by the displacing fluid. Poor sweep leads to oil being bypassed and left in the reservoir. Achieving high sweep efficiency requires a favorable mobility ratio, good reservoir homogeneity, and proper well placement.",
-              "Enhanced Oil Recovery (EOR) methods specifically target the improvement of sweep efficiency and reduction of residual oil saturation. Chemical flooding (polymers, surfactants) alters mobility ratios and wettability; thermal methods (steam injection) reduce oil viscosity; miscible gas injection reduces or eliminates interfacial tension and residual oil.",
+              "Ang sweep efficiency ay sinusukat ang bahagi ng volume ng reservoir na nakipagkontak sa displacing fluid. Ang mahinang sweep ay nagdudulot ng pagtawid sa langis at pagpapaiwan nito sa reservoir. Ang pagkamit ng mataas na sweep efficiency ay nangangailangan ng favorable mobility ratio, magandang homogeneity ng reservoir, at tamang paglalagay ng balon.",
+              "Ang mga paraan ng Enhanced Oil Recovery (EOR) ay partikular na naglalayong mapabuti ang sweep efficiency at mabawasan ang residual oil saturation. Ang chemical flooding (polymer, surfactant) ay nagbabago ng mobility ratio at wettability; ang thermal methods (steam injection) ay nagbabawas ng viscosity ng langis; ang miscible gas injection ay nagbabawas o ganap na nag-eelimina ng interfacial tension at residual oil.",
             ],
           },
         ],
       },
       {
         id: "sec-3-6",
-        title: "Fluid Contacts and Reservoir Zonation",
+        title: "Mga Fluid Contact at Zonasyon ng Reservoir",
         content: [
-          "The vertical distribution of fluids in a reservoir is governed by the interplay of gravity (which separates fluids by density) and capillary forces (which work against gravity to retain wetting-phase fluid in small pores above the FWL). This creates a characteristic vertical saturation profile.",
+          "Ang vertical na distribusyon ng mga fluid sa isang reservoir ay kontrolado ng interplay ng gravity (na naghihiwalay ng mga fluid ayon sa density) at capillary forces (na lumalaban sa gravity para mapanatili ang wetting-phase fluid sa maliliit na pores sa itaas ng FWL). Lumilikha ito ng katangian na vertical saturation profile.",
         ],
         subsections: [
           {
             id: "sec-3-6-a",
-            title: "Fluid Contact Definitions",
+            title: "Mga Kahulugan ng Fluid Contact",
             content: [],
             list: [
               {
                 term: "Oil-Water Contact (OWC)",
                 description:
-                  "The depth at which log-based water saturation rises sharply toward 100% water. Practically defined as the deepest depth at which oil is producible. Located above the Free Water Level.",
+                  "Ang lalim kung saan ang log-based water saturation ay biglang tumataas patungo sa 100% tubig. Praktikong tinukoy bilang pinakamalalim na lalim kung saan maaaring mag-produce ng langis. Matatagpuan sa itaas ng Free Water Level.",
               },
               {
                 term: "Gas-Oil Contact (GOC)",
                 description:
-                  "The boundary between the gas cap (free gas above the bubble point) and the oil zone. Defined by log response — typically a dramatic decrease in density and a neutron-density crossover.",
+                  "Ang hangganan sa pagitan ng gas cap (free gas sa itaas ng bubble point) at ng oil zone. Tinutukoy ng log response — karaniwang dramatikong pagbaba ng density at isang neutron-density crossover.",
               },
               {
                 term: "Transition Zone",
                 description:
-                  "The reservoir interval between the FWL and the OWC where both oil and water are mobile and water saturation decreases gradually from 100% upward. The thickness depends on rock quality — tight rocks have thick transition zones; high-permeability rocks have thin, sharp contacts.",
+                  "Ang reservoir interval sa pagitan ng FWL at ng OWC kung saan ang parehong langis at tubig ay mobile at ang water saturation ay unti-unting bumababa mula 100% paakyat. Ang kapal ay nakasalalay sa kalidad ng bato — ang mga tight rock ay may makapal na transition zone; ang mga high-permeability rock ay may manipis, malinaw na contact.",
               },
             ],
           },
@@ -873,27 +873,27 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
       {
         name: "Saturation Balance",
         eq: "Sw + So + Sg = 1.0",
-        desc: "All fluid phases must sum to 1.0 (or 100%). A change in one saturation requires a corresponding change in another.",
+        desc: "Ang lahat ng fluid phase ay dapat magsama-sama sa 1.0 (o 100%). Ang pagbabago ng isang saturation ay nangangailangan ng katumbas na pagbabago sa isa pa.",
       },
       {
         name: "Young-Laplace Capillary Pressure",
         eq: "Pc = 2σ cos θ / r",
-        desc: "σ = interfacial tension, θ = contact angle, r = pore throat radius. Pc increases as pore throat size decreases.",
+        desc: "σ = interfacial tension, θ = contact angle, r = pore throat radius. Tumataas ang Pc habang bumababa ang laki ng pore throat.",
       },
       {
         name: "Leverett J-Function",
         eq: "J(Sw) = (Pc / σ cos θ) × √(k / φ)",
-        desc: "Normalizes capillary pressure curves to allow comparison between different samples and rock types.",
+        desc: "Nino-normalize ang mga capillary pressure curve para payagan ang paghahambing sa pagitan ng iba't ibang sample at uri ng bato.",
       },
       {
         name: "Fluid Mobility",
         eq: "λ = k_r / μ",
-        desc: "Mobility of a fluid phase (λ) equals its relative permeability (k_r) divided by its viscosity (μ, in cP).",
+        desc: "Ang mobility ng isang fluid phase (λ) ay katumbas ng relative permeability nito (k_r) na hinati sa viscosity nito (μ, sa cP).",
       },
       {
         name: "Mobility Ratio",
         eq: "M = λ_displacing / λ_displaced = (k_r_d / μ_d) / (k_r_o / μ_o)",
-        desc: "M < 1 → stable displacement; M > 1 → viscous fingering and poor sweep efficiency.",
+        desc: "M < 1 → matatag na displacement; M > 1 → viscous fingering at mahinang sweep efficiency.",
       },
     ],
     terms: [
@@ -913,37 +913,37 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
   },
 
   4: {
-    title: "Well Log Interpretation",
+    title: "Interpretasyon ng Well Logs",
     overview:
-      "Well logs are the eyes of the reservoir engineer — continuous records of formation properties from surface to total depth. This chapter covers the principal logging tools, how to interpret them for lithology, porosity, and fluid saturation, and how to determine net pay.",
+      "Ang mga well log ay ang mga mata ng reservoir engineer — tuloy-tuloy na talaan ng mga katangian ng formation mula sa ibabaw hanggang sa kabuuang lalim. Sinasaklaw ng kabanatang ito ang mga pangunahing logging tool, kung paano i-interpret ang mga ito para sa lithology, porosity, at fluid saturation, at kung paano matukoy ang net pay.",
     sections: [
       {
         id: "sec-4-1",
-        title: "Introduction to Well Logging",
+        title: "Panimula sa Well Logging",
         content: [
-          "A well log is a continuous record of the physical response of a formation to energy transmitted by a downhole measurement tool, plotted as a function of depth. Logs are acquired after drilling and before casing the borehole (open-hole logs) or after casing has been set (cased-hole logs).",
-          "Modern well logging provides the only practical way to characterize reservoir properties over the entire drilled interval. While core data gives the most direct measurements, it is limited to short intervals and is expensive. Logs fill the gaps, providing data at every depth.",
+          "Ang well log ay isang tuloy-tuloy na talaan ng pisikal na tugon ng isang formation sa enerhiyang ipinadala ng isang downhole measurement tool, na naka-plot bilang function ng lalim. Ang mga log ay kinukuha pagkatapos ng drilling at bago i-case ang borehole (open-hole logs) o pagkatapos malagay ang casing (cased-hole logs).",
+          "Ang modernong well logging ay nagbibigay ng tanging praktikal na paraan para ma-characterize ang mga katangian ng reservoir sa buong na-drill na interval. Habang ang core data ay nagbibigay ng pinaka-direktang sukat, limitado ito sa mga maikling interval at mahal. Pinupuno ng mga log ang mga puwang, na nagbibigay ng data sa bawat lalim.",
         ],
         subsections: [
           {
             id: "sec-4-1-a",
-            title: "Types of Logging Operations",
+            title: "Mga Uri ng Logging Operations",
             content: [],
             list: [
               {
                 term: "Open-Hole Logging (Wireline)",
                 description:
-                  "Tools are lowered into the uncased wellbore on an electrical cable (wireline) after drilling is complete. Provides the most comprehensive suite of measurements because the formation is in direct contact with the measuring device.",
+                  "Ang mga tool ay ibinababa sa uncased wellbore sa isang electrical cable (wireline) pagkatapos makumpleto ang drilling. Nagbibigay ng pinaka-komprehensibong suite ng mga sukat dahil ang formation ay direktang nakikipag-ugnayan sa measuring device.",
               },
               {
                 term: "Cased-Hole Logging",
                 description:
-                  "Measurements taken after steel casing has been cemented in place. Used for monitoring production, detecting fluid movement behind casing, and well integrity verification. Tools must measure through steel and cement, reducing accuracy.",
+                  "Mga sukat na kinukuha pagkatapos na mai-cement ang steel casing. Ginagamit para sa pagmamanman ng produksyon, pagtuklas ng galaw ng fluid sa likod ng casing, at pag-verify ng well integrity. Ang mga tool ay dapat sumukat sa pamamagitan ng bakal at simento, na nagbabawas ng katumpakan.",
               },
               {
                 term: "Logging While Drilling (LWD) / Measurement While Drilling (MWD)",
                 description:
-                  "Sensors built into the drill collar acquire real-time formation data during drilling. Eliminates borehole deterioration issues and provides immediate geological guidance for geosteering horizontal wells.",
+                  "Ang mga sensor na nakalagay sa drill collar ay nagkukuha ng real-time na data ng formation sa panahon ng drilling. Inaalis ang mga isyu ng pagkasira ng borehole at nagbibigay ng agarang geological guidance para sa geosteering ng mga horizontal well.",
               },
             ],
           },
@@ -951,92 +951,92 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
         videoAfter: {
           label: "Lecture Video",
           description:
-            "Introduction to Well Logging — Tool Types, Acquisition Methods, and the Wireline Process",
+            "Panimula sa Well Logging — Mga Uri ng Tool, Mga Paraan ng Pagkuha, at ang Wireline Process",
         },
       },
       {
         id: "sec-4-2",
-        title: "Gamma Ray Log — Lithology and Shale Volume",
+        title: "Gamma Ray Log — Lithology at Shale Volume",
         content: [
-          "The Gamma Ray (GR) log measures the natural radioactivity of formations in API units. Radioactivity comes primarily from three elements: potassium (K-40) in clay minerals, uranium (U), and thorium (Th). Because shales are clay-rich, they have high GR readings (typically 75–150 API). Clean sands, limestones, and dolomites have low GR readings (typically 10–30 API). This contrast makes the GR log the primary lithology indicator and the most universally used log in the petroleum industry.",
-          "Evaporites (anhydrite, salt, clean carbonates) have very low GR values because they contain almost no potassium, uranium, or thorium. Some clean sands with feldspathic or arkosic content may show elevated GR, which must be distinguished from shale using the spectral GR log.",
+          "Sinusukat ng Gamma Ray (GR) log ang natural radioactivity ng mga formation sa API units. Ang radioactivity ay pangunahing nagmumula sa tatlong elemento: potassium (K-40) sa mga mineral na clay, uranium (U), at thorium (Th). Dahil ang mga shale ay mayaman sa clay, mayroon silang mataas na GR reading (karaniwang 75–150 API). Ang mga malinis na buhangin, limestone, at dolomite ay may mababang GR reading (karaniwang 10–30 API). Ang contrast na ito ay ginagawang pangunahing tagapagpahiwatig ng lithology ang GR log at ang pinaka-malawakang ginagamit na log sa industriya ng petroleum.",
+          "Ang mga evaporite (anhydrite, asin, malinis na carbonate) ay may napakababang GR dahil halos walang potassium, uranium, o thorium ang nilalaman nila. Ang ilang malinis na buhangin na may feldspathic o arkosic na nilalaman ay maaaring magpakita ng elevated na GR, na dapat makilala mula sa shale gamit ang spectral GR log.",
         ],
         subsections: [
           {
             id: "sec-4-2-a",
-            title: "Shale Volume Calculation",
+            title: "Kalkulasyon ng Shale Volume",
             content: [
-              "The GR index (IGR) normalizes the raw GR reading between the clean sand baseline (GR_min) and the shale line (GR_max). From this, the shale volume (Vsh) is estimated using one of several empirical correlations. The linear relationship is the simplest: Vsh = IGR = (GR_log − GR_min) / (GR_max − GR_min). More sophisticated corrections apply non-linear transforms for older or compacted formations.",
-              "Vsh is then used to apply shale corrections to porosity and water saturation calculations, since clay-rich zones reduce resistivity (causing Sw overestimation) and increase apparent neutron porosity (causing φ overestimation).",
+              "Ang GR index (IGR) ay nino-normalize ang raw GR reading sa pagitan ng clean sand baseline (GR_min) at ng shale line (GR_max). Mula rito, ang shale volume (Vsh) ay tinatantya gamit ang isa sa ilang empirical correlation. Ang pinakasimpleng linear na relasyon: Vsh = IGR = (GR_log − GR_min) / (GR_max − GR_min). Ang mas sopistikadong mga pagwawasto ay naglalapat ng non-linear transform para sa mas lumang o compacted na formation.",
+              "Ang Vsh ay ginagamit pagkatapos para maglapat ng shale correction sa mga kalkulasyon ng porosity at water saturation, dahil ang mga clay-rich zone ay nagbabawas ng resistivity (na nagdudulot ng overestimation ng Sw) at nagpapalaki ng apparent neutron porosity (na nagdudulot ng overestimation ng φ).",
             ],
           },
         ],
       },
       {
         id: "sec-4-3",
-        title: "Resistivity Logs — Fluid Identification",
+        title: "Resistivity Logs — Pagkilala ng Fluid",
         content: [
-          "Resistivity logs measure how strongly a formation opposes the flow of electrical current. Salt water is an excellent conductor (low resistivity), while hydrocarbons and cemented rock are resistors (high resistivity). This contrast is the fundamental basis for distinguishing oil-bearing zones from water-bearing zones using logs.",
-          "The true formation resistivity (Rt) represents the undisturbed zone deep in the formation, beyond the reach of drilling fluid invasion. Modern deep resistivity tools (induction and laterolog) measure Rt by sending alternating electromagnetic fields into the formation. Shallow resistivity tools measure the flushed zone (Rxo) near the wellbore, where original fluids have been displaced by drilling fluid filtrate.",
+          "Sinusukat ng mga resistivity log kung gaano kalakas ang pagtutol ng isang formation sa daloy ng electrical current. Ang asin na tubig ay isang mahusay na conductor (mababang resistivity), habang ang mga hydrocarbon at cement na bato ay mga resistor (mataas na resistivity). Ang contrast na ito ang pundamental na batayan para sa pagkilala ng mga langis-bearing zone mula sa mga tubig-bearing zone gamit ang mga log.",
+          "Ang tunay na formation resistivity (Rt) ay kumakatawan sa undisturbed zone na malalim sa formation, lampas sa abot ng drilling fluid invasion. Ang mga modernong deep resistivity tool (induction at laterolog) ay sinusukat ang Rt sa pamamagitan ng pagpapadala ng alternating electromagnetic field sa formation. Ang mga shallow resistivity tool ay sinusukat ang flushed zone (Rxo) malapit sa wellbore, kung saan ang mga orihinal na fluid ay napalitan ng drilling fluid filtrate.",
         ],
         subsections: [
           {
             id: "sec-4-3-a",
-            title: "Invasion and the Resistivity Profile",
+            title: "Invasion at ang Resistivity Profile",
             content: [
-              "When drilling fluid pressure exceeds formation pressure, mud filtrate invades the formation, displacing original fluids from pore spaces near the wellbore. This creates three zones: the flushed zone (Rxo) immediately adjacent to the borehole where mud filtrate has replaced most original fluids; the invaded zone with intermediate resistivity; and the uninvaded (virgin) zone with true resistivity Rt. Understanding this profile is essential for correctly estimating Sw from logs.",
+              "Kapag ang pressure ng drilling fluid ay lumampas sa formation pressure, ang mud filtrate ay pumapasok sa formation, na pinapalitan ang mga orihinal na fluid mula sa mga pore space malapit sa wellbore. Lumilikha ito ng tatlong zone: ang flushed zone (Rxo) kaagad katabi ng borehole kung saan ang mud filtrate ay napalitan na ang karamihan ng orihinal na fluid; ang invaded zone na may intermediate resistivity; at ang uninvaded (virgin) zone na may tunay na resistivity Rt. Ang pag-unawa sa profile na ito ay mahalaga para tamang matantya ang Sw mula sa mga log.",
             ],
           },
           {
             id: "sec-4-3-b",
-            title: "Rw Determination",
+            title: "Pagtukoy ng Rw",
             content: [
-              "The formation water resistivity (Rw) is required for Archie's equation and must be determined independently. Sources include: direct measurement of produced water, SP log analysis, Pickett plot crossplot method, or catalog values for the area. Rw varies with formation water salinity and temperature, and errors in Rw propagate directly into errors in calculated Sw.",
+              "Ang formation water resistivity (Rw) ay kinakailangan para sa Archie's equation at dapat matukoy nang hiwalay. Ang mga pinagkukunan ay kinabibilangan ng: direktang sukat ng produced water, SP log analysis, Pickett plot crossplot method, o mga catalog value para sa lugar. Nagbabago ang Rw kasabay ng salinity ng formation water at temperatura, at ang mga error sa Rw ay direktang nagpapalakas ng mga error sa kinakalkula na Sw.",
             ],
           },
         ],
         videoAfter: {
-          label: "Supplementary Video",
+          label: "Karagdagang Video",
           description:
-            "Reading Resistivity Logs — Identifying Hydrocarbon Zones vs. Water Zones and Understanding Invasion Profiles",
+            "Pagbabasa ng Resistivity Logs — Pagkilala ng mga Hydrocarbon Zone vs. Water Zone at Pag-unawa sa mga Invasion Profile",
         },
       },
       {
         id: "sec-4-4",
-        title: "Porosity Logs — Neutron, Density, and Sonic",
+        title: "Porosity Logs — Neutron, Density, at Sonic",
         content: [
-          "Three independent tools provide porosity estimates from different physical measurements. Used together, they cross-check each other, identify lithology, and detect gas. No single porosity log is definitive — the combination of at least two is the standard of practice.",
+          "Tatlong independyenteng tool ang nagbibigay ng mga tantya ng porosity mula sa iba't ibang pisikal na sukat. Kapag ginamit nang magkasama, nag-cross-check sila sa isa't isa, natutukoy ang lithology, at natukoy ang gas. Walang iisang porosity log ang mapagpasyahan — ang kombinasyon ng kahit dalawa ay pamantayan ng praktis.",
         ],
         subsections: [
           {
             id: "sec-4-4-a",
             title: "Neutron Porosity Log (ΦN)",
             content: [
-              "The neutron tool bombards the formation with high-energy neutrons. These neutrons slow down primarily by colliding with hydrogen atoms (since hydrogen and neutron have nearly the same mass). The measured hydrogen index is converted to porosity, because hydrogen in the pore space comes from water, oil, or gas.",
-              "The key effects to understand: shales have high apparent neutron porosity because clay minerals contain bound water hydrogen. Gas causes a characteristic 'gas effect' — gas has lower hydrogen content per unit volume than liquid, so neutron porosity reads low in gas zones. This creates the diagnostic neutron-density crossover when overlaid with the density log.",
+              "Binobomba ng neutron tool ang formation ng high-energy neutron. Ang mga neutron na ito ay nagpapabagal pangunahin sa pamamagitan ng pakikipagbanggaan sa mga hydrogen atom (dahil ang hydrogen at neutron ay halos magkaparehong masa). Ang sinukat na hydrogen index ay kino-convert sa porosity, dahil ang hydrogen sa pore space ay nagmumula sa tubig, langis, o gas.",
+              "Ang mga pangunahing epekto na dapat maunawaan: ang mga shale ay may mataas na apparent neutron porosity dahil ang mga mineral na clay ay naglalaman ng bound water hydrogen. Ang gas ay nagdudulot ng katangian na 'gas effect' — ang gas ay may mas mababang nilalaman ng hydrogen bawat unit ng volume kaysa sa likido, kaya mababa ang pagbabasa ng neutron porosity sa mga gas zone. Lumilikha ito ng diagnostic neutron-density crossover kapag naka-overlay sa density log.",
             ],
           },
           {
             id: "sec-4-4-b",
-            title: "Density Log (ΦD) and Bulk Density",
+            title: "Density Log (ΦD) at Bulk Density",
             content: [
-              "The density tool measures formation bulk density (ρb) by bombarding the formation with gamma rays and measuring the scattered gamma ray intensity. Bulk density is a direct function of matrix density, fluid density, and porosity. Porosity is calculated from: ΦD = (ρma − ρb) / (ρma − ρfl), where ρma is the grain/matrix density and ρfl is the fluid density.",
-              "Matrix density values: sandstone 2.65 g/cm³, limestone 2.71 g/cm³, dolomite 2.87 g/cm³. Gas causes a significant density decrease (low ρb) because gas density is much lower than liquid density. Combined neutron-density analysis is the most powerful lithology and porosity tool available.",
+              "Sinusukat ng density tool ang formation bulk density (ρb) sa pamamagitan ng pagbomba ng formation ng gamma ray at pagsukat ng scattered gamma ray intensity. Ang bulk density ay direktang function ng matrix density, fluid density, at porosity. Kinakalkula ang porosity mula sa: ΦD = (ρma − ρb) / (ρma − ρfl), kung saan ang ρma ay ang grain/matrix density at ang ρfl ay ang fluid density.",
+              "Mga halaga ng matrix density: sandstone 2.65 g/cm³, limestone 2.71 g/cm³, dolomite 2.87 g/cm³. Ang gas ay nagdudulot ng malaking pagbaba ng density (mababang ρb) dahil ang density ng gas ay mas mababa kaysa sa density ng likido. Ang pinagsama na neutron-density analysis ay ang pinaka-makapangyarihang lithology at porosity tool na available.",
             ],
           },
           {
             id: "sec-4-4-c",
-            title: "Sonic Log (ΦS) and Interval Transit Time",
+            title: "Sonic Log (ΦS) at Interval Transit Time",
             content: [
-              "The sonic tool measures the interval transit time (Δt, in μs/ft) — the time for a compressional acoustic wave to travel one foot through the formation. Tight, fast formations (low porosity, hard rock) have low Δt values (~50 μs/ft for limestone). Porous formations have high Δt values (~100+ μs/ft).",
-              "Wyllie's time-average equation: 1/Δt = φ/Δtfl + (1−φ)/Δtma, allows porosity to be estimated from the transit time. The sonic log is particularly valuable for fracture identification, lithology determination, and as the primary seismic-to-well tie calibration tool.",
+              "Sinusukat ng sonic tool ang interval transit time (Δt, sa μs/ft) — ang oras para maglakbay ang compressional acoustic wave ng isang talampakan sa pamamagitan ng formation. Ang mga tight, mabilis na formation (mababang porosity, matigas na bato) ay may mababang Δt values (~50 μs/ft para sa limestone). Ang mga porous na formation ay may mataas na Δt values (~100+ μs/ft).",
+              "Ang time-average equation ni Wyllie: 1/Δt = φ/Δtfl + (1−φ)/Δtma, ay nagpapahintulot na matantya ang porosity mula sa transit time. Ang sonic log ay partikular na mahalaga para sa pagtukoy ng fracture, pagtukoy ng lithology, at bilang pangunahing seismic-to-well tie calibration tool.",
             ],
           },
           {
             id: "sec-4-4-d",
-            title: "Neutron-Density Crossover (Gas Detection)",
+            title: "Neutron-Density Crossover (Pagtukoy ng Gas)",
             content: [
-              "In a liquid-saturated formation, neutron and density porosities agree closely. In a gas zone, two opposing effects occur simultaneously: the neutron reads low (gas has low hydrogen index) and the density reads high porosity (gas has low density). When neutron porosity tracks lower than density porosity on the log display, this neutron-density crossover is a powerful indicator of gas. This crossover effect is the most reliable qualitative gas indicator from logs.",
+              "Sa isang liquid-saturated na formation, ang neutron at density porosity ay magkakaayon. Sa isang gas zone, dalawang magkasalungat na epekto ang sabay na nagaganap: mababa ang pagbabasa ng neutron (ang gas ay may mababang hydrogen index) at mataas ang pagbabasa ng density porosity (mababang density ang gas). Kapag ang neutron porosity ay mas mababa kaysa sa density porosity sa log display, ang neutron-density crossover na ito ay isang makapangyarihang tagapagpahiwatig ng gas. Ang crossover effect na ito ang pinaka-maaasahang qualitative gas indicator mula sa mga log.",
             ],
           },
         ],
@@ -1045,87 +1045,87 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
         id: "sec-4-5",
         title: "Water Saturation — Archie's Equations",
         content: [
-          "Archie's equations (1942) are the cornerstone of quantitative well log interpretation. They relate the electrical resistivity of a water-saturated rock to its porosity and water resistivity (first law), and extend this to water saturation in a partially hydrocarbon-saturated rock (second law).",
-          "Archie's work recognized that a clean (shale-free) formation's resistivity is controlled by the conducting water in the pore space, which provides the current pathway. The more pore space there is, and the more of it is filled with conductive water, the lower the resistivity.",
+          "Ang Archie's equations (1942) ay ang pundasyon ng quantitative well log interpretation. Inuugnay nila ang electrical resistivity ng isang water-saturated na bato sa porosity at water resistivity nito (unang batas), at pinalawak nila ito sa water saturation sa isang partially hydrocarbon-saturated na bato (ikalawang batas).",
+          "Nakilala ng trabaho ni Archie na ang resistivity ng isang malinis (walang shale) na formation ay kontrolado ng nagko-conduct na tubig sa pore space, na nagbibigay ng pathway ng current. Habang mas maraming pore space, at habang mas marami ito na puno ng conductive na tubig, mas mababa ang resistivity.",
         ],
         subsections: [
           {
             id: "sec-4-5-a",
-            title: "Archie's First Law — Formation Factor",
+            title: "Unang Batas ni Archie — Formation Factor",
             content: [
-              "Formation Factor (F) = Ro / Rw = a / φ^m. Ro is the resistivity of the formation when 100% water-saturated; Rw is the resistivity of the formation water; a is the tortuosity factor (commonly 1.0 for sandstones); φ is porosity; m is the cementation exponent (typically 1.7–2.0 for sandstones, 2.0–2.5 for carbonates).",
-              "The formation factor reflects the geometry of the pore network — how tortuous and constricted the pathways are. A high formation factor means the pore network is complex and tortuous, restricting current flow more than the water alone would.",
+              "Formation Factor (F) = Ro / Rw = a / φ^m. Ang Ro ay ang resistivity ng formation kapag 100% water-saturated; ang Rw ay ang resistivity ng formation water; ang a ay ang tortuosity factor (karaniwang 1.0 para sa sandstone); ang φ ay ang porosity; ang m ay ang cementation exponent (karaniwang 1.7–2.0 para sa sandstone, 2.0–2.5 para sa carbonate).",
+              "Ang formation factor ay repleksyon ng geometry ng pore network — kung gaano kakulusot at makitid ang mga daan. Ang mataas na formation factor ay nangangahulugang ang pore network ay kumplikado at kulot, na mas naghihigpit sa daloy ng current kaysa sa tubig lamang.",
             ],
           },
           {
             id: "sec-4-5-b",
-            title: "Archie's Second Law — Water Saturation",
+            title: "Ikalawang Batas ni Archie — Water Saturation",
             content: [
-              "Sw^n = (F × Rw) / Rt = (a × Rw) / (φ^m × Rt), where Rt is the true formation resistivity and n is the saturation exponent (typically 2.0). This equation is solved for Sw: Sw = [(a × Rw) / (φ^m × Rt)]^(1/n).",
-              "Archie's equation is strictly valid only for clean (shale-free) formations. Shale introduces additional conduction pathways that lower resistivity and cause Archie's equation to overestimate Sw (underestimate hydrocarbon content). Corrected equations — the Waxman-Smits model and the Dual Water model — account for this shaly sand problem.",
+              "Sw^n = (F × Rw) / Rt = (a × Rw) / (φ^m × Rt), kung saan ang Rt ay ang tunay na formation resistivity at n ay ang saturation exponent (karaniwang 2.0). Niresolba ang equation na ito para sa Sw: Sw = [(a × Rw) / (φ^m × Rt)]^(1/n).",
+              "Ang Archie's equation ay mahigpit na valid lamang para sa mga malinis (walang shale) na formation. Ang shale ay nagpapakilala ng karagdagang conduction pathway na nagpapababa ng resistivity at nagdudulot ng overestimation ng Sw ng Archie's equation (underestimation ng nilalaman ng hydrocarbon). Ang mga corrected equation — ang Waxman-Smits model at ang Dual Water model — ay nag-aaccount sa shaly sand problem na ito.",
             ],
           },
           {
             id: "sec-4-5-c",
-            title: "The Shaly Sand Problem",
+            title: "Ang Shaly Sand Problem",
             content: [
-              "In shaly sands, clay minerals provide additional electrical conductivity — clay surfaces are coated with exchangeable cations that allow current to flow even in the absence of free water. This additional conduction path lowers the measured Rt below what it would be if only the pore water were conducting. If Archie's clean-sand equation is applied without correction, Sw will be significantly overestimated, and a productive pay zone may be incorrectly classified as a water zone.",
+              "Sa mga shaly sand, ang mga mineral na clay ay nagbibigay ng karagdagang electrical conductivity — ang mga surface ng clay ay nakabalot ng mga exchangeable cation na nagpapahintulot sa daloy ng current kahit sa kawalan ng free water. Ang karagdagang conduction path na ito ay nagpapababa ng sinukat na Rt sa ibaba ng magiging nito kung ang pore water lamang ang nag-co-conduct. Kung ang clean-sand equation ni Archie ay inilalapat nang walang pagwawasto, ang Sw ay malaki ang overestimation, at ang isang productive pay zone ay maaaring maling makilala bilang water zone.",
             ],
           },
         ],
       },
       {
         id: "sec-4-6",
-        title: "Advanced Log Tools — NMR and Log Facies",
+        title: "Mga Advanced Log Tool — NMR at Log Facies",
         content: [
-          "Modern logging has evolved far beyond the basic suite. Nuclear Magnetic Resonance (NMR) logging and advanced data analysis techniques provide capabilities impossible with conventional tools.",
+          "Ang modernong logging ay malayo na ang narating mula sa basic suite. Ang Nuclear Magnetic Resonance (NMR) logging at mga advanced na paraan ng data analysis ay nagbibigay ng mga kakayahan na imposible sa mga conventional tool.",
         ],
         subsections: [
           {
             id: "sec-4-6-a",
             title: "NMR Logging",
             content: [
-              "The NMR log measures the relaxation time of hydrogen nuclei in the pore fluid after excitation by a magnetic pulse. It directly measures the pore size distribution, providing estimates of total porosity, free fluid index (FFI — the producible fluid fraction), and bound volume irreducible (BVI — the irreducible water fraction). NMR also provides a permeability estimate independent of resistivity — a unique capability among logging tools.",
-              "NMR is particularly powerful in complex lithologies (carbonates, tuffaceous sands) where conventional porosity logs are unreliable, and in formations where determining whether water is producible or bound requires distinguishing FFI from BVI.",
+              "Sinusukat ng NMR log ang relaxation time ng mga hydrogen nuclei sa pore fluid pagkatapos ng excitation ng magnetic pulse. Direkta nitong sinusukat ang pore size distribution, na nagbibigay ng mga tantya ng total porosity, free fluid index (FFI — ang producible fluid fraction), at bound volume irreducible (BVI — ang irreducible water fraction). Ang NMR ay nagbibigay din ng tantya ng permeability na independyente sa resistivity — isang natatanging kakayahan sa mga logging tool.",
+              "Ang NMR ay partikular na makapangyarihan sa mga kumplikadong lithology (carbonate, tuffaceous sand) kung saan ang mga conventional porosity log ay hindi mapagkakatiwalaan, at sa mga formation kung saan ang pagtukoy kung ang tubig ay producible o bound ay nangangailangan ng pagkilala sa FFI mula sa BVI.",
             ],
           },
           {
             id: "sec-4-6-b",
-            title: "Log Facies and Electrofacies",
+            title: "Log Facies at Electrofacies",
             content: [
-              "Log facies are characteristic patterns on log curves that reflect depositional environment. For example, a funnel-shaped (coarsening-upward) GR pattern suggests a prograding delta or shoreface sequence; a bell-shaped (fining-upward) pattern suggests a fluvial channel fill. Recognizing these patterns allows correlation of depositional environments between wells.",
-              "Electrofacies classifies zones by grouping similar log responses using multivariate statistical methods (cluster analysis, neural networks). This allows automated partitioning of the logged interval into rock types without manual depth-by-depth interpretation.",
+              "Ang mga log facies ay katangian na pattern sa mga log curve na repleksyon ng depositional environment. Halimbawa, ang funnel-shaped (coarsening-upward) na pattern ng GR ay nagmumungkahi ng prograding delta o shoreface sequence; ang bell-shaped (fining-upward) na pattern ay nagmumungkahi ng fluvial channel fill. Ang pagkilala sa mga pattern na ito ay nagpapahintulot ng correlation ng mga depositional environment sa pagitan ng mga balon.",
+              "Ang electrofacies ay nagklasipika ng mga zone sa pamamagitan ng pagpapangkat ng katulad na log response gamit ang multivariate statistical methods (cluster analysis, neural network). Nagpapahintulot ito ng automated na paghati ng na-log na interval sa mga uri ng bato nang walang manu-manong interpretasyon sa bawat lalim.",
             ],
           },
         ],
       },
       {
         id: "sec-4-7",
-        title: "Net Pay Determination and Cutoff Values",
+        title: "Pagtukoy ng Net Pay at Mga Cutoff Value",
         content: [
-          "Net pay is the thickness of reservoir rock that can produce hydrocarbons at economically viable rates. It is distinguished from gross pay (the entire hydrocarbon-bearing interval) by applying cutoff criteria to petrophysical parameters derived from logs.",
-          "Not every zone that contains hydrocarbons qualifies as net pay. Zones with very low porosity may contain hydrocarbons but cannot produce them at useful rates. Zones with high water saturation will produce predominantly water. Shaly zones may appear as tight intervals in the production log even if they have some porosity.",
+          "Ang net pay ay ang kapal ng reservoir rock na maaaring mag-produce ng hydrocarbon sa ekonomikong viable na rate. Nakilala ito mula sa gross pay (ang buong hydrocarbon-bearing interval) sa pamamagitan ng paglalapat ng cutoff criteria sa mga petrophysical parameter na nagmumula sa mga log.",
+          "Hindi bawat zone na naglalaman ng hydrocarbon ay kwalipikado bilang net pay. Ang mga zone na may napakababang porosity ay maaaring naglalaman ng hydrocarbon ngunit hindi ito magagawa sa mga kapaki-pakinabang na rate. Ang mga zone na may mataas na water saturation ay pangunahing mag-po-produce ng tubig. Ang mga shaly zone ay maaaring lumitaw bilang mga tight interval sa production log kahit may ilang porosity.",
         ],
         subsections: [
           {
             id: "sec-4-7-a",
-            title: "Standard Cutoff Criteria",
+            title: "Karaniwang Cutoff Criteria",
             content: [],
             list: [
               {
                 term: "Porosity Cutoff (φ > φ_cut)",
                 description:
-                  "Zones with porosity below the cutoff (typically 6–8% for tight sands, 10–12% for conventional sands) are classified as non-reservoir. The cutoff is calibrated against core-measured porosity and production tests.",
+                  "Ang mga zone na may porosity na mas mababa sa cutoff (karaniwang 6–8% para sa tight sand, 10–12% para sa conventional sand) ay nakilala bilang non-reservoir. Nica-calibrate ang cutoff laban sa core-measured porosity at production test.",
               },
               {
                 term: "Water Saturation Cutoff (Sw < Sw_cut)",
                 description:
-                  "Zones with water saturation above the cutoff (typically 50–60%) are excluded from net pay. Zones with Sw above the cutoff will produce water at an uneconomic water-oil ratio.",
+                  "Ang mga zone na may water saturation na mas mataas sa cutoff (karaniwang 50–60%) ay hindi kasama sa net pay. Ang mga zone na may Sw na mas mataas sa cutoff ay mag-po-produce ng tubig sa hindi ekonomikong water-oil ratio.",
               },
               {
                 term: "Shale Volume Cutoff (Vsh < Vsh_cut)",
                 description:
-                  "Zones with Vsh above the cutoff (typically 30–50%) are classified as non-reservoir shale. Shale volumes above the cutoff reduce permeability to uneconomic levels.",
+                  "Ang mga zone na may Vsh na mas mataas sa cutoff (karaniwang 30–50%) ay nakilala bilang non-reservoir shale. Ang mga shale volume na mas mataas sa cutoff ay nagbabawas ng permeability sa hindi ekonomikong antas.",
               },
             ],
           },
@@ -1133,7 +1133,7 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
             id: "sec-4-7-b",
             title: "Bulk Volume Water (BVW)",
             content: [
-              "Bulk Volume Water (BVW = φ × Sw) is a useful diagnostic tool for identifying zones at or near irreducible water saturation. In reservoirs at Swirr, BVW is approximately constant with depth — the BVW is controlled by the rock's capillary properties, not by the height above the free water level. Zones where BVW equals a constant value (the irreducible BVW for that rock type) can be expected to produce water-free. Zones where BVW is above the irreducible value will co-produce water.",
+              "Ang Bulk Volume Water (BVW = φ × Sw) ay isang kapaki-pakinabang na diagnostic tool para matukoy ang mga zone na nasa o malapit sa irreducible water saturation. Sa mga reservoir na nasa Swirr, ang BVW ay halos constant kasabay ng lalim — ang BVW ay kontrolado ng capillary properties ng bato, hindi ng taas sa itaas ng free water level. Ang mga zone kung saan ang BVW ay katumbas ng isang constant na halaga (ang irreducible BVW para sa uri ng bato na iyon) ay inaasahang mag-po-produce nang walang tubig. Ang mga zone kung saan ang BVW ay mas mataas sa irreducible na halaga ay mag-po-produce ng tubig nang sabay.",
             ],
           },
         ],
@@ -1143,27 +1143,27 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
       {
         name: "GR Index (Shale Indicator)",
         eq: "I_GR = (GR_log − GR_min) / (GR_max − GR_min)",
-        desc: "Normalizes the GR reading between clean sand (GR_min) and shale (GR_max). I_GR ranges from 0 (clean) to 1 (pure shale).",
+        desc: "Nino-normalize ang GR reading sa pagitan ng clean sand (GR_min) at shale (GR_max). Ang I_GR ay mula 0 (malinis) hanggang 1 (purong shale).",
       },
       {
         name: "Density Porosity",
         eq: "ΦD = (ρ_ma − ρ_b) / (ρ_ma − ρ_fl)",
-        desc: "ρ_ma = matrix density (sandstone: 2.65 g/cm³, limestone: 2.71 g/cm³), ρ_b = measured bulk density, ρ_fl = fluid density (1.0 for water, ~0.85 for oil, ~0.1 for gas).",
+        desc: "ρ_ma = matrix density (sandstone: 2.65 g/cm³, limestone: 2.71 g/cm³), ρ_b = sinukat na bulk density, ρ_fl = fluid density (1.0 para sa tubig, ~0.85 para sa langis, ~0.1 para sa gas).",
       },
       {
         name: "Archie's Formation Factor",
         eq: "F = Ro / Rw = a / φ^m",
-        desc: "a = tortuosity factor (~1.0), φ = porosity, m = cementation exponent (1.7–2.5). F reflects pore geometry and tortuosity.",
+        desc: "a = tortuosity factor (~1.0), φ = porosity, m = cementation exponent (1.7–2.5). Ang F ay repleksyon ng pore geometry at tortuosity.",
       },
       {
         name: "Archie's Water Saturation",
         eq: "Sw = [(a × Rw) / (φ^m × Rt)]^(1/n)",
-        desc: "Rw = formation water resistivity, Rt = true formation resistivity, n = saturation exponent (~2.0). The cornerstone of quantitative log interpretation.",
+        desc: "Rw = formation water resistivity, Rt = tunay na formation resistivity, n = saturation exponent (~2.0). Ang pundasyon ng quantitative log interpretation.",
       },
       {
         name: "Bulk Volume Water",
         eq: "BVW = φ × Sw",
-        desc: "At irreducible water saturation, BVW is constant with depth for a given rock type. Variable BVW indicates transition zone conditions.",
+        desc: "Sa irreducible water saturation, ang BVW ay constant kasabay ng lalim para sa isang tiyak na uri ng bato. Ang variable BVW ay nagpapahiwatig ng mga kondisyon ng transition zone.",
       },
     ],
     terms: [
@@ -1183,55 +1183,55 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
   },
 
   5: {
-    title: "Hydrocarbon PVT Properties and Phase Behavior",
+    title: "Mga PVT Properties at Phase Behavior ng Hydrocarbon",
     overview:
-      "Pressure-Volume-Temperature (PVT) analysis characterizes how reservoir fluids behave as pressure and temperature change during production. This chapter covers the phase diagram, fluid classification, and the key PVT properties used in all reservoir engineering calculations.",
+      "Ang PVT (Pressure-Volume-Temperature) analysis ay nag-characterize kung paano kumilos ang mga reservoir fluid habang nagbabago ang pressure at temperatura sa panahon ng produksyon. Sinasaklaw ng kabanatang ito ang phase diagram, klasipikasyon ng fluid, at mga pangunahing PVT property na ginagamit sa lahat ng reservoir engineering calculation.",
     sections: [
       {
         id: "sec-5-1",
-        title: "The PVT Concept and Fluid Classification Basis",
+        title: "Ang PVT Concept at Batayan ng Klasipikasyon ng Fluid",
         content: [
-          "PVT stands for Pressure, Volume, Temperature — the three thermodynamic state variables that determine the phase and physical properties of reservoir fluids. PVT analysis is the process of measuring and describing how a reservoir fluid's volume, density, viscosity, and phase state change as pressure and temperature vary from reservoir to surface conditions.",
-          "The behavior of reservoir fluids depends fundamentally on their composition — the relative amounts of light hydrocarbons (methane C1, ethane C2, propane C3, butane C4) versus intermediate and heavy hydrocarbons (C5 through C17+). Fluids rich in light components tend toward gas behavior; fluids rich in heavy components tend toward liquid behavior.",
+          "Ang PVT ay kumakatawan sa Pressure, Volume, Temperature — ang tatlong thermodynamic state variable na nagtatakda ng phase at pisikal na katangian ng mga reservoir fluid. Ang PVT analysis ay ang proseso ng pagsukat at paglalarawan kung paano nagbabago ang volume, density, viscosity, at phase state ng reservoir fluid habang nagbabago ang pressure at temperatura mula sa reservoir patungong surface conditions.",
+          "Ang gawi ng mga reservoir fluid ay pundamental na nakasalalay sa kanilang komposisyon — ang kamag-anak na halaga ng mga magaang na hydrocarbon (methane C1, ethane C2, propane C3, butane C4) kumpara sa mga intermediate at mabibigat na hydrocarbon (C5 hanggang C17+). Ang mga fluid na mayaman sa magaang na sangkap ay may tendensiyang kumilos na parang gas; ang mga mayaman sa mabibigat na sangkap ay may tendensiyang kumilos na parang likido.",
         ],
         subsections: [
           {
             id: "sec-5-1-a",
-            title: "The Pressure-Temperature Phase Diagram",
+            title: "Ang Pressure-Temperature Phase Diagram",
             content: [
-              "The phase diagram (PT diagram) is the master tool for classifying reservoir fluids and predicting their behavior. For a multicomponent hydrocarbon mixture, the phase envelope is a curved two-dimensional region bounded by the bubble point curve on the left and the dew point curve on the right, joining at the critical point at the top.",
-              "Inside the phase envelope, two phases (liquid and gas) coexist. Outside the envelope, the fluid is single-phase — either all liquid (at high pressure) or all gas (at low pressure/high temperature). The position of a reservoir's initial conditions on this diagram determines its fluid type and production behavior.",
+              "Ang phase diagram (PT diagram) ay ang master tool para sa pag-uuri ng mga reservoir fluid at paghula ng kanilang gawi. Para sa isang multicomponent hydrocarbon mixture, ang phase envelope ay isang curved na dalawang-dimensyonal na rehiyon na hangganan ng bubble point curve sa kaliwa at dew point curve sa kanan, na nagtatagpo sa critical point sa tuktok.",
+              "Sa loob ng phase envelope, dalawang phase (likido at gas) ang sabay na umiiral. Sa labas ng envelope, ang fluid ay single-phase — alinman ay puro likido (sa mataas na pressure) o puro gas (sa mababang pressure/mataas na temperatura). Ang posisyon ng paunang kondisyon ng reservoir sa diagram na ito ang nagtatakda ng uri ng fluid at gawi ng produksyon nito.",
             ],
           },
           {
             id: "sec-5-1-b",
-            title: "Critical Parameters of the Phase Diagram",
+            title: "Mga Kritikal na Parameter ng Phase Diagram",
             content: [],
             list: [
               {
                 term: "Critical Point (Tc, Pc)",
                 description:
-                  "The unique temperature and pressure at which the distinction between liquid and gas vanishes. Above the critical temperature, no amount of pressure can condense the fluid to a liquid.",
+                  "Ang natatanging temperatura at pressure kung saan nawawala ang pagkakaiba sa pagitan ng likido at gas. Sa itaas ng critical temperature, walang anumang halaga ng pressure ang maaaring mag-condense ng fluid sa likido.",
               },
               {
                 term: "Cricondentherm",
                 description:
-                  "The maximum temperature at which two phases can coexist. To the right of the cricondentherm, the fluid will never form two phases regardless of pressure. This defines the upper temperature boundary for gas condensate behavior.",
+                  "Ang maximum na temperatura kung saan maaaring sabay na umiiral ang dalawang phase. Sa kanan ng cricondentherm, ang fluid ay hindi kailanman bubuo ng dalawang phase anuman ang pressure. Tinutukoy nito ang itaas na temperatura na hangganan ng gas condensate behavior.",
               },
               {
                 term: "Cricondenbar",
                 description:
-                  "The maximum pressure at which two phases can coexist. Above the cricondenbar, the fluid is always single-phase liquid.",
+                  "Ang maximum na pressure kung saan maaaring sabay na umiiral ang dalawang phase. Sa itaas ng cricondenbar, ang fluid ay palaging single-phase liquid.",
               },
               {
                 term: "Undersaturated Fluid",
                 description:
-                  "A fluid whose pressure is above the bubble point (for oil) or dew point (for gas condensate), existing as a single phase. The reservoir contains no free second phase.",
+                  "Isang fluid na ang pressure ay nasa itaas ng bubble point (para sa langis) o dew point (para sa gas condensate), na umiiral bilang isang phase. Ang reservoir ay walang free second phase.",
               },
               {
                 term: "Saturated Fluid",
                 description:
-                  "A fluid at or below its bubble/dew point, within the two-phase envelope. Both liquid and gas are present simultaneously in the reservoir.",
+                  "Isang fluid na nasa o sa ibaba ng bubble/dew point nito, sa loob ng two-phase envelope. Parehong likido at gas ang sabay na naroroon sa reservoir.",
               },
             ],
           },
@@ -1239,70 +1239,70 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
         videoAfter: {
           label: "Lecture Video",
           description:
-            "PVT Properties and Phase Behavior — Introduction to Pressure-Temperature Phase Diagrams for Reservoir Fluid Systems",
+            "Mga PVT Properties at Phase Behavior — Panimula sa Pressure-Temperature Phase Diagram para sa mga Reservoir Fluid System",
         },
       },
       {
         id: "sec-5-2",
-        title: "The Phase Envelope and Reservoir Depletion Paths",
+        title: "Ang Phase Envelope at Mga Reservoir Depletion Path",
         content: [
-          "The depletion path of a reservoir — the trajectory of pressure and temperature on the PT diagram as the reservoir is produced — determines what the fluid does during production. Most reservoirs deplete at approximately constant temperature (isothermal depletion) as pressure declines.",
+          "Ang depletion path ng isang reservoir — ang trajectory ng pressure at temperatura sa PT diagram habang ginagamit ang reservoir — ang nagtatakda kung ano ang gagawin ng fluid sa panahon ng produksyon. Karamihan sa mga reservoir ay nag-de-deplete sa halos constant na temperatura (isothermal depletion) habang bumababa ang pressure.",
         ],
         subsections: [
           {
             id: "sec-5-2-a",
-            title: "Depletion in Oil Reservoirs",
+            title: "Depletion sa mga Oil Reservoir",
             content: [
-              "An oil reservoir starts above its bubble point as an undersaturated single-phase liquid. As production proceeds, reservoir pressure declines. When pressure reaches the bubble point, the first bubble of gas is liberated. Below bubble point, both free gas and oil coexist — the oil zone becomes saturated.",
-              "Gas saturation builds up as more gas is liberated. When gas saturation exceeds the critical gas saturation, free gas begins to flow toward the well, causing the producing GOR to increase. Effective reservoir management aims to keep reservoir pressure above bubble point for as long as possible to maximize liquid recovery.",
+              "Nagsisimula ang isang oil reservoir sa itaas ng bubble point nito bilang isang undersaturated single-phase liquid. Habang nagpapatuloy ang produksyon, bumababa ang reservoir pressure. Kapag ang pressure ay umabot sa bubble point, napalaya ang unang bula ng gas. Sa ibaba ng bubble point, parehong free gas at langis ang sabay na umiiral — ang oil zone ay nagiging saturated.",
+              "Nagtatayo ang gas saturation habang mas maraming gas ang napalaya. Kapag ang gas saturation ay lumampas sa critical gas saturation, ang free gas ay nagsisimulang dumaan patungo sa balon, na nagdudulot ng pagtaas ng producing GOR. Ang epektibong pamamahala ng reservoir ay naglalayong panatilihin ang reservoir pressure sa itaas ng bubble point nang matagal hangga't maaari para ma-maximize ang liquid recovery.",
             ],
           },
           {
             id: "sec-5-2-b",
-            title: "Depletion in Gas Condensate Reservoirs",
+            title: "Depletion sa mga Gas Condensate Reservoir",
             content: [
-              "Gas condensate reservoirs start above the dew point as single-phase gas. As pressure declines and crosses the dew point, liquid condenses — but unlike normal condensation, this liquid forms in the reservoir pore space, where capillary forces trap it. This retrograde condensate buildup reduces gas permeability and the condensate itself may not be recoverable by primary depletion.",
-              "The engineering response is pressure maintenance by gas recycling: produced gas (after condensate extraction) is reinjected into the reservoir to maintain pressure above the dew point and prevent retrograde condensation.",
+              "Ang mga gas condensate reservoir ay nagsisimula sa itaas ng dew point bilang single-phase gas. Habang bumababa ang pressure at tumatawid sa dew point, nag-co-condense ang likido — ngunit hindi tulad ng normal na condensation, nabubuo ang likidong ito sa pore space ng reservoir, kung saan ito ay ikinukulong ng capillary forces. Ang retrograde condensate buildup na ito ay nagbabawas ng gas permeability at ang condensate mismo ay maaaring hindi na mababawi ng primary depletion.",
+              "Ang engineering na tugon ay pressure maintenance sa pamamagitan ng gas recycling: ang produced gas (pagkatapos ng condensate extraction) ay i-inject muli sa reservoir para mapanatili ang pressure sa itaas ng dew point at mapigilan ang retrograde condensation.",
             ],
           },
         ],
         videoAfter: {
-          label: "Phase Behavior Demonstration",
+          label: "Demonstrasyon ng Phase Behavior",
           description:
-            "Visualizing the Phase Envelope — Pressure-Temperature Diagrams for Black Oil, Volatile Oil, Gas Condensate, and Dry Gas Systems",
+            "Visualization ng Phase Envelope — Pressure-Temperature Diagram para sa Black Oil, Volatile Oil, Gas Condensate, at Dry Gas System",
         },
       },
       {
         id: "sec-5-3",
-        title: "Black Oil — The Most Common Reservoir Fluid",
+        title: "Black Oil — Ang Pinakakaraniwang Reservoir Fluid",
         content: [
-          "Black oil is the most common and most extensively studied reservoir fluid type. It consists predominantly of heavy hydrocarbon molecules (C5+) with relatively small amounts of lighter dissolved gas. Despite the name, black oils range in color from black to dark brown to green depending on composition.",
+          "Ang black oil ay ang pinakakaraniwang at pinaka-malawak na pinag-aralan na uri ng reservoir fluid. Binubuo ito pangunahin ng mabibigat na hydrocarbon molecule (C5+) na may relatibong maliit na halaga ng mas magaang na dissolved gas. Sa kabila ng pangalan, ang mga black oil ay may kulay mula itim hanggang dark brown hanggang berde depende sa komposisyon.",
         ],
         subsections: [
           {
             id: "sec-5-3-a",
-            title: "Characteristics of Black Oil",
+            title: "Mga Katangian ng Black Oil",
             content: [],
             list: [
               {
-                term: "Low GOR (Gas-Oil Ratio)",
+                term: "Mababang GOR (Gas-Oil Ratio)",
                 description:
-                  "Typically < 2,000 scf/STB. The low GOR reflects the limited amount of light hydrocarbons dissolved in the oil under reservoir conditions. Solution GOR increases with pressure up to the bubble point.",
+                  "Karaniwang < 2,000 scf/STB. Ang mababang GOR ay repleksyon ng limitadong halaga ng magaang na hydrocarbon na natunaw sa langis sa ilalim ng reservoir conditions. Ang solution GOR ay tumataas kasabay ng pressure hanggang sa bubble point.",
               },
               {
-                term: "Low API Gravity",
+                term: "Mababang API Gravity",
                 description:
-                  "Typically 15–45° API. Heavy crude (< 20° API), medium crude (20–35° API), light crude (> 35° API). API gravity = (141.5/SG) − 131.5, where SG is specific gravity relative to water.",
+                  "Karaniwang 15–45° API. Mabigat na crude (< 20° API), katamtamang crude (20–35° API), magaang na crude (> 35° API). API gravity = (141.5/SG) − 131.5, kung saan ang SG ay specific gravity kaugnay ng tubig.",
               },
               {
-                term: "Far from the Critical Point",
+                term: "Malayo sa Critical Point",
                 description:
-                  "Initial reservoir temperature is well to the left of the critical temperature on the PT diagram. This makes black oil the most stable, most predictable fluid type and the easiest to model.",
+                  "Ang paunang temperatura ng reservoir ay nasa malayo sa kaliwa ng critical temperature sa PT diagram. Ginagawa nitong pinaka-matatag, pinaka-predictable na uri ng fluid ang black oil at pinakamadaling i-model.",
               },
               {
-                term: "Bo > 1.0 (typically 1.1 to 1.8 res bbl/STB)",
+                term: "Bo > 1.0 (karaniwang 1.1 hanggang 1.8 res bbl/STB)",
                 description:
-                  "Oil at reservoir conditions contains dissolved gas and is thermally expanded compared to stock tank conditions. Bo shrinks significantly below bubble point as gas is released.",
+                  "Ang langis sa reservoir conditions ay naglalaman ng dissolved gas at thermally expanded kumpara sa stock tank conditions. Ang Bo ay malaki ang shrinkage sa ibaba ng bubble point habang napalaya ang gas.",
               },
             ],
           },
@@ -1310,35 +1310,35 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
       },
       {
         id: "sec-5-4",
-        title: "Volatile Oil — Near the Critical Region",
+        title: "Volatile Oil — Malapit sa Critical Region",
         content: [
-          "Volatile oils occupy the critical region of the phase diagram, with initial reservoir temperature much closer to the critical temperature than black oil. This proximity to the critical point has dramatic consequences for production behavior.",
+          "Ang mga volatile oil ay inookupahan ang critical region ng phase diagram, na ang paunang temperatura ng reservoir ay mas malapit sa critical temperature kaysa sa black oil. Ang pagiging malapit sa critical point na ito ay may dramatikong kahihinatnan para sa gawi ng produksyon.",
         ],
         subsections: [
           {
             id: "sec-5-4-a",
-            title: "Characteristics of Volatile Oil",
+            title: "Mga Katangian ng Volatile Oil",
             content: [],
             list: [
               {
-                term: "High GOR",
+                term: "Mataas na GOR",
                 description:
-                  "Typically 2,000–100,000 scf/STB. Large amounts of intermediate hydrocarbons (C2–C4) are dissolved in the oil, ready to flash to gas when pressure drops below bubble point.",
+                  "Karaniwang 2,000–100,000 scf/STB. Malaking halaga ng intermediate hydrocarbon (C2–C4) ang natunaw sa langis, handa na mag-flash sa gas kapag bumaba ang pressure sa ibaba ng bubble point.",
               },
               {
-                term: "High API Gravity",
+                term: "Mataas na API Gravity",
                 description:
-                  "Typically 40–60° API. Lighter, less viscous oil. At surface conditions, volatile oil produces a higher-quality, more valuable crude than black oil.",
+                  "Karaniwang 40–60° API. Mas magaan, mas kaunting viscous na langis. Sa surface conditions, ang volatile oil ay gumagawa ng mas mataas na kalidad, mas mahalagang crude kaysa sa black oil.",
               },
               {
-                term: "Rapid Liquid Volume Shrinkage",
+                term: "Mabilis na Liquid Volume Shrinkage",
                 description:
-                  "Below bubble point, the large amount of dissolved intermediate components flashes rapidly to gas. The produced liquid volume fraction decreases sharply, and much of the reservoir oil may arrive at the separator as gas-phase material.",
+                  "Sa ibaba ng bubble point, ang malaking halaga ng dissolved intermediate component ay mabilis na nag-fla-flash sa gas. Ang produced liquid volume fraction ay mabilis na bumababa, at malaking bahagi ng reservoir oil ay maaaring dumating sa separator bilang gas-phase material.",
               },
               {
-                term: "Light-Colored Produced Liquid",
+                term: "Maliwanag na Kulay ng Produced Liquid",
                 description:
-                  "Unlike black oil, the stock tank liquid from volatile reservoirs is typically amber, greenish-yellow, or very light brown — reflecting the high content of intermediate molecular weight hydrocarbons.",
+                  "Hindi tulad ng black oil, ang stock tank liquid mula sa mga volatile reservoir ay karaniwang amber, greenish-yellow, o napaka-light brown — repleksyon ng mataas na nilalaman ng intermediate molecular weight hydrocarbon.",
               },
             ],
           },
@@ -1346,82 +1346,82 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
       },
       {
         id: "sec-5-5",
-        title: "Gas Condensate, Wet Gas, and Dry Gas",
+        title: "Gas Condensate, Wet Gas, at Dry Gas",
         content: [
-          "As the reservoir fluid composition shifts progressively toward lighter hydrocarbons, we move from volatile oil through gas condensate, wet gas, and finally to dry gas. These represent a continuum defined by position on the PT phase diagram relative to the critical point.",
+          "Habang ang komposisyon ng reservoir fluid ay unti-unting naglilipat patungo sa mas magaang na hydrocarbon, lilipat tayo mula sa volatile oil patungo sa gas condensate, wet gas, at sa huli ay dry gas. Kinakatawan nila ang isang continuum na tinutukoy ng posisyon sa PT phase diagram kaugnay ng critical point.",
         ],
         subsections: [
           {
             id: "sec-5-5-a",
             title: "Gas Condensate",
             content: [
-              "A gas condensate reservoir starts above its dew point as a single-phase gas. The reservoir temperature is between the critical temperature and the cricondentherm. As pressure declines during production, the dew point is crossed and liquid hydrocarbon condenses in the reservoir — retrograde condensation. This condensate is often rich in valuable liquids (pentanes, hexanes, and heavier) but may be difficult to recover once it has dropped out in the pore space.",
-              "Surface-separated condensate (also called 'white oil' or 'lease condensate') from gas condensate wells typically has API gravity above 60° and near-water-clear appearance. The gas produced contains valuable intermediate components that are extracted in the gas plant.",
+              "Ang isang gas condensate reservoir ay nagsisimula sa itaas ng dew point nito bilang isang single-phase gas. Ang temperatura ng reservoir ay nasa pagitan ng critical temperature at ng cricondentherm. Habang bumababa ang pressure sa panahon ng produksyon, tinatawid ang dew point at nag-co-condense ang likidong hydrocarbon sa reservoir — retrograde condensation. Ang condensate na ito ay madalas na mayaman sa mahahalagang likido (pentane, hexane, at mas mabibigat) ngunit maaaring mahirap mabawi kapag na-drop out na ito sa pore space.",
+              "Ang surface-separated condensate (tinatawag ding 'white oil' o 'lease condensate') mula sa mga gas condensate well ay karaniwang may API gravity na mas mataas sa 60° at halos transparent na hitsura. Ang gas na ginagawa ay naglalaman ng mahahalagang intermediate component na kinukuha sa gas plant.",
             ],
           },
           {
             id: "sec-5-5-b",
-            title: "Wet Gas and Dry Gas",
+            title: "Wet Gas at Dry Gas",
             content: [
-              "Wet gas reservoirs lie to the right of the cricondentherm on the phase diagram. The reservoir fluid is single-phase gas throughout depletion (no retrograde condensation in the reservoir), but the separator conditions fall inside the phase envelope, producing a liquid condensate at the surface. The liquid content of wet gas is typically expressed as gallons of liquid per thousand standard cubic feet (GPM).",
-              "Dry gas (predominantly methane) has a phase envelope entirely to the left and below the reservoir conditions. No liquid is formed at any point in the production process. Dry gas is the simplest fluid to model and the least valuable per unit of heating content, but the easiest to process. Reservoir engineering of dry gas reservoirs uses only material balance and gas well deliverability methods.",
+              "Ang mga wet gas reservoir ay nasa kanan ng cricondentherm sa phase diagram. Ang reservoir fluid ay single-phase gas sa buong depletion (walang retrograde condensation sa reservoir), ngunit ang mga kondisyon ng separator ay nasa loob ng phase envelope, na gumagawa ng liquid condensate sa surface. Ang liquid content ng wet gas ay karaniwang ipinahayag bilang gallons ng likido bawat libong standard cubic feet (GPM).",
+              "Ang dry gas (pangunahin methane) ay may phase envelope na ganap na nasa kaliwa at ibaba ng reservoir conditions. Walang likidong nabubuo sa anumang punto ng proseso ng produksyon. Ang dry gas ay pinakasimpleng fluid na i-model at pinakamababang halaga bawat unit ng heating content, ngunit pinakamadaling i-process. Ang reservoir engineering ng mga dry gas reservoir ay gumagamit lamang ng material balance at gas well deliverability methods.",
             ],
           },
         ],
         videoAfter: {
           label: "PVT Analysis Walkthrough",
           description:
-            "PVT Laboratory Analysis — Flash Liberation, Differential Liberation, and Separator Tests for Reservoir Fluid Characterization",
+            "PVT Laboratory Analysis — Flash Liberation, Differential Liberation, at Separator Test para sa Reservoir Fluid Characterization",
         },
       },
       {
         id: "sec-5-6",
-        title: "Key PVT Properties for Reservoir Engineering",
+        title: "Mga Pangunahing PVT Property para sa Reservoir Engineering",
         content: [
-          "The PVT laboratory provides a set of fluid property tables and correlations that are the essential inputs to all reservoir engineering calculations. These properties characterize how fluid volumes and densities change with pressure from reservoir conditions to the surface separator.",
+          "Ang PVT laboratoryo ay nagbibigay ng isang set ng fluid property table at correlation na ang mga ito ang mahahalagang input sa lahat ng reservoir engineering calculation. Nag-characterize ang mga katangiang ito kung paano nagbabago ang mga volume at density ng fluid kasabay ng pressure mula sa reservoir conditions hanggang sa surface separator.",
         ],
         subsections: [
           {
             id: "sec-5-6-a",
-            title: "Oil PVT Properties",
+            title: "Mga PVT Property ng Langis",
             content: [],
             list: [
               {
                 term: "Oil Formation Volume Factor (Bo)",
                 description:
-                  "The ratio of oil volume at reservoir conditions to oil volume at stock tank conditions (res bbl/STB). Bo > 1 because reservoir oil contains dissolved gas and is thermally expanded. Above bubble point, Bo increases with pressure. Below bubble point, Bo decreases as gas escapes.",
+                  "Ang ratio ng volume ng langis sa reservoir conditions sa volume ng langis sa stock tank conditions (res bbl/STB). Ang Bo > 1 dahil ang reservoir oil ay naglalaman ng dissolved gas at thermally expanded. Sa itaas ng bubble point, tumataas ang Bo kasabay ng pressure. Sa ibaba ng bubble point, bumababa ang Bo habang lumalabas ang gas.",
               },
               {
                 term: "Solution Gas-Oil Ratio (Rs)",
                 description:
-                  "Volume of gas dissolved in oil at reservoir pressure and temperature per stock tank barrel of oil (scf/STB). Rs increases with pressure up to the bubble point, then remains constant (the oil is at saturation pressure). Below bubble point, Rs decreases as gas is liberated.",
+                  "Volume ng gas na natunaw sa langis sa reservoir pressure at temperatura bawat stock tank barrel ng langis (scf/STB). Tumataas ang Rs kasabay ng pressure hanggang sa bubble point, pagkatapos ay nananatiling constant (ang langis ay nasa saturation pressure). Sa ibaba ng bubble point, bumababa ang Rs habang napalaya ang gas.",
               },
               {
                 term: "Oil Viscosity (μo)",
                 description:
-                  "Viscosity of the reservoir oil at in-situ conditions (cP). Above bubble point, viscosity increases as pressure decreases. Below bubble point, viscosity decreases as dissolved gas is released, making the oil less viscous.",
+                  "Viscosity ng reservoir oil sa in-situ conditions (cP). Sa itaas ng bubble point, tumataas ang viscosity habang bumababa ang pressure. Sa ibaba ng bubble point, bumababa ang viscosity habang napalaya ang dissolved gas, na ginagawang mas kaunting viscous ang langis.",
               },
             ],
           },
           {
             id: "sec-5-6-b",
-            title: "Gas PVT Properties",
+            title: "Mga PVT Property ng Gas",
             content: [],
             list: [
               {
                 term: "Z-Factor (Gas Compressibility Factor)",
                 description:
-                  "Dimensionless correction for real gas deviation from ideal: PV = ZnRT. Z is determined from the gas specific gravity and reservoir P, T using Standing-Katz correlations or equations of state. Z approaches 1 at low pressures (ideal gas limit).",
+                  "Dimensionless na pagwawasto para sa paglihis ng tunay na gas mula sa ideal: PV = ZnRT. Tinutukoy ang Z mula sa gas specific gravity at reservoir P, T gamit ang Standing-Katz correlation o equations of state. Ang Z ay lumalapot sa 1 sa mababang pressure (ideal gas limit).",
               },
               {
                 term: "Gas Formation Volume Factor (Bg)",
                 description:
-                  "Volume of gas at reservoir conditions per unit volume at standard conditions. Bg = 0.00504 × ZT/P (res bbl/scf) or 0.02829 × ZT/P (cuft/scf). Bg is small at high pressure and increases dramatically as pressure declines.",
+                  "Volume ng gas sa reservoir conditions bawat unit ng volume sa standard conditions. Bg = 0.00504 × ZT/P (res bbl/scf) o 0.02829 × ZT/P (cuft/scf). Maliit ang Bg sa mataas na pressure at malaki ang pagtaas nito habang bumababa ang pressure.",
               },
               {
                 term: "Gas Compressibility (cg)",
                 description:
-                  "For real gases, cg = 1/P − (1/Z)(dZ/dP). Near-ideal gas behavior: cg ≈ 1/P. Gas compressibility is the key property determining how much energy is stored in the gas reservoir at initial pressure.",
+                  "Para sa mga tunay na gas, cg = 1/P − (1/Z)(dZ/dP). Near-ideal gas behavior: cg ≈ 1/P. Ang gas compressibility ang pangunahing katangian na nagtatakda kung gaano karaming enerhiya ang nakaimbak sa gas reservoir sa paunang pressure.",
               },
             ],
           },
@@ -1432,27 +1432,27 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
       {
         name: "Real Gas Law (Z-factor)",
         eq: "PV = ZnRT",
-        desc: "Z = compressibility factor, n = moles of gas, R = gas constant (10.73 psi·ft³/lbmol·°R), T = absolute temperature (°R).",
+        desc: "Z = compressibility factor, n = moles ng gas, R = gas constant (10.73 psi·ft³/lbmol·°R), T = absolute temperature (°R).",
       },
       {
         name: "Gas Formation Volume Factor",
         eq: "Bg = 0.02829 × Z × T / P",
-        desc: "Bg in ft³/scf; T in °R (= °F + 460), P in psia. Converts reservoir gas volume to standard surface volume.",
+        desc: "Bg sa ft³/scf; T sa °R (= °F + 460), P sa psia. Kino-convert ang reservoir gas volume sa standard surface volume.",
       },
       {
         name: "API Gravity",
         eq: "API = (141.5 / SG_oil) − 131.5",
-        desc: "SG_oil = specific gravity of oil relative to water at 60°F. API < 20 = heavy oil; 20–35 = medium; > 35 = light; > 60 = condensate.",
+        desc: "SG_oil = specific gravity ng langis kaugnay ng tubig sa 60°F. API < 20 = mabigat na langis; 20–35 = katamtaman; > 35 = magaan; > 60 = condensate.",
       },
       {
         name: "Oil Formation Volume Factor (approximation)",
         eq: "Bo = 0.972 + 1.47×10⁻⁴ × [Rs(γg/γo)^0.5 + 1.25T]^1.175",
-        desc: "Standing's correlation for Bo above bubble point. Rs = solution GOR (scf/STB), γg = gas gravity, γo = oil gravity, T = temperature (°F).",
+        desc: "Standing's correlation para sa Bo sa itaas ng bubble point. Rs = solution GOR (scf/STB), γg = gas gravity, γo = oil gravity, T = temperatura (°F).",
       },
       {
         name: "Gas Compressibility",
         eq: "c_g = 1/P − (1/Z)(dZ/dP)",
-        desc: "For ideal gas behavior (Z=1, dZ/dP=0): c_g = 1/P. The gas compressibility controls depletion behavior and material balance.",
+        desc: "Para sa ideal gas behavior (Z=1, dZ/dP=0): c_g = 1/P. Ang gas compressibility ang kumokontrol sa gawi ng depletion at material balance.",
       },
     ],
     terms: [
@@ -1475,90 +1475,90 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
   },
 
   6: {
-    title: "Integration of Petrophysics and Phase Behavior",
+    title: "Integrasyon ng Petrophysics at Phase Behavior",
     overview:
-      "In real reservoir engineering, petrophysics and PVT cannot be used in isolation. This chapter explores how rock properties and fluid properties work together to control reservoir performance — and what happens when the integration is done poorly.",
+      "Sa tunay na reservoir engineering, ang petrophysics at PVT ay hindi maaaring gamitin nang hiwalay. Tinalakay ng kabanatang ito kung paano magkasamang kumokontrol ang mga katangian ng bato at fluid sa performance ng reservoir — at kung ano ang nangyayari kapag mahina ang integrasyon.",
     sections: [
       {
         id: "sec-6-1",
-        title: "Why Integration Is Essential",
+        title: "Bakit Mahalaga ang Integrasyon",
         content: [
-          "Petrophysics without PVT cannot predict production — it tells you where the oil is and how permeable the rock is, but not how the fluid will behave as pressure declines. PVT without petrophysics cannot predict flow — it tells you the fluid properties, but not how fast or how easily the fluid can move through the rock. Only their combination produces a complete, predictive model of reservoir performance.",
-          "Consider two reservoirs with identical porosity and permeability: one contains light, low-viscosity oil; the other contains heavy, high-viscosity oil. Reservoir performance will be dramatically different. Permeability controls whether fluid can move, but viscosity controls how hard it is to push. The product of both determines actual flow rates and recovery.",
+          "Ang petrophysics na walang PVT ay hindi makakapaghula ng produksyon — sinasabi nito kung saan ang langis at gaano ka-permeable ang bato, ngunit hindi kung paano kumilos ang fluid habang bumababa ang pressure. Ang PVT na walang petrophysics ay hindi makakapaghula ng daloy — sinasabi nito ang mga katangian ng fluid, ngunit hindi kung gaano kabilis o gaano kadali ang pagkilos ng fluid sa pamamagitan ng bato. Tanging ang kanilang kombinasyon ang gumagawa ng kumpletong, predictive na modelo ng performance ng reservoir.",
+          "Isipin ang dalawang reservoir na may magkaparehong porosity at permeability: ang isa ay naglalaman ng magaan, mababang viscosity na langis; ang isa pa ay naglalaman ng mabigat, mataas na viscosity na langis. Ang performance ng reservoir ay magiging dramatikong magkaiba. Kumokontrol ang permeability kung maaaring gumalaw ang fluid, ngunit kumokontrol ang viscosity kung gaano kahirap itulak. Ang produkto ng dalawa ang nagtatakda ng aktwal na flow rate at recovery.",
         ],
         noteBox: {
-          title: "The Fundamental Integration Principle",
+          title: "Ang Pundamental na Prinsipyo ng Integrasyon",
           items: [
-            "Rock properties (petrophysics) determine WHERE fluids are and HOW they can move.",
-            "Fluid properties (PVT) determine HOW the fluids behave as pressure changes.",
-            "Reserves estimation requires BOTH: petrophysics provides Vb, φ, Sw; PVT provides Bo or Bg.",
-            "Reservoir simulation requires BOTH as inputs: static (petrophysical) and dynamic (PVT) data.",
+            "Ang mga katangian ng bato (petrophysics) ay nagtatakda kung SAAN ang mga fluid at kung PAANO sila maaaring gumalaw.",
+            "Ang mga katangian ng fluid (PVT) ay nagtatakda kung PAANO kumilos ang mga fluid habang nagbabago ang pressure.",
+            "Ang reserves estimation ay nangangailangan ng PAREHONG: nagbibigay ang petrophysics ng Vb, φ, Sw; nagbibigay ang PVT ng Bo o Bg.",
+            "Ang reservoir simulation ay nangangailangan ng PAREHONG bilang input: static (petrophysical) at dynamic (PVT) na data.",
           ],
         },
       },
       {
         id: "sec-6-2",
-        title: "Key Integrated Rock and Fluid Properties",
+        title: "Mga Pangunahing Integrated Rock at Fluid Property",
         content: [
-          "Reservoir performance is governed by the interaction between rock properties and fluid properties. Neither set of properties alone is sufficient to characterize reservoir behavior.",
+          "Ang performance ng reservoir ay kontrolado ng interaksyon sa pagitan ng mga katangian ng bato at fluid. Alinman sa set ng mga katangian na nag-iisa ay hindi sapat para ma-characterize ang gawi ng reservoir.",
         ],
         subsections: [
           {
             id: "sec-6-2-a",
-            title: "Critical Rock Properties",
+            title: "Mga Kritikal na Katangian ng Bato",
             content: [],
             list: [
               {
                 term: "Porosity (φ)",
                 description:
-                  "Controls the volume of fluid stored in the reservoir. Together with area and net pay, it determines hydrocarbon in place.",
+                  "Kumokontrol sa volume ng fluid na nakaimbak sa reservoir. Kasama ng lugar at net pay, nagtatakda ito ng hydrocarbon in place.",
               },
               {
                 term: "Permeability (k)",
                 description:
-                  "Controls the rate at which fluid can flow toward the well. High porosity with low permeability is a common frustration — the fluid is there but won't flow.",
+                  "Kumokontrol sa rate ng pagkilos ng fluid patungo sa balon. Ang mataas na porosity na may mababang permeability ay isang karaniwang kabiguan — naroroon ang fluid ngunit hindi dumadaling.",
               },
               {
                 term: "Relative Permeability (k_r)",
                 description:
-                  "Controls how easily each fluid phase flows in the presence of others. The shape of relative permeability curves determines producing GOR, WOR, and sweep efficiency over the life of the field.",
+                  "Kumokontrol kung gaano kadaling dumadaling ang bawat fluid phase sa presensya ng iba. Ang hugis ng mga relative permeability curve ang nagtatakda ng producing GOR, WOR, at sweep efficiency sa buong buhay ng field.",
               },
               {
                 term: "Wettability",
                 description:
-                  "Governs the initial saturation distribution, the shape of capillary pressure and relative permeability curves, and the efficiency of waterflood displacement.",
+                  "Namamahala sa paunang distribusyon ng saturation, sa hugis ng capillary pressure at relative permeability curve, at sa kahusayan ng waterflood displacement.",
               },
               {
                 term: "Capillary Pressure",
                 description:
-                  "Controls the vertical saturation distribution and the thickness of the transition zone. Determines how much of the rock column is in the net pay.",
+                  "Kumokontrol sa vertical na distribusyon ng saturation at sa kapal ng transition zone. Nagtatakda kung gaano karaming bahagi ng rock column ang nasa net pay.",
               },
             ],
           },
           {
             id: "sec-6-2-b",
-            title: "Critical PVT Properties",
+            title: "Mga Kritikal na PVT Property",
             content: [],
             list: [
               {
                 term: "Formation Volume Factors (Bo, Bg)",
                 description:
-                  "Convert fluid volumes between reservoir conditions and surface conditions. Essential for OOIP/GIIP calculations and material balance.",
+                  "Kino-convert ang mga volume ng fluid sa pagitan ng reservoir conditions at surface conditions. Mahalaga para sa mga kalkulasyon ng OOIP/GIIP at material balance.",
               },
               {
                 term: "Fluid Viscosity (μo, μg)",
                 description:
-                  "Controls flow resistance. High-viscosity heavy oil flows much more slowly through the same rock as low-viscosity light oil. Critical input to the Darcy flow equation and mobility calculations.",
+                  "Kumokontrol sa flow resistance. Ang mabigat na heavy oil na may mataas na viscosity ay mas mabagal dumaan sa parehong bato kaysa sa magaang na langis na may mababang viscosity. Kritikal na input sa Darcy flow equation at mobility calculations.",
               },
               {
                 term: "Fluid Compressibility (Co, Cg)",
                 description:
-                  "Determines how much energy is stored in the fluid and released as the reservoir depressurizes. Gas has very high compressibility; oil has lower compressibility, close to that of water above the bubble point.",
+                  "Nagtatakda kung gaano karaming enerhiya ang nakaimbak sa fluid at napalaya habang depressurizing ang reservoir. Ang gas ay may napakataas na compressibility; ang langis ay may mas mababang compressibility, malapit sa compressibility ng tubig sa itaas ng bubble point.",
               },
               {
                 term: "Phase Behavior (Pb, Pd)",
                 description:
-                  "Determines the saturation state throughout reservoir life. Knowing the bubble or dew point relative to reservoir pressure tells us whether we are in single-phase or two-phase flow.",
+                  "Nagtatakda ng saturation state sa buong buhay ng reservoir. Ang pag-alam sa bubble o dew point kaugnay ng reservoir pressure ay nagsasabi sa amin kung nasa single-phase o two-phase flow tayo.",
               },
             ],
           },
@@ -1568,142 +1568,142 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
         id: "sec-6-3",
         title: "Volumetric Reserves Estimation",
         content: [
-          "The volumetric method is the most fundamental approach to estimating hydrocarbon initially in place. It is entirely dependent on integrated petrophysical and PVT inputs. Errors in either set of inputs propagate directly into errors in reserves.",
+          "Ang volumetric method ay ang pinaka-pundamental na paraan sa pagtatantya ng hydrocarbon na paunang naroroon. Ganap itong nakasalalay sa mga integrated petrophysical at PVT input. Ang mga error sa alinmang set ng input ay direktang nagpapalakas ng mga error sa reserves.",
         ],
         subsections: [
           {
             id: "sec-6-3-a",
-            title: "The OOIP Formula and Its Inputs",
+            title: "Ang OOIP Formula at ang mga Input Nito",
             content: [
-              "The stock tank oil initially in place (STOIIP or N) is calculated as: N = (Vb × φ × (1 − Sw)) / Bo. Each term has a specific source: Vb (bulk volume) comes from seismic mapping and geological interpretation; φ (porosity) and Sw (water saturation) come from petrophysical log analysis calibrated to core data; Bo (oil formation volume factor) comes from PVT laboratory analysis of representative fluid samples.",
-              "A 10% error in any one of these inputs produces approximately a 10% error in STOIIP. In practice, the largest uncertainties typically come from porosity (especially in carbonates), Sw (affected by clay, invasion, and Archie parameter uncertainty), and Vb (due to structural and stratigraphic uncertainty). PVT errors are usually smaller because laboratory measurements of Bo are relatively precise.",
+              "Ang stock tank oil initially in place (STOIIP o N) ay kinakalkula bilang: N = (Vb × φ × (1 − Sw)) / Bo. Ang bawat term ay may tiyak na pinagkukunan: ang Vb (bulk volume) ay nagmumula sa seismic mapping at geological interpretation; ang φ (porosity) at Sw (water saturation) ay nagmumula sa petrophysical log analysis na nica-calibrate sa core data; ang Bo (oil formation volume factor) ay nagmumula sa PVT laboratory analysis ng mga representative fluid sample.",
+              "Ang 10% na error sa alinmang isa sa mga input na ito ay gumagawa ng halos 10% na error sa STOIIP. Sa praktis, ang pinakamalalaking uncertainty ay karaniwang nagmumula sa porosity (lalo na sa mga carbonate), Sw (apektado ng clay, invasion, at Archie parameter uncertainty), at Vb (dahil sa structural at stratigraphic uncertainty). Ang mga PVT error ay karaniwang mas maliit dahil ang mga laboratoryo na sukat ng Bo ay medyo tumpak.",
             ],
           },
           {
             id: "sec-6-3-b",
-            title: "Recovery Factor and Recoverable Reserves",
+            title: "Recovery Factor at Recoverable Reserves",
             content: [
-              "STOIIP is not the same as recoverable reserves. Recovery Factor (RF) is the fraction of STOIIP that can be economically extracted using current technology. RF depends strongly on drive mechanism (water drive gives 35–75%; solution gas drive gives 5–30%), rock quality, fluid properties, and the development strategy selected.",
-              "Recoverable Reserves = STOIIP × RF. The recovery factor is itself a function of integrated rock-fluid properties — particularly relative permeability endpoints, wettability, and fluid viscosity. An excellent PVT description combined with poor relative permeability data will give an incorrect RF prediction.",
+              "Hindi pareho ang STOIIP at recoverable reserves. Ang Recovery Factor (RF) ay ang bahagi ng STOIIP na maaaring ekonomikong ma-extract gamit ang kasalukuyang teknolohiya. Ang RF ay lubos na nakasalalay sa drive mechanism (ang water drive ay nagbibigay ng 35–75%; ang solution gas drive ay nagbibigay ng 5–30%), kalidad ng bato, mga katangian ng fluid, at ang piniling strategy ng pag-unlad.",
+              "Recoverable Reserves = STOIIP × RF. Ang recovery factor mismo ay function ng mga integrated rock-fluid property — partikular ang mga relative permeability endpoint, wettability, at fluid viscosity. Ang isang mahusay na paglalarawan ng PVT na pinagsama sa mahinang relative permeability data ay magbibigay ng maling hula ng RF.",
             ],
           },
         ],
       },
       {
         id: "sec-6-4",
-        title: "Effects of Pressure Depletion on Rock and Fluid",
+        title: "Mga Epekto ng Pressure Depletion sa Bato at Fluid",
         content: [
-          "Production from a reservoir is essentially the controlled depletion of natural energy stored in the form of elevated fluid and rock pressure. As this pressure declines, both the fluids and the rock respond simultaneously, and these responses interact with each other in ways that control production performance.",
+          "Ang produksyon mula sa isang reservoir ay karaniwang kontroladong pag-ubos ng natural na enerhiya na nakaimbak sa anyo ng elevated fluid at rock pressure. Habang bumababa ang pressure na ito, parehong sabay na tumutugon ang mga fluid at ang bato, at ang mga tugon na ito ay nakikipag-interaksyon sa isa't isa sa mga paraan na kumokontrol sa performance ng produksyon.",
         ],
         subsections: [
           {
             id: "sec-6-4-a",
-            title: "Fluid Behavior During Depletion",
+            title: "Gawi ng Fluid sa Panahon ng Depletion",
             content: [],
             list: [
               {
                 term: "Oil Volume Shrinkage",
                 description:
-                  "Below bubble point, dissolved gas is liberated, and Bo decreases. The oil volume in the reservoir shrinks as gas comes out of solution. This reduces oil production rate because there is less total fluid expansion energy per barrel of oil.",
+                  "Sa ibaba ng bubble point, napalaya ang dissolved gas, at bumababa ang Bo. Ang volume ng langis sa reservoir ay lumiit habang lumalabas ang gas mula sa solusyon. Nagbabawas ito ng oil production rate dahil may mas kaunting kabuuang fluid expansion energy bawat bariles ng langis.",
               },
               {
                 term: "Free Gas Liberation",
                 description:
-                  "Gas released from solution below the bubble point builds up free gas saturation in the pore space. When Sg exceeds the critical gas saturation, free gas flows and the producing GOR rises rapidly.",
+                  "Ang gas na napalaya mula sa solusyon sa ibaba ng bubble point ay nagtatayo ng free gas saturation sa pore space. Kapag ang Sg ay lumampas sa critical gas saturation, ang free gas ay dumadaling at mabilis na tumataas ang producing GOR.",
               },
               {
                 term: "Gas Expansion",
                 description:
-                  "Free gas expands significantly as pressure declines (Bg increases), providing additional energy for fluid production. In gas reservoirs, this expansion is the primary drive mechanism.",
+                  "Ang free gas ay malaki ang pagpapalawak habang bumababa ang pressure (tumataas ang Bg), na nagbibigay ng karagdagang enerhiya para sa produksyon ng fluid. Sa mga gas reservoir, ang pagpapalawak na ito ang pangunahing drive mechanism.",
               },
               {
-                term: "Viscosity Changes",
+                term: "Mga Pagbabago ng Viscosity",
                 description:
-                  "Below bubble point, oil viscosity decreases as gas comes out of solution (lighter, lower-viscosity oil remains). This improves the mobility ratio, partially compensating for the effect of free gas reducing oil relative permeability.",
+                  "Sa ibaba ng bubble point, bumababa ang oil viscosity habang lumalabas ang gas mula sa solusyon (ang mas magaan, mas kaunting viscous na langis ang nananatili). Nagpapabuti ito ng mobility ratio, na bahagyang nagkokompensayon sa epekto ng free gas na nagbabawas ng oil relative permeability.",
               },
             ],
           },
           {
             id: "sec-6-4-b",
-            title: "Rock Behavior During Depletion",
+            title: "Gawi ng Bato sa Panahon ng Depletion",
             content: [
-              "As reservoir pressure declines, effective overburden stress increases, causing the rock matrix to compact. This reduces pore volume (pore volume compressibility effect), which provides additional energy to push fluids out of the rock. In most reservoirs, this compaction drive is a minor contribution to total recovery. In highly compressible chalk reservoirs and in overpressured formations, however, compaction drive can be the dominant mechanism.",
-              "In some reservoirs, compaction also irreversibly reduces permeability as pore throats constrict. Fractures may close (reducing fracture permeability) or dilate (increasing natural fracture contribution) depending on the stress direction and orientation relative to the producing structure.",
+              "Habang bumababa ang reservoir pressure, tumataas ang epektibong overburden stress, na nagdudulot ng compaction ng rock matrix. Nagbabawas ito ng pore volume (pore volume compressibility effect), na nagbibigay ng karagdagang enerhiya para itulak ang mga fluid palabas ng bato. Sa karamihan ng reservoir, ang compaction drive na ito ay maliit na kontribusyon sa kabuuang recovery. Sa mga highly compressible chalk reservoir at sa mga overpressured formation, gayunpaman, ang compaction drive ay maaaring maging dominanteng mekanismo.",
+              "Sa ilang reservoir, ang compaction ay nagbabawas din ng permeability nang hindi na mababalik habang nag-ko-constrict ang mga pore throat. Ang mga fracture ay maaaring magsara (nagbabawas ng fracture permeability) o mapalawak (nagpapalaki ng natural fracture contribution) depende sa direksyon ng stress at oryentasyon kaugnay ng producing structure.",
             ],
           },
         ],
       },
       {
         id: "sec-6-5",
-        title: "Multiphase Flow and Mobility in the Integrated Context",
+        title: "Multiphase Flow at Mobility sa Integrated Context",
         content: [
-          "The Darcy flow equation for a single phase gives flow rate = k × A × ΔP / (μ × L). In a multiphase system, each phase's flow is governed by its effective permeability, which equals k_r × k_abs. The mobility concept combines both rock and fluid properties into a single measure of flow ease.",
-          "Mobility ratio M = λ_displacing / λ_displaced = (k_r,disp / μ_disp) / (k_r,oil / μ_oil). When M < 1, displacement is stable. When M > 1, viscous fingering occurs. The success of any waterflood or gas injection project is determined by this ratio, which integrates both the reservoir rock's relative permeability (a petrophysical property) and the fluid viscosities (PVT properties).",
+          "Ang Darcy flow equation para sa isang phase ay nagbibigay ng flow rate = k × A × ΔP / (μ × L). Sa isang multiphase system, ang daloy ng bawat phase ay kontrolado ng effective permeability nito, na katumbas ng k_r × k_abs. Pinagsasama ng konsepto ng mobility ang parehong katangian ng bato at fluid sa isang sukat ng kagalingan ng daloy.",
+          "Mobility ratio M = λ_displacing / λ_displaced = (k_r,disp / μ_disp) / (k_r,oil / μ_oil). Kapag ang M < 1, matatag ang displacement. Kapag ang M > 1, nagaganap ang viscous fingering. Ang tagumpay ng anumang waterflood o gas injection project ay tinutukoy ng ratio na ito, na nag-iintegrate ng parehong relative permeability ng reservoir rock (isang petrophysical property) at ang mga fluid viscosity (PVT property).",
         ],
         subsections: [
           {
             id: "sec-6-5-a",
-            title: "Integrated Implications for Waterflood Design",
+            title: "Mga Integrated na Implikasyon para sa Waterflood Design",
             content: [
-              "Waterflooding displaces oil with injected water. The efficiency depends on: mobility ratio M (controlled by both k_r curves and fluid viscosities); areal sweep efficiency (controlled by well pattern, heterogeneity, and M); vertical sweep efficiency (controlled by permeability layering and gravity); and displacement efficiency (controlled by relative permeability endpoints — specifically Sor).",
-              "A heavy oil reservoir with favorable rock properties (high k, good connectivity) may still produce poorly under waterflooding because unfavorable mobility ratio (M >> 1 due to high oil viscosity) causes fingering and early water breakthrough. Polymer flooding — which increases water viscosity to reduce M — is the standard remedy.",
+              "Ang waterflooding ay nagpapalit ng langis ng injected water. Ang kahusayan ay nakasalalay sa: mobility ratio M (kontrolado ng parehong k_r curves at fluid viscosity); areal sweep efficiency (kontrolado ng well pattern, heterogeneity, at M); vertical sweep efficiency (kontrolado ng permeability layering at gravity); at displacement efficiency (kontrolado ng relative permeability endpoint — partikular ang Sor).",
+              "Ang isang heavy oil reservoir na may magandang katangian ng bato (mataas na k, magandang connectivity) ay maaari pa ring mag-produce nang mahinang mahinang sa ilalim ng waterflooding dahil ang unfavorable mobility ratio (M >> 1 dahil sa mataas na oil viscosity) ay nagdudulot ng fingering at maagang water breakthrough. Ang polymer flooding — na nagpapalaki ng water viscosity para bawasan ang M — ang karaniwang lunas.",
             ],
           },
         ],
       },
       {
         id: "sec-6-6",
-        title: "Petrophysics and PVT in Reservoir Simulation",
+        title: "Petrophysics at PVT sa Reservoir Simulation",
         content: [
-          "Reservoir simulation is the ultimate integration tool — it combines a three-dimensional geological model populated with petrophysical properties with a dynamic fluid model described by PVT equations, and solves the coupled flow equations to predict production performance over the reservoir's life.",
+          "Ang reservoir simulation ang ultimate integration tool — pinagsasama nito ang isang three-dimensional geological model na puno ng mga petrophysical property sa isang dynamic fluid model na inilarawan ng mga PVT equation, at nireresolba ang mga coupled flow equation para hulaan ang performance ng produksyon sa buong buhay ng reservoir.",
         ],
         subsections: [
           {
             id: "sec-6-6-a",
-            title: "Static Petrophysical Inputs",
+            title: "Mga Static Petrophysical Input",
             content: [],
             list: [
               {
                 term: "Porosity (φ)",
                 description:
-                  "Distributed across the 3D simulation grid from log analysis, geostatistical modeling, and core calibration. Controls fluid storage in each grid cell.",
+                  "Ibinahagi sa buong 3D simulation grid mula sa log analysis, geostatistical modeling, at core calibration. Kumokontrol sa fluid storage sa bawat grid cell.",
               },
               {
                 term: "Permeability (k_h, k_v)",
                 description:
-                  "Horizontal and vertical permeability. Controls flow between grid cells. Often the most uncertain property in the simulation model.",
+                  "Horizontal at vertical permeability. Kumokontrol sa daloy sa pagitan ng mga grid cell. Madalas na pinaka-hindi siguradong katangian sa simulation model.",
               },
               {
                 term: "Net-to-Gross (N/G)",
                 description:
-                  "Fraction of each grid layer that is productive reservoir rock, based on net pay cutoffs from log analysis.",
+                  "Bahagi ng bawat grid layer na productive reservoir rock, batay sa net pay cutoff mula sa log analysis.",
               },
               {
-                term: "Rock Types and Relative Permeability Curves",
+                term: "Rock Types at Relative Permeability Curves",
                 description:
-                  "Different rock types have different k_r and Pc curves, measured from SCAL. Assigning the correct rock type to each grid cell is critical for accurate production forecasting.",
+                  "Ang iba't ibang uri ng bato ay may iba't ibang k_r at Pc curves, na sinusukat mula sa SCAL. Ang tamang pagtatalaga ng uri ng bato sa bawat grid cell ay kritikal para sa tumpak na production forecasting.",
               },
             ],
           },
           {
             id: "sec-6-6-b",
-            title: "Dynamic PVT Inputs",
+            title: "Mga Dynamic PVT Input",
             content: [],
             list: [
               {
                 term: "PVT Tables (Bo, Rs, μo, Bg, Z)",
                 description:
-                  "Look-up tables of fluid properties as functions of pressure. The simulator interpolates these at each pressure step to compute fluid volumes and flow mobilities.",
+                  "Mga look-up table ng mga katangian ng fluid bilang function ng pressure. Ang simulator ay nag-iinterpolate ng mga ito sa bawat pressure step para kalkulahin ang mga volume ng fluid at flow mobility.",
               },
               {
-                term: "Fluid Compressibilities",
+                term: "Fluid Compressibility",
                 description:
-                  "Controls how much fluid expands per unit pressure drop. Critical for material balance validation and history matching.",
+                  "Kumokontrol kung gaano karaming fluid ang lumalawak bawat unit ng pagbaba ng pressure. Kritikal para sa material balance validation at history matching.",
               },
               {
                 term: "Phase Behavior Model",
                 description:
-                  "For gas condensate and volatile oil systems, a compositional model (equation of state) is needed to track phase changes accurately throughout the simulation.",
+                  "Para sa mga gas condensate at volatile oil system, ang isang compositional model (equation of state) ay kinakailangan para tumpak na ma-track ang mga pagbabago ng phase sa buong simulation.",
               },
             ],
           },
@@ -1711,46 +1711,46 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
       },
       {
         id: "sec-6-7",
-        title: "Consequences of Poor Integration",
+        title: "Mga Kahihinatnan ng Mahinang Integrasyon",
         content: [
-          "The history of petroleum engineering is filled with case studies where poor integration of petrophysical and PVT data led to costly field development mistakes. Understanding these failure modes is as important as understanding the correct methods.",
+          "Ang kasaysayan ng petroleum engineering ay puno ng mga case study kung saan ang mahinang integrasyon ng petrophysical at PVT data ay nagdulot ng mga mahal na pagkakamali sa field development. Ang pag-unawa sa mga failure mode na ito ay kasinghalaga ng pag-unawa sa mga tamang pamamaraan.",
         ],
         subsections: [
           {
             id: "sec-6-7-a",
-            title: "Common Integration Errors and Their Consequences",
+            title: "Mga Karaniwang Integration Error at ang kanilang mga Kahihinatnan",
             content: [],
             list: [
               {
-                term: "Using the Wrong Saturation Model",
+                term: "Paggamit ng Maling Saturation Model",
                 description:
-                  "Applying Archie's equation in a shaly sand without correction systematically overestimates Sw, underestimates STOIIP, and may cause productive zones to be abandoned as water zones.",
+                  "Ang paglalapat ng Archie's equation sa isang shaly sand nang walang pagwawasto ay sistematikong nag-o-overestimate ng Sw, nag-u-underestimate ng STOIIP, at maaaring magdulot ng pag-abandono ng mga productive zone bilang mga water zone.",
               },
               {
-                term: "Ignoring Wettability Effects",
+                term: "Pagbabalewalang mga Epekto ng Wettability",
                 description:
-                  "Using relative permeability curves measured under water-wet laboratory conditions in an oil-wet or mixed-wet carbonate reservoir leads to poor waterflood history matches and over-optimistic recovery forecasts.",
+                  "Ang paggamit ng mga relative permeability curve na sinukat sa ilalim ng water-wet na kondisyon ng laboratoryo sa isang oil-wet o mixed-wet carbonate reservoir ay nagdudulot ng mahinang waterflood history match at labis na optimistikong recovery forecast.",
               },
               {
-                term: "Using the Wrong PVT Model",
+                term: "Paggamit ng Maling PVT Model",
                 description:
-                  "Characterizing a volatile oil reservoir with a black oil PVT model (instead of a compositional model) can significantly misrepresent the gas-oil ratio behavior and liquid recovery below bubble point.",
+                  "Ang pag-characterize ng isang volatile oil reservoir gamit ang black oil PVT model (sa halip na isang compositional model) ay maaaring malaki ang maling representasyon ng gas-oil ratio behavior at liquid recovery sa ibaba ng bubble point.",
               },
               {
-                term: "Over-smoothing Permeability",
+                term: "Over-smoothing ng Permeability",
                 description:
-                  "Averaging heterogeneous permeability profiles eliminates key baffles and barriers, causing the simulation to overpredict early sweep efficiency and underpredict water breakthrough time.",
+                  "Ang pag-average ng mga heterogeneous permeability profile ay nag-aalis ng mahahalagang baffle at hadlang, na nagdudulot ng overpredict ng simulation ng early sweep efficiency at underpredict ng oras ng water breakthrough.",
               },
             ],
           },
         ],
         noteBox: {
-          title: "Core Integration Principles",
+          title: "Mga Pangunahing Prinsipyo ng Integrasyon",
           items: [
-            "Most reservoir failures are due to misinterpretation of rock or fluid data, not arithmetic errors.",
-            "The reservoir model is only as good as its weakest input — identify and quantify uncertainties.",
-            "History matching against actual production data is the ultimate test of integration quality.",
-            "Sensitivity analysis on key uncertain parameters (k, φ, Sw, Pc, kr) is always required.",
+            "Karamihan sa mga kabiguan ng reservoir ay dahil sa maling interpretasyon ng data ng bato o fluid, hindi sa mga arithmetic error.",
+            "Ang reservoir model ay kasinghalaga lang ng pinaka-mahinang input nito — tukuyin at quantify ang mga uncertainty.",
+            "Ang history matching laban sa aktwal na production data ang ultimate na pagsubok ng kalidad ng integrasyon.",
+            "Ang sensitivity analysis sa mga pangunahing hindi siguradong parameter (k, φ, Sw, Pc, kr) ay palaging kinakailangan.",
           ],
         },
       },
@@ -1759,27 +1759,27 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
       {
         name: "STOIIP (Stock Tank Oil Initially In Place)",
         eq: "N = (Vb × φ × (1 − Sw)) / Bo",
-        desc: "Vb = bulk volume (res bbl from seismic/geology), φ and Sw from petrophysics, Bo from PVT. All inputs must be consistent.",
+        desc: "Vb = bulk volume (res bbl mula sa seismic/geology), φ at Sw mula sa petrophysics, Bo mula sa PVT. Ang lahat ng input ay dapat na konsistente.",
       },
       {
         name: "Recoverable Oil Reserves",
         eq: "Np = N × RF",
-        desc: "Recoverable reserves = STOIIP × Recovery Factor. RF depends on drive mechanism, rock type, fluid properties, and development strategy.",
+        desc: "Recoverable reserves = STOIIP × Recovery Factor. Ang RF ay nakasalalay sa drive mechanism, uri ng bato, mga katangian ng fluid, at strategy ng pag-unlad.",
       },
       {
         name: "Fluid Mobility",
         eq: "λ = k_r / μ",
-        desc: "Combines rock property (relative permeability k_r) and fluid property (viscosity μ) into a single measure of flow ease.",
+        desc: "Pinagsasama ang katangian ng bato (relative permeability k_r) at katangian ng fluid (viscosity μ) sa isang sukat ng kagalingan ng daloy.",
       },
       {
         name: "Mobility Ratio",
         eq: "M = (k_r,w / μ_w) / (k_r,o / μ_o)",
-        desc: "M < 1 → stable waterflood; M = 1 → unit mobility ratio (neutral); M > 1 → viscous fingering. Combines both petrophysical and PVT inputs.",
+        desc: "M < 1 → matatag na waterflood; M = 1 → unit mobility ratio (neutral); M > 1 → viscous fingering. Pinagsasama ang parehong petrophysical at PVT input.",
       },
       {
-        name: "Darcy's Law in Field Units",
+        name: "Darcy's Law sa Field Units",
         eq: "q = 1.127×10⁻³ × (k × A × ΔP) / (μ × L)",
-        desc: "q = flow rate (bbl/day), k in mD, A in ft², ΔP in psi, μ in cP, L in ft. The practical form for reservoir engineering.",
+        desc: "q = flow rate (bbl/day), k sa mD, A sa ft², ΔP sa psi, μ sa cP, L sa ft. Ang praktikal na anyo para sa reservoir engineering.",
       },
     ],
     terms: [
@@ -1797,46 +1797,46 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
   },
 
   7: {
-    title: "Application in Reservoir Engineering",
+    title: "Aplikasyon sa Reservoir Engineering",
     overview:
-      "From drive mechanisms to secondary and enhanced recovery, this final chapter shows how all the preceding petrophysical and PVT principles are applied in the real-world engineering of oil and gas field development and production optimization.",
+      "Mula sa mga drive mechanism hanggang sa secondary at enhanced recovery, ipinapakita ng huling kabanatang ito kung paano inilalapat ang lahat ng nakaraang petrophysical at PVT prinsipyo sa tunay na engineering ng pag-unlad ng field ng langis at gas at pag-optimize ng produksyon.",
     sections: [
       {
         id: "sec-7-1",
-        title: "Reservoir Energy Sources",
+        title: "Mga Pinagkukunan ng Enerhiya ng Reservoir",
         content: [
-          "Every oil and gas reservoir initially contains a certain amount of stored energy, equivalent to the pressure that exists above normal hydrostatic pressure. This energy drives fluids toward the wellbore during production. Understanding the source and magnitude of this energy is fundamental to predicting reservoir performance and designing an optimal production strategy.",
+          "Ang bawat reservoir ng langis at gas ay paunang naglalaman ng isang tiyak na halaga ng nakaimbak na enerhiya, katumbas ng pressure na umiiral sa itaas ng normal na hydrostatic pressure. Ang enerhiyang ito ang nagtutulak ng mga fluid patungo sa wellbore sa panahon ng produksyon. Ang pag-unawa sa pinagkukunan at magnitude ng enerhiyang ito ay pundamental sa paghula ng performance ng reservoir at pagdisenyo ng optimal na strategy ng produksyon.",
         ],
         subsections: [
           {
             id: "sec-7-1-a",
-            title: "Sources of Reservoir Drive Energy",
+            title: "Mga Pinagkukunan ng Drive Energy ng Reservoir",
             content: [],
             list: [
               {
-                term: "Fluid Expansion (Oil, Gas, Water)",
+                term: "Fluid Expansion (Langis, Gas, Tubig)",
                 description:
-                  "As reservoir pressure declines, fluids expand according to their compressibility. Gas expansion is the most powerful energy source because gas is highly compressible. Oil and water expansion are smaller contributions.",
+                  "Habang bumababa ang reservoir pressure, ang mga fluid ay lumalawak ayon sa kanilang compressibility. Ang gas expansion ang pinaka-makapangyarihang pinagkukunan ng enerhiya dahil ang gas ay highly compressible. Ang oil at water expansion ay mas maliit na kontribusyon.",
               },
               {
                 term: "Dissolved Gas Expansion",
                 description:
-                  "Below the bubble point, gas comes out of solution from oil, expanding dramatically as pressure declines. This liberated gas provides a strong drive but causes rapid pressure decline and GOR increase if not managed carefully.",
+                  "Sa ibaba ng bubble point, ang gas ay lumalabas mula sa solusyon mula sa langis, malaki ang pagpapalawak habang bumababa ang pressure. Ang napalaya na gas na ito ay nagbibigay ng malakas na drive ngunit nagdudulot ng mabilis na pagbaba ng pressure at pagtaas ng GOR kung hindi maayos na pinamamahalaan.",
               },
               {
                 term: "Gas Cap Expansion",
                 description:
-                  "Free gas accumulated above the oil zone in the gas cap expands as pressure declines, pushing down and displacing oil toward production wells. Maintaining a large, intact gas cap is one of the most effective strategies for pressure maintenance.",
+                  "Ang free gas na naipon sa itaas ng oil zone sa gas cap ay lumalawak habang bumababa ang pressure, na nagtutulak pababa at nagpapalipat ng langis patungo sa mga produksyon na balon. Ang pagpapanatili ng malaki, buo na gas cap ay isa sa mga pinaka-epektibong strategy para sa pressure maintenance.",
               },
               {
                 term: "Aquifer Water Influx (Water Encroachment)",
                 description:
-                  "Natural water encroachment from a connected aquifer replenishes reservoir volume as oil is produced. Active aquifer support can maintain nearly constant reservoir pressure over the life of the field. The most efficient natural drive mechanism.",
+                  "Ang natural na pagpasok ng tubig mula sa isang konektadong aquifer ay nagpupuno ng volume ng reservoir habang ginagamit ang langis. Ang aktibong suporta ng aquifer ay maaaring mapanatili ang halos constant na reservoir pressure sa buong buhay ng field. Ang pinaka-mahusay na natural drive mechanism.",
               },
               {
-                term: "Rock and Fluid Compressibility",
+                term: "Rock at Fluid Compressibility",
                 description:
-                  "The expansion of pore volume reduction (compaction) and connate water as pressure declines. Typically a minor contribution except in highly compressible rocks (chalk, unconsolidated sand) or highly overpressured reservoirs.",
+                  "Ang pagpapalawak ng pagbaba ng pore volume (compaction) at connate water habang bumababa ang pressure. Karaniwang maliit na kontribusyon maliban sa mga highly compressible rock (chalk, unconsolidated sand) o lubos na overpressured reservoir.",
               },
             ],
           },
@@ -1846,37 +1846,37 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
         id: "sec-7-2",
         title: "Primary Recovery — Solution Gas Drive",
         content: [
-          "Primary recovery refers to production driven entirely by natural reservoir energy, without any injection of gas or water. The mechanism that provides this energy is called the drive mechanism, and it fundamentally determines how much oil is produced and how long production remains economic.",
+          "Ang primary recovery ay tumutukoy sa produksyon na ganap na pinapatakbo ng natural na enerhiya ng reservoir, nang walang anumang injection ng gas o tubig. Ang mekanismong nagbibigay ng enerhiyang ito ay tinatawag na drive mechanism, at ito ay pundamental na nagtatakda kung gaano karaming langis ang ginagawa at kung gaano katagal ang produksyon na nananatiling ekonomiko.",
         ],
         subsections: [
           {
             id: "sec-7-2-a",
             title: "Solution Gas Drive Mechanism",
             content: [
-              "Solution gas drive (also called dissolved gas drive or depletion drive) is the simplest and most common primary recovery mechanism. The reservoir starts above bubble point as a single-phase liquid. As production reduces reservoir pressure below bubble point, dissolved gas is liberated from the oil.",
-              "The liberated gas expands, providing the energy to push oil toward the wellbore. However, as free gas saturation builds up above critical gas saturation, gas begins to flow preferentially (since gas mobility is much higher than oil mobility at high gas saturations). The producing GOR rises sharply, and oil production rate declines rapidly.",
-              "Recovery factors for solution gas drive are typically 5–30% of STOIIP — the lowest of all primary drive mechanisms. Pressure maintenance by gas or water injection before GOR begins to rise dramatically improves recovery.",
+              "Ang solution gas drive (tinatawag din na dissolved gas drive o depletion drive) ay ang pinakasimple at pinakakaraniwang primary recovery mechanism. Ang reservoir ay nagsisimula sa itaas ng bubble point bilang isang single-phase liquid. Habang binabawasan ng produksyon ang reservoir pressure sa ibaba ng bubble point, ang dissolved gas ay napalaya mula sa langis.",
+              "Ang napalaya na gas ay lumalawak, na nagbibigay ng enerhiya para itulak ang langis patungo sa wellbore. Gayunpaman, habang nagtatayo ang free gas saturation sa itaas ng critical gas saturation, ang gas ay nagsisimulang dumaning preferentially (dahil ang gas mobility ay mas mataas kaysa sa oil mobility sa mataas na gas saturation). Ang producing GOR ay mabilis na tumataas, at ang oil production rate ay mabilis na bumababa.",
+              "Ang mga recovery factor para sa solution gas drive ay karaniwang 5–30% ng STOIIP — ang pinakamababa sa lahat ng primary drive mechanism. Ang pressure maintenance ng gas o water injection bago mabilis na tumaas ang GOR ay dramatikong nagpapabuti ng recovery.",
             ],
           },
           {
             id: "sec-7-2-b",
-            title: "Production Characteristics of Solution Gas Drive",
+            title: "Mga Katangian ng Produksyon ng Solution Gas Drive",
             content: [],
             list: [
               {
-                term: "Rapid Pressure Decline",
+                term: "Mabilis na Pagbaba ng Pressure",
                 description:
-                  "With no external energy input, reservoir pressure falls quickly as oil and gas are produced. The pressure decline rate is proportional to production rate and inversely proportional to the total fluid compressibility.",
+                  "Nang walang external na input ng enerhiya, ang reservoir pressure ay mabilis na bumabagsak habang ginagamit ang langis at gas. Ang rate ng pagbaba ng pressure ay proporsyonal sa production rate at inversely proporsyonal sa kabuuang fluid compressibility.",
               },
               {
-                term: "Rising Gas-Oil Ratio",
+                term: "Tumataas na Gas-Oil Ratio",
                 description:
-                  "GOR starts at the initial solution GOR (Rs), then rises steeply below bubble point as free gas saturation exceeds Sgc. A rapidly rising GOR is the diagnostic sign of solution gas drive.",
+                  "Nagsisimula ang GOR sa paunang solution GOR (Rs), pagkatapos ay mabilis na tumataas sa ibaba ng bubble point habang ang free gas saturation ay lumampas sa Sgc. Ang mabilis na pagtaas ng GOR ang diagnostic na palatandaan ng solution gas drive.",
               },
               {
-                term: "Declining Oil Rate",
+                term: "Bumababang Oil Rate",
                 description:
-                  "As reservoir pressure falls and gas saturation rises (reducing oil relative permeability), oil production rate declines continuously. Eventually, gas flow dominates and oil production becomes uneconomic.",
+                  "Habang bumabagsak ang reservoir pressure at tumataas ang gas saturation (nagbabawas ng oil relative permeability), ang oil production rate ay tuloy-tuloy na bumababa. Sa kalaunan, ang daloy ng gas ang nangunguna at ang produksyon ng langis ay nagiging hindi na ekonomiko.",
               },
             ],
           },
@@ -1884,82 +1884,82 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
       },
       {
         id: "sec-7-3",
-        title: "Primary Recovery — Gas Cap Drive and Water Drive",
+        title: "Primary Recovery — Gas Cap Drive at Water Drive",
         content: [
-          "Gas cap drive and water drive are significantly more efficient natural drive mechanisms than solution gas drive because they provide continuous pressure support, maintaining the reservoir at higher average pressure for longer.",
+          "Ang gas cap drive at water drive ay makabuluhang mas mahusay na natural drive mechanism kaysa sa solution gas drive dahil nagbibigay sila ng tuloy-tuloy na pressure support, na nagpapanatili ng reservoir sa mas mataas na average pressure nang mas matagal.",
         ],
         subsections: [
           {
             id: "sec-7-3-a",
             title: "Gas Cap Drive",
             content: [
-              "In a gas cap reservoir, a free gas phase occupies the structural crest above the oil zone. As oil is produced from the flanks, the gas cap expands downward, displacing oil toward the producing wells. The gas cap maintains reservoir pressure much better than solution gas drive alone.",
-              "Recovery factors for gas cap drive are typically 20–40% of STOIIP, significantly better than solution gas drive. The key to maximizing recovery is to prevent gas coning — the premature breakthrough of gas cap gas into the oil-producing wells — by controlling production rates and well placement.",
+              "Sa isang gas cap reservoir, ang isang free gas phase ay inookupahan ang structural crest sa itaas ng oil zone. Habang ginagamit ang langis mula sa mga flanks, ang gas cap ay lumalawak pababa, na nagpapalipat ng langis patungo sa mga produksyon na balon. Ang gas cap ay nagpapanatili ng reservoir pressure nang mas mahusay kaysa sa solution gas drive na mag-isa.",
+              "Ang mga recovery factor para sa gas cap drive ay karaniwang 20–40% ng STOIIP, makabuluhang mas mahusay kaysa sa solution gas drive. Ang susi para sa pag-maximize ng recovery ay mapigilan ang gas coning — ang maagang breakthrough ng gas cap gas sa mga oil-producing well — sa pamamagitan ng pagkontrol ng mga production rate at paglalagay ng balon.",
             ],
           },
           {
             id: "sec-7-3-b",
             title: "Water Drive",
             content: [
-              "Water drive is the most efficient natural drive mechanism, capable of recovering 35–75% of STOIIP. It operates through an aquifer — a water-bearing formation connected to the reservoir — that influx water into the reservoir as oil is produced, maintaining reservoir pressure near its original level.",
-              "The efficiency of water drive depends on the mobility ratio between water and oil, the rate of water influx relative to production rate, and the degree of permeability heterogeneity. In strong water drive reservoirs, reservoir pressure remains essentially constant until water cuts become uneconomic.",
+              "Ang water drive ay ang pinaka-mahusay na natural drive mechanism, kayang mag-recover ng 35–75% ng STOIIP. Gumagana ito sa pamamagitan ng isang aquifer — isang water-bearing formation na konektado sa reservoir — na nagpapasok ng tubig sa reservoir habang ginagamit ang langis, na nagpapanatili ng reservoir pressure malapit sa orihinal na antas nito.",
+              "Ang kahusayan ng water drive ay nakasalalay sa mobility ratio sa pagitan ng tubig at langis, ang rate ng pagpasok ng tubig kaugnay ng rate ng produksyon, at ang antas ng permeability heterogeneity. Sa mga malakas na water drive reservoir, ang reservoir pressure ay nanatiling halos constant hanggang sa magiging hindi na ekonomiko ang mga water cut.",
             ],
           },
           {
             id: "sec-7-3-c",
-            title: "Expansion and Compaction Drives",
+            title: "Expansion at Compaction Drive",
             content: [
-              "Rock and fluid expansion drive is dominant in undersaturated oil reservoirs above bubble point, where the only energy sources are the expansion of the slightly compressible oil, water, and rock. Recovery is very low (1–5% of STOIIP) because liquid and rock compressibilities are small.",
-              "Compaction drive occurs when the reservoir rock is sufficiently compressible that its pore volume reduction contributes meaningfully to fluid expulsion. In chalk reservoirs and unconsolidated deep sands, this mechanism can be significant. However, severe compaction may cause irreversible permeability reduction and surface subsidence.",
+              "Ang rock at fluid expansion drive ay dominante sa mga undersaturated oil reservoir sa itaas ng bubble point, kung saan ang tanging pinagkukunan ng enerhiya ay ang pagpapalawak ng bahagyang compressible na langis, tubig, at bato. Ang recovery ay napakababa (1–5% ng STOIIP) dahil maliit ang liquid at rock compressibility.",
+              "Ang compaction drive ay nagaganap kapang ang reservoir rock ay sapat na compressible na ang pagbaba ng pore volume nito ay makabuluhang nag-aambag sa pag-expulse ng fluid. Sa mga chalk reservoir at unconsolidated deep sand, ang mekanismong ito ay maaaring maging malaki. Gayunpaman, ang malubhang compaction ay maaaring magdulot ng irreversible na pagbaba ng permeability at subsidence ng ibabaw ng lupa.",
             ],
           },
         ],
       },
       {
         id: "sec-7-4",
-        title: "Combination Drive and Drive Mechanism Identification",
+        title: "Combination Drive at Pagtukoy ng Drive Mechanism",
         content: [
-          "Most real reservoirs are not driven by a single pure mechanism. Combination drive reservoirs experience simultaneous contributions from solution gas, gas cap expansion, water influx, and rock compressibility. The relative contributions vary over the production life of the field as each energy source is progressively depleted.",
-          "Correctly identifying the dominant drive mechanism is critical for optimal field management. Material balance analysis (the Havlena-Odeh method and Craft-Hawkins method) decomposes the cumulative production into contributions from each mechanism, allowing engineers to identify what is driving the reservoir and forecast future performance.",
+          "Karamihan sa mga tunay na reservoir ay hindi pinapatakbo ng isang purong mekanismo. Ang mga combination drive reservoir ay nakakaranas ng sabay na kontribusyon mula sa solution gas, gas cap expansion, water influx, at rock compressibility. Ang kamag-anak na kontribusyon ay nagbabago sa buong buhay ng produksyon ng field habang unti-unting naubos ang bawat pinagkukunan ng enerhiya.",
+          "Ang tamang pagtukoy ng dominanteng drive mechanism ay kritikal para sa optimal na pamamahala ng field. Ang material balance analysis (ang paraan ng Havlena-Odeh at Craft-Hawkins) ay nag-de-decompose ng cumulative production sa mga kontribusyon mula sa bawat mekanismo, na nagpapahintulot sa mga engineer na matukoy kung ano ang nagpapatakbo ng reservoir at hulaan ang hinaharap na performance.",
         ],
         subsections: [
           {
             id: "sec-7-4-a",
-            title: "Consequences of Misidentifying Drive Mechanism",
+            title: "Mga Kahihinatnan ng Maling Pagtukoy ng Drive Mechanism",
             content: [
-              "If a water drive reservoir is mistakenly modeled as a solution gas drive reservoir, injection projects will be improperly designed. Water injection may be initiated when the aquifer could have maintained adequate pressure support, wasting capital. Alternatively, if an active aquifer is unrecognized, depletion may be too rapid, allowing premature gas breakout or edge-water encroachment.",
-              "Misidentification of a gas condensate reservoir as a dry gas reservoir can result in ignoring retrograde condensate buildup, leading to loss of valuable condensate production and reduced gas deliverability as condensate blocks near-wellbore pores.",
+              "Kung ang isang water drive reservoir ay maling na-model bilang isang solution gas drive reservoir, ang mga injection project ay hindi maayos na madidisenyuhan. Ang water injection ay maaaring simulan kapag ang aquifer ay maaari sana ay nagpanatili ng sapat na pressure support, na aksidente ang kapital. Sa kabilang banda, kung ang isang aktibong aquifer ay hindi nakilala, ang depletion ay maaaring masyadong mabilis, na nagpapahintulot ng maagang gas breakout o edge-water encroachment.",
+              "Ang maling pagtukoy ng isang gas condensate reservoir bilang isang dry gas reservoir ay maaaring magresulta sa hindi pagpansin sa retrograde condensate buildup, na nagdudulot ng pagkawala ng mahalagang condensate production at nabawasang gas deliverability habang ang condensate ay naghaharang ng mga near-wellbore pore.",
             ],
           },
         ],
       },
       {
         id: "sec-7-5",
-        title: "Secondary Recovery — Water Flooding and Gas Injection",
+        title: "Secondary Recovery — Water Flooding at Gas Injection",
         content: [
-          "When natural reservoir energy is insufficient or declining, secondary recovery methods are used to artificially maintain reservoir pressure and displace oil toward producing wells. Water flooding and gas injection are the two standard secondary recovery techniques.",
-          "Water flooding is the dominant secondary recovery method worldwide. Water is injected through dedicated injection wells to displace oil toward producing wells. An effective waterflood design requires: favorable mobility ratio (M ≤ 1), good well pattern geometry to maximize areal sweep, layer-by-layer permeability data for vertical sweep analysis, and careful management of injection rates to control flood-front advancement.",
+          "Kapag ang natural na enerhiya ng reservoir ay kulang o bumababa, ang mga secondary recovery method ay ginagamit para artipisyal na mapanatili ang reservoir pressure at mapalipat ang langis patungo sa mga producing well. Ang water flooding at gas injection ang dalawang pamantayang secondary recovery technique.",
+          "Ang water flooding ang dominanteng secondary recovery method sa buong mundo. Ang tubig ay ini-inject sa pamamagitan ng mga dedicated injection well para mapalipat ang langis patungo sa mga producing well. Ang isang epektibong waterflood design ay nangangailangan ng: favorable mobility ratio (M ≤ 1), magandang geometry ng well pattern para ma-maximize ang areal sweep, layer-by-layer na permeability data para sa vertical sweep analysis, at maingat na pamamahala ng mga injection rate para kontrolin ang advancement ng flood-front.",
         ],
         subsections: [
           {
             id: "sec-7-5-a",
-            title: "Water Flooding Design Principles",
+            title: "Mga Prinsipyo ng Disenyo ng Water Flooding",
             content: [],
             list: [
               {
                 term: "Five-Spot Pattern",
                 description:
-                  "One injector surrounded by four producers at equal spacing. The most common well pattern, providing reasonable areal sweep efficiency. Line drive and inverted nine-spot patterns are used in different reservoir geometries.",
+                  "Isang injector na napapalibutan ng apat na producer sa pantay na espasyo. Ang pinakakaraniwang well pattern, na nagbibigay ng katamtamang areal sweep efficiency. Ang mga line drive at inverted nine-spot pattern ay ginagamit sa iba't ibang geometry ng reservoir.",
               },
               {
-                term: "Mobility Ratio Control",
+                term: "Kontrol ng Mobility Ratio",
                 description:
-                  "When M > 1 (heavy oil or low k_rw endpoint), polymer flooding is used to increase water viscosity, reducing M toward unity. This dramatically improves sweep efficiency and delays water breakthrough.",
+                  "Kapag ang M > 1 (heavy oil o mababang k_rw endpoint), ang polymer flooding ay ginagamit para mapataas ang water viscosity, na nagbabawas ng M patungo sa unity. Dramatikong nagpapabuti ito ng sweep efficiency at nagpapabagal ng water breakthrough.",
               },
               {
-                term: "Injection Rate Management",
+                term: "Pamamahala ng Injection Rate",
                 description:
-                  "Injection rate must be balanced against production rate to maintain target reservoir pressure. Over-injection causes fracturing and channeling; under-injection fails to maintain pressure support.",
+                  "Ang injection rate ay dapat ibalanse laban sa production rate para mapanatili ang target na reservoir pressure. Ang over-injection ay nagdudulot ng fracturing at channeling; ang under-injection ay nabibigo sa pagpapanatili ng pressure support.",
               },
             ],
           },
@@ -1967,43 +1967,43 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
             id: "sec-7-5-b",
             title: "Gas Injection",
             content: [
-              "Gas injection (GI) is used for pressure maintenance (especially in gas condensate reservoirs to prevent retrograde condensation), gravity drainage enhancement, and miscible flooding to reduce residual oil saturation. Miscible gas injection achieves essentially zero interfacial tension between injected gas and reservoir oil, eliminating capillary trapping and dramatically improving displacement efficiency.",
-              "Gas channeling — preferential flow of injected gas along high-permeability streaks — is the major problem with gas injection. This reduces areal sweep efficiency and causes premature gas breakthrough at producing wells.",
+              "Ang gas injection (GI) ay ginagamit para sa pressure maintenance (lalo na sa mga gas condensate reservoir para maiwasan ang retrograde condensation), gravity drainage enhancement, at miscible flooding para mabawasan ang residual oil saturation. Ang miscible gas injection ay nakakamit ng halos zero interfacial tension sa pagitan ng injected gas at reservoir oil, na inuubos ang capillary trapping at dramatikong nagpapabuti ng displacement efficiency.",
+              "Ang gas channeling — preferential na daloy ng injected gas sa mga high-permeability streak — ang pangunahing problema sa gas injection. Nagbabawas ito ng areal sweep efficiency at nagdudulot ng maagang gas breakthrough sa mga producing well.",
             ],
           },
         ],
       },
       {
         id: "sec-7-6",
-        title: "Enhanced Oil Recovery (EOR) Techniques",
+        title: "Mga Pamamaraan ng Enhanced Oil Recovery (EOR)",
         content: [
-          "Enhanced Oil Recovery (EOR) methods target oil that conventional primary and secondary recovery cannot mobilize — specifically the residual oil trapped in pore spaces by capillary forces (Sor). EOR techniques address this by modifying fluid properties, wettability, or displacement mechanisms beyond what simple water or gas injection can achieve.",
+          "Ang mga pamamaraan ng Enhanced Oil Recovery (EOR) ay naglalayong makuha ang langis na hindi kayang mobilisahin ng conventional primary at secondary recovery — partikular ang residual oil na nakulong sa mga pore space ng capillary forces (Sor). Tinutugunan ng mga EOR technique ito sa pamamagitan ng pagbabago ng mga katangian ng fluid, wettability, o displacement mechanism na higit pa sa magagawa ng simpleng water o gas injection.",
         ],
         subsections: [
           {
             id: "sec-7-6-a",
-            title: "EOR Categories and Key Techniques",
+            title: "Mga Kategorya ng EOR at Mga Pangunahing Teknik",
             content: [],
             list: [
               {
                 term: "Chemical EOR (Polymer, Surfactant, Alkali)",
                 description:
-                  "Polymer flooding increases water viscosity to improve mobility ratio. Surfactant flooding reduces interfacial tension to mobilize trapped oil ganglia. Alkaline flooding reacts with acidic crude oil to generate surfactant in situ.",
+                  "Ang polymer flooding ay nagpapalaki ng water viscosity para mapabuti ang mobility ratio. Ang surfactant flooding ay nagbabawas ng interfacial tension para ma-mobilize ang mga nakulong na oil ganglia. Ang alkaline flooding ay nakikipag-react sa acidic crude oil para lumikha ng surfactant in situ.",
               },
               {
                 term: "WAG (Water Alternating Gas)",
                 description:
-                  "Alternating cycles of water injection and gas injection. The water slugs improve sweep efficiency by reducing the high mobility of gas; the gas slugs improve displacement efficiency. WAG is widely applied in both offshore and onshore fields.",
+                  "Alternating na cycle ng water injection at gas injection. Ang mga water slug ay nagpapabuti ng sweep efficiency sa pamamagitan ng pagbabawas ng mataas na mobility ng gas; ang mga gas slug ay nagpapabuti ng displacement efficiency. Ang WAG ay malawakang inilalapat sa parehong offshore at onshore field.",
               },
               {
                 term: "FAWAG (Foam Assisted WAG)",
                 description:
-                  "An advanced variant of WAG where foam is generated at the injection front by reacting a surfactant with the injected gas. Foam has much lower mobility than free gas, dramatically reducing gas channeling and improving conformance in heterogeneous reservoirs.",
+                  "Isang advanced na variant ng WAG kung saan ang foam ay nabubuo sa injection front sa pamamagitan ng pakikipagreact ng surfactant sa injected gas. Ang foam ay may mas mababang mobility kaysa sa free gas, dramatikong nagbabawas ng gas channeling at nagpapabuti ng conformance sa mga heterogeneous reservoir.",
               },
               {
                 term: "Thermal EOR (Steam, SAGD, In-Situ Combustion)",
                 description:
-                  "Heat reduces oil viscosity, sometimes by orders of magnitude. Steam injection and Steam-Assisted Gravity Drainage (SAGD) are applied extensively in heavy oil and bitumen reservoirs. In-situ combustion burns a fraction of the oil in place to generate heat.",
+                  "Ang init ay nagbabawas ng oil viscosity, minsan ng ilang order ng magnitude. Ang steam injection at Steam-Assisted Gravity Drainage (SAGD) ay malawakang inilalapat sa mga heavy oil at bitumen reservoir. Ang in-situ combustion ay nagsusunog ng isang bahagi ng langis in place para makabuo ng init.",
               },
             ],
           },
@@ -2011,51 +2011,51 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
       },
       {
         id: "sec-7-7",
-        title: "Reservoir Performance Monitoring and Material Balance",
+        title: "Pagmamanman ng Performance ng Reservoir at Material Balance",
         content: [
-          "Monitoring reservoir performance over the field life is essential for detecting problems early, validating production forecasts, and optimizing field management. Key performance indicators include reservoir pressure, producing GOR, water cut, and production rate trends.",
+          "Ang pagmamanman ng performance ng reservoir sa buong buhay ng field ay mahalaga para maagang matukoy ang mga problema, ma-validate ang mga hula ng produksyon, at ma-optimize ang pamamahala ng field. Ang mga pangunahing performance indicator ay kinabibilangan ng reservoir pressure, producing GOR, water cut, at mga trend ng production rate.",
         ],
         subsections: [
           {
             id: "sec-7-7-a",
-            title: "Key Performance Indicators",
+            title: "Mga Pangunahing Performance Indicator",
             content: [],
             list: [
               {
                 term: "Reservoir Pressure (average static pressure)",
                 description:
-                  "Monitored through periodic well shut-in pressure buildups (DST, RFT/MDT). Pressure decline rate is the primary indicator of reservoir energy depletion. Sudden pressure changes may indicate communication between reservoir zones.",
+                  "Mino-monitor sa pamamagitan ng pana-panahong well shut-in pressure buildup (DST, RFT/MDT). Ang rate ng pagbaba ng pressure ang pangunahing tagapagpahiwatig ng pagkaubos ng enerhiya ng reservoir. Ang mga biglang pagbabago ng pressure ay maaaring magpahiwatig ng komunikasyon sa pagitan ng mga zone ng reservoir.",
               },
               {
                 term: "Gas-Oil Ratio (GOR)",
                 description:
-                  "Rising GOR above the solution GOR indicates free gas is flowing, signaling pressure has dropped below bubble point and/or gas cap breakthrough. GOR trend is the most sensitive indicator of drive mechanism behavior.",
+                  "Ang pagtaas ng GOR sa itaas ng solution GOR ay nagpapahiwatig na ang free gas ay dumadaling, na nagpapatanda na ang pressure ay bumaba sa ibaba ng bubble point at/o nagkaroon ng gas cap breakthrough. Ang trend ng GOR ang pinaka-sensitive na tagapagpahiwatig ng gawi ng drive mechanism.",
               },
               {
                 term: "Water Cut (WC)",
                 description:
-                  "The fraction of produced liquid that is water. Rising water cut indicates aquifer influx or injected water breakthrough. Water cut management is central to the economics of mature field production.",
+                  "Ang bahagi ng produced liquid na tubig. Ang tumataas na water cut ay nagpapahiwatig ng aquifer influx o breakthrough ng injected water. Ang pamamahala ng water cut ay sentral sa ekonomika ng produksyon ng mature field.",
               },
             ],
           },
           {
             id: "sec-7-7-b",
-            title: "Material Balance — The Reservoir Equation",
+            title: "Material Balance — Ang Reservoir Equation",
             content: [
-              "The material balance equation (MBE) is the most powerful classical tool for reservoir analysis. It states that cumulative production equals the sum of the expansion of all fluids and rock in the reservoir: expansion of undersaturated oil + gas cap gas + connate water + rock compressibility + water influx = cumulative oil, gas, and water production.",
-              "The MBE allows independent estimation of STOIIP without depending on volumetrics, identification of the dominant drive mechanism, determination of aquifer strength, and prediction of future pressure and production performance. History-matching the MBE to actual production data is one of the most fundamental reservoir engineering tasks.",
+              "Ang material balance equation (MBE) ay ang pinaka-makapangyarihang klasikal na tool para sa reservoir analysis. Sinasabi nito na ang cumulative production ay katumbas ng kabuuan ng pagpapalawak ng lahat ng fluid at bato sa reservoir: pagpapalawak ng undersaturated oil + gas cap gas + connate water + rock compressibility + water influx = cumulative oil, gas, at water production.",
+              "Ang MBE ay nagpapahintulot ng independyenteng pagtatantya ng STOIIP nang hindi umaaasa sa volumetrics, pagtukoy ng dominanteng drive mechanism, pagtukoy ng lakas ng aquifer, at paghula ng hinaharap na pressure at performance ng produksyon. Ang history-matching ng MBE sa aktwal na production data ay isa sa pinaka-pundamental na gawain ng reservoir engineering.",
             ],
           },
         ],
         noteBox: {
-          title: "Recovery Factor Summary by Drive Mechanism",
+          title: "Buod ng Recovery Factor ayon sa Drive Mechanism",
           items: [
-            "Solution Gas Drive: 5–30% of STOIIP — rapid pressure decline, rising GOR",
-            "Gas Cap Drive: 20–40% of STOIIP — pressure maintained better, delayed GOR rise",
-            "Water Drive: 35–75% of STOIIP — excellent pressure maintenance, rising water cut",
-            "Compaction/Expansion Drive: 1–5% of STOIIP — weak energy, small recovery",
-            "Secondary Recovery (Waterflood): Additional 15–25% — depends on sweep efficiency",
-            "EOR Methods: Additional 5–15% — target residual oil after conventional methods",
+            "Solution Gas Drive: 5–30% ng STOIIP — mabilis na pagbaba ng pressure, tumataas na GOR",
+            "Gas Cap Drive: 20–40% ng STOIIP — mas mahusay na pagpapanatili ng pressure, naantalang pagtaas ng GOR",
+            "Water Drive: 35–75% ng STOIIP — mahusay na pressure maintenance, tumataas na water cut",
+            "Compaction/Expansion Drive: 1–5% ng STOIIP — mahinang enerhiya, maliit na recovery",
+            "Secondary Recovery (Waterflood): Karagdagang 15–25% — nakasalalay sa sweep efficiency",
+            "Mga Pamamaraan ng EOR: Karagdagang 5–15% — target ang residual oil pagkatapos ng conventional methods",
           ],
         },
       },
@@ -2064,27 +2064,27 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
       {
         name: "STOIIP (Volumetric)",
         eq: "N = 7758 × A × h × φ × (1 − Sw) / Boi",
-        desc: "A = area (acres), h = net pay thickness (ft), φ = porosity, Sw = initial water saturation, Boi = initial oil FVF (res bbl/STB).",
+        desc: "A = lugar (acres), h = net pay thickness (ft), φ = porosity, Sw = paunang water saturation, Boi = paunang oil FVF (res bbl/STB).",
       },
       {
         name: "Recovery Factor",
         eq: "RF = Np / N",
-        desc: "Np = cumulative oil produced (STB), N = STOIIP (STB). RF depends on drive mechanism, rock quality, and development strategy.",
+        desc: "Np = cumulative oil produced (STB), N = STOIIP (STB). Ang RF ay nakasalalay sa drive mechanism, kalidad ng bato, at strategy ng pag-unlad.",
       },
       {
-        name: "Material Balance (Simplified Oil Reservoir)",
+        name: "Material Balance (Pinasimpleng Oil Reservoir)",
         eq: "Np × Bo ≈ N × (Bo − Boi) + N × Boi × cf × ΔP + We",
-        desc: "Left side = cumulative production; right side = oil expansion + rock/water expansion + water influx (We). Used to identify drive mechanisms.",
+        desc: "Kaliwang panig = cumulative production; kanang panig = oil expansion + rock/water expansion + water influx (We). Ginagamit para matukoy ang mga drive mechanism.",
       },
       {
         name: "Gas Cap Expansion Drive",
         eq: "We + N × m × Bgi × (Bg/Bgi − 1) = Np × Bo",
-        desc: "m = ratio of gas cap volume to oil zone volume (at initial conditions). Gas cap drive supplements oil zone expansion.",
+        desc: "m = ratio ng volume ng gas cap sa volume ng oil zone (sa paunang kondisyon). Ang gas cap drive ay nagdadagdag sa pagpapalawak ng oil zone.",
       },
       {
         name: "Productivity Index",
         eq: "PI = q / (P_r − P_wf)",
-        desc: "PI (bbl/day/psi) = production rate / pressure drawdown. Combines reservoir permeability, thickness, and fluid mobility into a single deliverability measure.",
+        desc: "PI (bbl/day/psi) = production rate / pressure drawdown. Pinagsasama ang reservoir permeability, kapal, at fluid mobility sa isang sukat ng deliverability.",
       },
     ],
     terms: [
@@ -2108,8 +2108,8 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
 const getChapterData = (id: number): ChapterData => {
   if (CHAPTER_CONTENT[id]) return CHAPTER_CONTENT[id];
   return {
-    title: CHAPTER_TITLES[id] || `Chapter ${id}`,
-    overview: "Content loading...",
+    title: CHAPTER_TITLES[id] || `Kabanata ${id}`,
+    overview: "Naglo-load ang nilalaman...",
     sections: [],
     formulas: [],
     terms: [],
@@ -2126,7 +2126,7 @@ function VideoCard({ label, description }: { label: string; description: string 
         </div>
         <div>
           <span className="text-xs font-semibold uppercase tracking-widest text-amber-400/80 mb-1 block">
-            Video Resource
+            Video na Kagamitan
           </span>
           <h3 className="font-bold text-lg font-serif text-white">{label}</h3>
           <p className="text-sm text-slate-300 mt-1">{description}</p>
@@ -2184,8 +2184,8 @@ export default function Chapter() {
         queryClient.invalidateQueries({ queryKey: getGetProgressSummaryQueryKey() });
         if (data.completed) {
           toast({
-            title: "Chapter Completed!",
-            description: "Your progress has been saved.",
+            title: "Natapos ang Kabanata!",
+            description: "Nai-save na ang iyong progreso.",
           });
         }
       },
@@ -2195,7 +2195,7 @@ export default function Chapter() {
   const createBookmark = useCreateBookmark({
     mutation: {
       onSuccess: () => {
-        toast({ title: "Bookmark Added", description: "Section saved to your bookmarks." });
+        toast({ title: "Idinagdag ang Bookmark", description: "Nai-save ang seksyon sa iyong mga bookmark." });
       },
     },
   });
@@ -2252,7 +2252,7 @@ export default function Chapter() {
           {/* Sidebar Navigation */}
           <aside className="hidden lg:block w-64 shrink-0">
             <div className="sticky top-24">
-              <h3 className="font-serif font-bold text-lg mb-4 text-primary">Chapters</h3>
+              <h3 className="font-serif font-bold text-lg mb-4 text-primary">Mga Kabanata</h3>
               <div className="space-y-1">
                 {[1, 2, 3, 4, 5, 6, 7].map((num) => (
                   <Link
@@ -2265,22 +2265,22 @@ export default function Chapter() {
                     }`}
                     data-testid={`link-chapter-sidebar-${num}`}
                   >
-                    <span className="text-xs opacity-60 mr-1">Ch {num}</span> {CHAPTER_TITLES[num]}
+                    <span className="text-xs opacity-60 mr-1">Kab {num}</span> {CHAPTER_TITLES[num]}
                   </Link>
                 ))}
               </div>
             </div>
           </aside>
 
-          {/* Main Content */}
+          {/* Pangunahing Nilalaman */}
           <article className="flex-1 max-w-4xl mx-auto lg:mx-0 min-w-0">
             {/* Header */}
             <header className="mb-8">
               <div className="flex items-center gap-3 text-primary mb-3 font-medium uppercase tracking-widest text-sm">
-                <span>Chapter {chapterId}</span>
+                <span>Kabanata {chapterId}</span>
                 {progress?.completed && (
                   <span className="flex items-center gap-1 text-green-600 bg-green-50 dark:bg-green-950/50 px-2 py-0.5 rounded-full text-xs">
-                    <CheckCircle2 className="h-3 w-3" /> Completed
+                    <CheckCircle2 className="h-3 w-3" /> Natapos Na
                   </span>
                 )}
               </div>
@@ -2292,7 +2292,7 @@ export default function Chapter() {
               </p>
             </header>
 
-            {/* Main Lecture Video Placeholder */}
+            {/* Pangunahing Lecture Video Placeholder */}
             <Card className="mb-10 bg-slate-900 border-slate-800 overflow-hidden relative group cursor-pointer aspect-video flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-tr from-slate-900 via-slate-800 to-amber-900/20 opacity-80 mix-blend-overlay"></div>
               <div className="relative z-10 flex flex-col items-center gap-4 text-white p-6 text-center transform group-hover:scale-105 transition-transform duration-500">
@@ -2302,14 +2302,14 @@ export default function Chapter() {
                 <div>
                   <h3 className="font-bold text-xl font-serif">Lecture Video</h3>
                   <p className="text-sm text-slate-300">
-                    Chapter {chapterId} — {chapterData.title}
+                    Kabanata {chapterId} — {chapterData.title}
                   </p>
-                  <p className="text-xs text-slate-400 mt-1">Video will be available soon</p>
+                  <p className="text-xs text-slate-400 mt-1">Malapit nang makuha ang video</p>
                 </div>
               </div>
             </Card>
 
-            {/* Chapter Sections */}
+            {/* Mga Seksyon ng Kabanata */}
             <div className="space-y-14 mb-12">
               {chapterData.sections.map((section) => (
                 <section key={section.id} id={section.id} className="scroll-mt-24 group">
@@ -2323,14 +2323,14 @@ export default function Chapter() {
                       size="icon"
                       className="opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-primary shrink-0 mt-1"
                       onClick={() => handleAddBookmark(section.id, section.title)}
-                      title="Bookmark this section"
+                      title="I-bookmark ang seksyong ito"
                       data-testid={`button-bookmark-${section.id}`}
                     >
                       <BookmarkPlus className="h-5 w-5" />
                     </Button>
                   </div>
 
-                  {/* Section main content paragraphs */}
+                  {/* Mga Talata ng Nilalaman ng Seksyon */}
                   {section.content.length > 0 && (
                     <div className="prose prose-slate dark:prose-invert prose-lg max-w-none prose-p:leading-relaxed text-muted-foreground mb-6">
                       {section.content.map((paragraph, idx) => (
@@ -2339,12 +2339,12 @@ export default function Chapter() {
                     </div>
                   )}
 
-                  {/* Section top-level note box */}
+                  {/* Note Box ng Seksyon */}
                   {section.noteBox && (
                     <NoteBox title={section.noteBox.title} items={section.noteBox.items} />
                   )}
 
-                  {/* Subsections */}
+                  {/* Mga Subseksyon */}
                   {section.subsections && section.subsections.length > 0 && (
                     <div className="space-y-8 mt-4">
                       {section.subsections.map((sub) => (
@@ -2361,7 +2361,7 @@ export default function Chapter() {
                             </div>
                           )}
 
-                          {/* Definition list */}
+                          {/* Listahan ng Kahulugan */}
                           {sub.list && sub.list.length > 0 && (
                             <div className="grid gap-3 mt-3">
                               {sub.list.map((item, i) => (
@@ -2385,7 +2385,7 @@ export default function Chapter() {
                             </div>
                           )}
 
-                          {/* Subsection note box */}
+                          {/* Note Box ng Subseksyon */}
                           {sub.noteBox && (
                             <NoteBox title={sub.noteBox.title} items={sub.noteBox.items} />
                           )}
@@ -2394,7 +2394,7 @@ export default function Chapter() {
                     </div>
                   )}
 
-                  {/* Inline Video Placeholder (for Ch 4 and 5) */}
+                  {/* Inline Video Placeholder (para sa Kab 4 at 5) */}
                   {section.videoAfter && (
                     <VideoCard
                       label={section.videoAfter.label}
@@ -2405,14 +2405,14 @@ export default function Chapter() {
               ))}
             </div>
 
-            {/* Key Formulas */}
+            {/* Mga Pangunahing Formula */}
             {chapterData.formulas.length > 0 && (
               <div className="my-12 p-8 bg-card border border-border rounded-xl shadow-sm">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="p-2 bg-primary/10 text-primary rounded-md">
                     <FlaskConical className="h-5 w-5" />
                   </div>
-                  <h3 className="text-xl font-serif font-bold">Key Formulas</h3>
+                  <h3 className="text-xl font-serif font-bold">Mga Pangunahing Formula</h3>
                 </div>
                 <div className="space-y-6">
                   {chapterData.formulas.map((formula, idx) => (
@@ -2431,15 +2431,14 @@ export default function Chapter() {
               </div>
             )}
 
-            {/* Key Terms */}
+            {/* Mga Pangunahing Termino */}
             <div className="my-12 p-8 bg-primary/5 border border-primary/20 rounded-xl">
               <div className="flex items-center gap-3 mb-4">
                 <BookOpen className="h-5 w-5 text-primary" />
-                <h3 className="text-xl font-serif font-bold text-primary">Key Terms</h3>
+                <h3 className="text-xl font-serif font-bold text-primary">Mga Pangunahing Termino</h3>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                Hover over highlighted terms in the text above to see definitions, or review them
-                here.
+                Mag-hover sa mga naka-highlight na termino sa teksto sa itaas para makita ang mga kahulugan, o suriin ang mga ito dito.
               </p>
               <div className="flex flex-wrap gap-2">
                 {chapterData.terms.map((term, idx) => (
@@ -2454,14 +2453,14 @@ export default function Chapter() {
               </div>
             </div>
 
-            {/* Completion Actions */}
+            {/* Mga Aksyon para sa Pagkumpleto */}
             <Separator className="my-12" />
 
             <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mb-12 p-6 md:p-8 bg-card border border-border rounded-xl shadow-sm text-center sm:text-left">
               <div>
-                <h3 className="font-bold text-lg mb-1">Finished reading?</h3>
+                <h3 className="font-bold text-lg mb-1">Natapos na ang pagbabasa?</h3>
                 <p className="text-sm text-muted-foreground">
-                  Mark this chapter as complete to track your progress.
+                  Markahan ang kabanatang ito bilang natapos para ma-track ang iyong progreso.
                 </p>
               </div>
               <Button
@@ -2477,10 +2476,10 @@ export default function Chapter() {
                   <Skeleton className="h-5 w-32" />
                 ) : progress?.completed ? (
                   <>
-                    <CheckCircle2 className="mr-2 h-5 w-5" /> Completed
+                    <CheckCircle2 className="mr-2 h-5 w-5" /> Natapos Na
                   </>
                 ) : (
-                  "Mark as Completed"
+                  "Markahan bilang Natapos"
                 )}
               </Button>
             </div>
@@ -2491,19 +2490,19 @@ export default function Chapter() {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4">
                   <BrainCircuit className="h-8 w-8" />
                 </div>
-                <h3 className="text-2xl font-serif font-bold mb-2">Test Your Knowledge</h3>
+                <h3 className="text-2xl font-serif font-bold mb-2">Subukan ang Iyong Kaalaman</h3>
                 <p className="text-muted-foreground mb-6 max-w-md">
-                  Take the quiz to confirm your understanding of {chapterData.title}.
+                  Kumuha ng quiz para kumpirmahin ang iyong pag-unawa sa {chapterData.title}.
                 </p>
                 <Button size="lg" asChild className="px-8" data-testid="button-start-quiz">
                   <Link href={`/quiz/${chapterId}`}>
-                    Start Chapter Quiz <ChevronRight className="ml-2 h-4 w-4" />
+                    Simulan ang Quiz ng Kabanata <ChevronRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </CardContent>
             </Card>
 
-            {/* Chapter Navigation */}
+            {/* Nabigasyon ng Kabanata */}
             <div className="flex justify-between items-center py-6 border-t border-border">
               {chapterId > 1 ? (
                 <Link href={`/chapter/${chapterId - 1}`}>
@@ -2512,7 +2511,7 @@ export default function Chapter() {
                     className="text-muted-foreground hover:text-foreground"
                     data-testid="button-prev-chapter"
                   >
-                    <ChevronLeft className="mr-2 h-4 w-4" /> Previous Chapter
+                    <ChevronLeft className="mr-2 h-4 w-4" /> Nakaraang Kabanata
                   </Button>
                 </Link>
               ) : (
@@ -2525,7 +2524,7 @@ export default function Chapter() {
                     className="text-primary hover:text-primary"
                     data-testid="button-next-chapter"
                   >
-                    Next Chapter <ChevronRight className="ml-2 h-4 w-4" />
+                    Susunod na Kabanata <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
               ) : (

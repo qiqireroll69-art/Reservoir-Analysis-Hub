@@ -2,18 +2,18 @@ import { Layout } from "@/components/layout/Layout";
 import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { useGetAllProgress, useGetProgressSummary } from "@workspace/api-client-react";
-import { CheckCircle2, ArrowRight, BookOpen, Clock, Activity, Target, BrainCircuit, Beaker } from "lucide-react";
+import { CheckCircle2, ArrowRight, BookOpen, Clock, Activity, Target, BrainCircuit, FlaskConical } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const CHAPTERS_META = [
-  { id: 1, title: "Introduction to Reservoir Petrophysics", icon: BookOpen },
-  { id: 2, title: "Fundamentals of Reservoir Petrophysics", icon: Target },
-  { id: 3, title: "Fluid Saturation, Wettability, and Capillary Pressure", icon: Activity },
-  { id: 4, title: "Well Log Interpretation", icon: BrainCircuit },
-  { id: 5, title: "Hydrocarbon PVT Properties and Phase Behavior", icon: Beaker },
-  { id: 6, title: "Integration of Petrophysics and Phase Behavior", icon: Target },
-  { id: 7, title: "Application in Reservoir Engineering", icon: BookOpen }
+  { id: 1, title: "Panimula sa Reservoir Petrophysics", icon: BookOpen },
+  { id: 2, title: "Mga Pangunahing Kaalaman sa Reservoir Petrophysics", icon: Target },
+  { id: 3, title: "Fluid Saturation, Wettability, at Capillary Pressure", icon: Activity },
+  { id: 4, title: "Interpretasyon ng Well Logs", icon: BrainCircuit },
+  { id: 5, title: "Mga PVT Properties at Phase Behavior ng Hydrocarbon", icon: FlaskConical },
+  { id: 6, title: "Integrasyon ng Petrophysics at Phase Behavior", icon: Target },
+  { id: 7, title: "Aplikasyon sa Reservoir Engineering", icon: BookOpen }
 ];
 
 export default function Chapters() {
@@ -25,9 +25,9 @@ export default function Chapters() {
       <div className="bg-slate-900 dark:bg-slate-950 text-white py-16 md:py-20 border-b border-slate-800">
         <div className="container mx-auto px-4 md:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold tracking-tight mb-4">Course Syllabus</h1>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold tracking-tight mb-4">Nilalaman ng Kurso</h1>
             <p className="text-xl text-slate-300 leading-relaxed">
-              Navigate through the comprehensive curriculum. Mastering these chapters will provide a deep understanding of rock properties and fluid phase behavior.
+              Mag-navigate sa komprehensibong kurikulum. Ang pag-aralan ang mga kabanatang ito ay magbibigay sa iyo ng malalim na pag-unawa sa mga katangian ng bato at fluid phase behavior.
             </p>
           </div>
         </div>
@@ -35,7 +35,7 @@ export default function Chapters() {
 
       <div className="container mx-auto px-4 md:px-8 py-12 md:py-16">
         <div className="flex flex-col lg:flex-row gap-12">
-          {/* Main content - Chapter list */}
+          {/* Listahan ng Kabanata */}
           <div className="flex-1">
             <div className="space-y-6">
               {CHAPTERS_META.map((chapter) => {
@@ -50,10 +50,10 @@ export default function Chapters() {
                       <div>
                         <div className="flex justify-between items-start mb-4">
                           <div className="flex items-center gap-3 text-muted-foreground text-sm font-medium tracking-widest uppercase">
-                            <span className="text-primary font-bold">Chapter {chapter.id}</span>
+                            <span className="text-primary font-bold">Kabanata {chapter.id}</span>
                             {isCompleted && (
                               <span className="flex items-center gap-1 text-green-600 dark:text-green-500 bg-green-50 dark:bg-green-500/10 px-2 py-0.5 rounded-full text-xs normal-case tracking-normal">
-                                <CheckCircle2 className="h-3 w-3" /> Completed
+                                <CheckCircle2 className="h-3 w-3" /> Natapos Na
                               </span>
                             )}
                           </div>
@@ -68,22 +68,22 @@ export default function Chapters() {
                         </h2>
                         {progress?.lastVisited && !isCompleted && (
                           <p className="text-sm text-muted-foreground flex items-center gap-2 mb-4">
-                            <Clock className="h-4 w-4" /> Last visited {new Date(progress.lastVisited).toLocaleDateString()}
+                            <Clock className="h-4 w-4" /> Huling binisita {new Date(progress.lastVisited).toLocaleDateString('fil-PH')}
                           </p>
                         )}
                         {progress?.quizBestScore !== null && progress?.quizBestScore !== undefined && (
                           <p className="text-sm font-medium text-amber-600 dark:text-amber-500 mb-4">
-                            Best Quiz Score: {progress.quizBestScore}%
+                            Pinakamataas na Quiz Score: {progress.quizBestScore}%
                           </p>
                         )}
                       </div>
                       <div className="flex items-center gap-4 mt-6 pt-6 border-t border-border/50">
                         <Link href={`/chapter/${chapter.id}`} className="text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all">
-                          {isCompleted ? "Review Material" : "Continue Reading"} <ArrowRight className="h-4 w-4" />
+                          {isCompleted ? "Suriin ang Aralin" : "Ipagpatuloy ang Pagbabasa"} <ArrowRight className="h-4 w-4" />
                         </Link>
                         <span className="text-muted-foreground">|</span>
                         <Link href={`/quiz/${chapter.id}`} className="text-muted-foreground hover:text-primary font-medium transition-colors">
-                          Take Quiz
+                          Kumuha ng Quiz
                         </Link>
                       </div>
                     </div>
@@ -93,13 +93,13 @@ export default function Chapters() {
             </div>
           </div>
 
-          {/* Sidebar - Progress summary */}
+          {/* Sidebar - Buod ng Progreso */}
           <div className="w-full lg:w-80 shrink-0">
             <div className="sticky top-24 space-y-6">
               <Card className="bg-card border-border">
                 <CardHeader>
-                  <CardTitle className="font-serif">Overall Progress</CardTitle>
-                  <CardDescription>Your journey through the course</CardDescription>
+                  <CardTitle className="font-serif">Kabuuang Progreso</CardTitle>
+                  <CardDescription>Iyong paglalakbay sa kurso</CardDescription>
                 </CardHeader>
                 <CardContent>
                   {isLoadingSummary ? (
@@ -112,7 +112,7 @@ export default function Chapters() {
                     <div className="space-y-6">
                       <div>
                         <div className="flex justify-between items-end mb-2">
-                          <span className="text-sm font-medium">Completion</span>
+                          <span className="text-sm font-medium">Pagkumpleto</span>
                           <span className="text-xl font-bold text-primary">{Math.round(summary.percentComplete)}%</span>
                         </div>
                         <Progress value={summary.percentComplete} className="h-2.5" />
@@ -120,29 +120,29 @@ export default function Chapters() {
                       
                       <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border">
                         <div>
-                          <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Chapters</p>
+                          <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Mga Kabanata</p>
                           <p className="text-2xl font-bold font-serif">{summary.completedChapters} <span className="text-sm text-muted-foreground font-sans font-normal">/ {summary.totalChapters}</span></p>
                         </div>
                       </div>
                     </div>
                   ) : (
-                    <p className="text-sm text-muted-foreground">Unable to load progress summary.</p>
+                    <p className="text-sm text-muted-foreground">Hindi ma-load ang buod ng progreso.</p>
                   )}
                 </CardContent>
               </Card>
 
               <Card className="bg-slate-900 text-white border-slate-800">
                 <CardHeader>
-                  <CardTitle className="font-serif text-amber-500">Need a quick review?</CardTitle>
+                  <CardTitle className="font-serif text-amber-500">Kailangan ng mabilis na review?</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-sm text-slate-300">
-                  <p>Access our comprehensive study materials designed to help you prepare for exams.</p>
+                  <p>I-access ang aming komprehensibong study materials para makatulong sa inyong paghahanda sa eksamen.</p>
                   <div className="flex flex-col gap-2">
                     <Link href="/formulas" className="text-white hover:text-amber-500 transition-colors flex items-center gap-2">
-                      <ArrowRight className="h-4 w-4" /> Formula Sheet
+                      <ArrowRight className="h-4 w-4" /> Sheet ng mga Formula
                     </Link>
                     <Link href="/glossary" className="text-white hover:text-amber-500 transition-colors flex items-center gap-2">
-                      <ArrowRight className="h-4 w-4" /> Glossary of Terms
+                      <ArrowRight className="h-4 w-4" /> Talasalitaan
                     </Link>
                   </div>
                 </CardContent>

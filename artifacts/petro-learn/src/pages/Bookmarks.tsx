@@ -1,7 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { useGetBookmarks, useDeleteBookmark, getGetBookmarksQueryKey } from "@workspace/api-client-react";
 import { Link } from "wouter";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Bookmark, Trash2, ArrowRight } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -18,15 +18,15 @@ export default function Bookmarks() {
       onSuccess: () => {
         queryClient.invalidateQueries({ queryKey: getGetBookmarksQueryKey() });
         toast({
-          title: "Bookmark removed",
-          description: "The item has been removed from your saved list.",
+          title: "Nabura ang Bookmark",
+          description: "Inalis na ang item mula sa iyong listahan ng nakatago.",
         });
       }
     }
   });
 
   const handleDelete = (e: React.MouseEvent, id: number) => {
-    e.preventDefault(); // Prevent navigating to link
+    e.preventDefault();
     deleteBookmark.mutate({ id });
   };
 
@@ -36,9 +36,9 @@ export default function Bookmarks() {
         <div className="container mx-auto px-4 md:px-8 max-w-4xl">
           <h1 className="text-3xl md:text-4xl font-serif font-bold tracking-tight mb-2 flex items-center gap-3">
             <Bookmark className="h-8 w-8 text-amber-500" />
-            My Bookmarks
+            Mga Bookmark Ko
           </h1>
-          <p className="text-slate-300">Quick access to your saved chapter sections.</p>
+          <p className="text-slate-300">Mabilis na access sa iyong mga naka-save na seksyon ng kabanata.</p>
         </div>
       </div>
 
@@ -52,12 +52,12 @@ export default function Bookmarks() {
         ) : !bookmarks || bookmarks.length === 0 ? (
           <div className="text-center py-24 bg-card border border-border rounded-xl">
             <Bookmark className="h-16 w-16 text-muted-foreground mx-auto mb-4 opacity-20" />
-            <h2 className="text-2xl font-serif font-bold mb-2">No bookmarks yet</h2>
+            <h2 className="text-2xl font-serif font-bold mb-2">Wala pang mga Bookmark</h2>
             <p className="text-muted-foreground mb-6">
-              Save important sections while reading chapters to quickly access them later.
+              I-save ang mahahalagang seksyon habang nagbabasa ng mga kabanata para mabilis na ma-access ang mga ito sa ibang pagkakataon.
             </p>
             <Button asChild>
-              <Link href="/chapters">Browse Chapters</Link>
+              <Link href="/chapters">Tingnan ang mga Kabanata</Link>
             </Button>
           </div>
         ) : (
@@ -67,18 +67,18 @@ export default function Bookmarks() {
                 <Card className="hover:border-primary/50 hover:shadow-md transition-all cursor-pointer group">
                   <CardContent className="p-6 flex items-center justify-between">
                     <div>
-                      <div className="text-sm text-primary font-medium mb-1">Chapter {bm.chapterId}</div>
+                      <div className="text-sm text-primary font-medium mb-1">Kabanata {bm.chapterId}</div>
                       <h3 className="text-xl font-serif font-bold group-hover:text-primary transition-colors">
                         {bm.title}
                       </h3>
                       {bm.note && <p className="text-muted-foreground mt-2 text-sm italic">"{bm.note}"</p>}
                       <p className="text-xs text-muted-foreground mt-3 flex items-center gap-1">
-                        Saved on {new Date(bm.createdAt).toLocaleDateString()}
+                        Nai-save noong {new Date(bm.createdAt).toLocaleDateString('fil-PH')}
                       </p>
                     </div>
                     <div className="flex items-center gap-4">
                       <div className="text-muted-foreground group-hover:text-primary opacity-0 group-hover:opacity-100 transition-all transform translate-x-2 group-hover:translate-x-0 hidden sm:flex items-center gap-1 font-medium">
-                        Read <ArrowRight className="h-4 w-4" />
+                        Basahin <ArrowRight className="h-4 w-4" />
                       </div>
                       <Button 
                         variant="ghost" 
@@ -86,7 +86,7 @@ export default function Bookmarks() {
                         className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 shrink-0 z-10"
                         onClick={(e) => handleDelete(e, bm.id)}
                         disabled={deleteBookmark.isPending}
-                        title="Remove bookmark"
+                        title="Alisin ang bookmark"
                       >
                         <Trash2 className="h-5 w-5" />
                       </Button>

@@ -1,7 +1,7 @@
 import { Link } from "wouter";
-import { BookOpen, Target, BrainCircuit, ArrowRight, Activity, Beaker, CheckCircle2 } from "lucide-react";
+import { BookOpen, Target, BrainCircuit, ArrowRight, Activity, FlaskConical, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Layout } from "@/components/layout/Layout";
 import { useGetProgressSummary } from "@workspace/api-client-react";
@@ -10,44 +10,44 @@ import { Skeleton } from "@/components/ui/skeleton";
 const CHAPTERS = [
   {
     id: 1,
-    title: "Introduction to Reservoir Petrophysics",
-    description: "Basic concepts, rock cycle, and the fundamental role of petrophysics in reservoir characterization.",
+    title: "Panimula sa Reservoir Petrophysics",
+    description: "Mga pangunahing konsepto, rock cycle, at ang mahalagang papel ng petrophysics sa pagsusuri ng reservoir.",
     icon: BookOpen,
   },
   {
     id: 2,
-    title: "Fundamentals of Reservoir Petrophysics",
-    description: "Porosity, permeability, and their measurement. Understanding Darcy's Law and rock texture.",
+    title: "Mga Pangunahing Kaalaman sa Reservoir Petrophysics",
+    description: "Porosity, permeability, at ang kanilang pagsukat. Pag-unawa sa Darcy's Law at rock texture.",
     icon: Target,
   },
   {
     id: 3,
-    title: "Fluid Saturation, Wettability, and Capillary Pressure",
-    description: "Multiphase flow in porous media, contact angles, and the physics of fluid distribution.",
+    title: "Fluid Saturation, Wettability, at Capillary Pressure",
+    description: "Multiphase flow sa porous media, contact angles, at pisika ng distribusyon ng fluid.",
     icon: Activity,
   },
   {
     id: 4,
-    title: "Well Log Interpretation",
-    description: "Gamma ray, resistivity, density, and neutron logs. Correlating log signatures to rock properties.",
+    title: "Interpretasyon ng Well Logs",
+    description: "Gamma ray, resistivity, density, at neutron logs. Pag-ugnay ng log signatures sa mga katangian ng bato.",
     icon: BrainCircuit,
   },
   {
     id: 5,
-    title: "Hydrocarbon PVT Properties and Phase Behavior",
-    description: "Pressure-Volume-Temperature relationships, phase envelopes, and fluid sampling.",
-    icon: Beaker,
+    title: "Mga PVT Properties at Phase Behavior ng Hydrocarbon",
+    description: "Relasyon ng Pressure-Volume-Temperature, phase envelopes, at fluid sampling.",
+    icon: FlaskConical,
   },
   {
     id: 6,
-    title: "Integration of Petrophysics and Phase Behavior",
-    description: "Combining rock and fluid properties for comprehensive reservoir modeling.",
+    title: "Integrasyon ng Petrophysics at Phase Behavior",
+    description: "Pagsasama ng mga katangian ng bato at fluid para sa komprehensibong reservoir modeling.",
     icon: Target,
   },
   {
     id: 7,
-    title: "Application in Reservoir Engineering",
-    description: "Volumetrics, decline curve analysis, and material balance equations.",
+    title: "Aplikasyon sa Reservoir Engineering",
+    description: "Volumetrics, decline curve analysis, at mga equation ng material balance.",
     icon: BookOpen,
   }
 ];
@@ -63,23 +63,23 @@ export default function Home() {
         <div className="container relative z-10 mx-auto px-4 md:px-8 py-24 md:py-32 flex flex-col items-center text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-200 border border-amber-500/30 text-sm font-medium mb-6 animate-in slide-in-from-bottom-4 duration-500">
             <span className="flex h-2 w-2 rounded-full bg-amber-500"></span>
-            Comprehensive Petroleum Engineering Curriculum
+            Komprehensibong Kurikulum sa Petroleum Engineering
           </div>
           <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-4xl leading-tight mb-6 animate-in slide-in-from-bottom-6 duration-700">
-            Master Reservoir Petrophysics & Phase Analysis
+            Araling-aral ang Reservoir Petrophysics at Phase Analysis
           </h1>
           <p className="text-lg md:text-xl text-slate-300 max-w-2xl mb-10 leading-relaxed animate-in slide-in-from-bottom-8 duration-1000">
-            A precise, authoritative learning platform for engineering students. Dive deep into rock properties, fluid saturation, well logging, and PVT behavior.
+            Isang tumpak at komprehensibong learning platform para sa mga estudyante ng engineering. Pag-aralan ang mga katangian ng bato, fluid saturation, well logging, at PVT behavior.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in duration-1000 delay-300">
             <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold text-base h-12 px-8" asChild>
               <Link href="/chapters">
-                Start Learning <ArrowRight className="ml-2 h-5 w-5" />
+                Simulan ang Pag-aaral <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" className="border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white h-12 px-8 bg-slate-800/50 backdrop-blur-sm" asChild>
               <Link href="/formulas">
-                View Formula Sheet
+                Tingnan ang Sheet ng mga Formula
               </Link>
             </Button>
           </div>
@@ -100,9 +100,9 @@ export default function Home() {
               <div className="bg-card border border-border rounded-xl p-6 shadow-sm hover-elevate transition-all">
                 <div className="flex justify-between items-end mb-4">
                   <div>
-                    <h2 className="text-lg font-bold font-serif mb-1">Your Course Progress</h2>
+                    <h2 className="text-lg font-bold font-serif mb-1">Progreso Mo sa Kurso</h2>
                     <p className="text-sm text-muted-foreground">
-                      {summary.completedChapters} of {summary.totalChapters} chapters completed
+                      {summary.completedChapters} sa {summary.totalChapters} na kabanata ang natapos
                     </p>
                   </div>
                   <span className="text-2xl font-bold text-primary">{Math.round(summary.percentComplete)}%</span>
@@ -118,8 +118,8 @@ export default function Home() {
       <section className="py-20 md:py-24 bg-background">
         <div className="container mx-auto px-4 md:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold tracking-tight mb-4 text-foreground">Course Syllabus</h2>
-            <p className="text-muted-foreground text-lg">Structured logically from fundamental rock properties to advanced reservoir engineering applications.</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold tracking-tight mb-4 text-foreground">Nilalaman ng Kurso</h2>
+            <p className="text-muted-foreground text-lg">Nakaayos nang maayos mula sa mga pangunahing katangian ng bato hanggang sa mga advanced na aplikasyon ng reservoir engineering.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -150,7 +150,7 @@ export default function Home() {
                     </CardContent>
                     <CardFooter className="pt-4 border-t border-border/50">
                       <span className="text-sm font-medium text-primary flex items-center gap-1 group-hover:gap-2 transition-all">
-                        {isCompleted ? "Review Chapter" : "Begin Chapter"} <ArrowRight className="h-4 w-4" />
+                        {isCompleted ? "Suriin ang Kabanata" : "Simulan ang Kabanata"} <ArrowRight className="h-4 w-4" />
                       </span>
                     </CardFooter>
                   </Card>

@@ -21,7 +21,6 @@ export default function Glossary() {
     );
   }, [terms, searchQuery]);
 
-  // Group terms alphabetically
   const groupedTerms = useMemo(() => {
     const groups: Record<string, typeof filteredTerms> = {};
     filteredTerms.forEach(term => {
@@ -30,11 +29,9 @@ export default function Glossary() {
       groups[firstLetter].push(term);
     });
     
-    // Sort keys alphabetically
     return Object.keys(groups)
       .sort()
       .reduce((acc, key) => {
-        // Sort terms within group
         acc[key] = groups[key].sort((a, b) => a.term.localeCompare(b.term));
         return acc;
       }, {} as Record<string, typeof filteredTerms>);
@@ -47,16 +44,16 @@ export default function Glossary() {
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-serif font-bold tracking-tight mb-4 flex items-center gap-3">
               <BookA className="h-10 w-10 text-amber-500" />
-              Glossary of Terms
+              Talasalitaan
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed mb-8">
-              A comprehensive dictionary of petrophysics and reservoir engineering terminology.
+              Komprehensibong diksyunaryo ng terminolohiya sa petrophysics at reservoir engineering.
             </p>
             <div className="relative max-w-md">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400" />
               <Input 
                 type="search" 
-                placeholder="Search terms or definitions..." 
+                placeholder="Maghanap ng salita o kahulugan..." 
                 className="w-full bg-slate-800/50 border-slate-700 text-white pl-10 py-6 text-lg focus-visible:ring-amber-500 rounded-xl"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -81,7 +78,7 @@ export default function Glossary() {
           ) : Object.keys(groupedTerms).length === 0 ? (
             <div className="text-center py-20 text-muted-foreground">
               <Search className="h-12 w-12 mx-auto mb-4 opacity-20" />
-              <p className="text-lg">No terms found matching "{searchQuery}"</p>
+              <p className="text-lg">Walang nahanap na salita para sa "{searchQuery}"</p>
             </div>
           ) : (
             <div className="space-y-12">
@@ -107,7 +104,7 @@ export default function Glossary() {
                             )}
                             {term.chapterId && (
                               <span className="text-xs font-medium px-2 py-1 bg-primary/10 text-primary rounded-md uppercase tracking-wider">
-                                Chapter {term.chapterId}
+                                Kabanata {term.chapterId}
                               </span>
                             )}
                           </div>

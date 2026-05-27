@@ -91,15 +91,15 @@ export default function Quiz() {
       <Layout>
         <div className="container mx-auto px-4 py-16 text-center max-w-lg">
           <BrainCircuit className="h-16 w-16 text-muted-foreground mx-auto mb-4 opacity-50" />
-          <h2 className="text-2xl font-serif font-bold mb-4">Quiz not available</h2>
-          <p className="text-muted-foreground mb-8">There are no questions configured for this chapter yet.</p>
-          <Button asChild><Link href={`/chapter/${chapterId}`}>Return to Chapter</Link></Button>
+          <h2 className="text-2xl font-serif font-bold mb-4">Hindi available ang Quiz</h2>
+          <p className="text-muted-foreground mb-8">Wala pang mga tanong na naka-configure para sa kabanatang ito.</p>
+          <Button asChild><Link href={`/chapter/${chapterId}`}>Bumalik sa Kabanata</Link></Button>
         </div>
       </Layout>
     );
   }
 
-  // Result View
+  // Resulta
   if (quizResult) {
     const isPassing = quizResult.percentage >= 70;
     
@@ -111,15 +111,15 @@ export default function Quiz() {
               <span className="text-3xl font-bold">{Math.round(quizResult.percentage)}%</span>
             </div>
             <h1 className="text-3xl font-serif font-bold mb-2">
-              {isPassing ? "Great job!" : "Keep studying!"}
+              {isPassing ? "Napakagaling!" : "Mag-aral pa nang kaunti!"}
             </h1>
             <p className="text-muted-foreground">
-              You scored {quizResult.score} out of {quizResult.total} points.
+              Nakakuha ka ng {quizResult.score} sa {quizResult.total} puntos.
             </p>
           </div>
 
           <div className="space-y-8 mb-12">
-            <h2 className="text-2xl font-serif font-bold border-b pb-2">Detailed Feedback</h2>
+            <h2 className="text-2xl font-serif font-bold border-b pb-2">Detalyadong Feedback</h2>
             {quizResult.feedback.map((fb: any, idx: number) => (
               <Card key={fb.questionId} className={`border-l-4 ${fb.isCorrect ? 'border-l-green-500' : 'border-l-red-500'} bg-card`}>
                 <CardContent className="p-6">
@@ -137,14 +137,14 @@ export default function Quiz() {
                       
                       <div className="grid md:grid-cols-2 gap-4 text-sm mb-4">
                         <div className="bg-muted p-3 rounded-md">
-                          <p className="text-muted-foreground mb-1 text-xs uppercase tracking-wider">Your Answer</p>
+                          <p className="text-muted-foreground mb-1 text-xs uppercase tracking-wider">Iyong Sagot</p>
                           <p className={fb.isCorrect ? "text-green-600 dark:text-green-400 font-medium" : "text-red-600 dark:text-red-400 font-medium"}>
                             {fb.userAnswer}
                           </p>
                         </div>
                         {!fb.isCorrect && (
                           <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-md">
-                            <p className="text-green-700 dark:text-green-400 mb-1 text-xs uppercase tracking-wider">Correct Answer</p>
+                            <p className="text-green-700 dark:text-green-400 mb-1 text-xs uppercase tracking-wider">Tamang Sagot</p>
                             <p className="text-green-800 dark:text-green-300 font-medium">
                               {fb.correctAnswer}
                             </p>
@@ -154,7 +154,7 @@ export default function Quiz() {
                       
                       <div className="bg-primary/5 p-4 rounded-md mt-4 border border-primary/10">
                         <p className="text-sm text-foreground leading-relaxed">
-                          <span className="font-bold mr-2">Explanation:</span> 
+                          <span className="font-bold mr-2">Paliwanag:</span> 
                           {fb.explanation}
                         </p>
                       </div>
@@ -167,11 +167,11 @@ export default function Quiz() {
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button size="lg" onClick={handleRetake} variant="outline">
-              <RotateCcw className="mr-2 h-4 w-4" /> Retake Quiz
+              <RotateCcw className="mr-2 h-4 w-4" /> Ulitin ang Quiz
             </Button>
             <Button size="lg" asChild>
               <Link href={`/chapter/${chapterId < 7 ? chapterId + 1 : chapterId}`}>
-                Continue Learning <ArrowRight className="ml-2 h-4 w-4" />
+                Ipagpatuloy ang Pag-aaral <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </div>
@@ -180,7 +180,7 @@ export default function Quiz() {
     );
   }
 
-  // Quiz Taking View
+  // Pagsasagot ng Quiz
   const progressPercent = (currentQuestionIndex / questions.length) * 100;
 
   return (
@@ -189,13 +189,13 @@ export default function Quiz() {
         <div className="container mx-auto px-4 md:px-8 max-w-3xl flex justify-between items-center">
           <div>
             <Link href={`/chapter/${chapterId}`} className="text-slate-400 hover:text-white text-sm flex items-center mb-2 transition-colors">
-              <ChevronLeft className="h-4 w-4 mr-1" /> Back to Chapter
+              <ChevronLeft className="h-4 w-4 mr-1" /> Bumalik sa Kabanata
             </Link>
-            <h1 className="text-2xl font-serif font-bold">Chapter {chapterId} Knowledge Check</h1>
+            <h1 className="text-2xl font-serif font-bold">Kabanata {chapterId} — Pagsubok sa Kaalaman</h1>
           </div>
           {bestScore !== null && (
             <div className="text-right hidden sm:block">
-              <p className="text-xs text-slate-400 uppercase tracking-wider">Previous Best</p>
+              <p className="text-xs text-slate-400 uppercase tracking-wider">Nakaraang Pinakamataas</p>
               <p className="text-xl font-bold text-amber-500">{bestScore}%</p>
             </div>
           )}
@@ -205,7 +205,7 @@ export default function Quiz() {
       <div className="container mx-auto px-4 md:px-8 py-12 max-w-3xl">
         <div className="mb-8">
           <div className="flex justify-between text-sm font-medium text-muted-foreground mb-2">
-            <span>Question {currentQuestionIndex + 1} of {questions.length}</span>
+            <span>Tanong {currentQuestionIndex + 1} sa {questions.length}</span>
             <span>{Math.round(progressPercent)}%</span>
           </div>
           <Progress value={progressPercent} className="h-2" />
@@ -235,12 +235,12 @@ export default function Quiz() {
               </RadioGroup>
             ) : (
               <div className="space-y-4">
-                <Label htmlFor="short-answer" className="text-muted-foreground">Type your answer below:</Label>
+                <Label htmlFor="short-answer" className="text-muted-foreground">Isulat ang iyong sagot sa ibaba:</Label>
                 <Textarea 
                   id="short-answer"
                   value={answers[currentQuestion!.id] || ""}
                   onChange={(e) => setAnswers(prev => ({ ...prev, [currentQuestion!.id]: e.target.value }))}
-                  placeholder="Enter your answer..."
+                  placeholder="Ilagay ang iyong sagot..."
                   className="min-h-[120px] text-lg p-4"
                 />
               </div>
@@ -252,14 +252,14 @@ export default function Quiz() {
               onClick={() => setCurrentQuestionIndex(prev => Math.max(0, prev - 1))}
               disabled={currentQuestionIndex === 0}
             >
-              Previous
+              Nakaraan
             </Button>
             <Button 
               onClick={handleNext}
               disabled={!isAnswered || submitQuiz.isPending}
               className={isLastQuestion ? "bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold" : ""}
             >
-              {submitQuiz.isPending ? "Submitting..." : isLastQuestion ? "Submit Quiz" : "Next Question"}
+              {submitQuiz.isPending ? "Isinusumite..." : isLastQuestion ? "Isumite ang Quiz" : "Susunod na Tanong"}
               {!isLastQuestion && <ArrowRight className="ml-2 h-4 w-4" />}
             </Button>
           </CardFooter>

@@ -5,37 +5,37 @@ import { Sigma } from "lucide-react";
 const FORMULA_CATEGORIES = [
   {
     category: "Volumetrics",
-    description: "Calculations for estimating initial hydrocarbons in place.",
+    description: "Mga kalkulasyon para sa pagtatantya ng mga hydrocarbon na nakaimbak sa reservoir.",
     formulas: [
-      { name: "Original Oil in Place (OOIP)", eq: "N = 7758 * A * h * φ * (1 - Sw) / Bo", desc: "Calculates stock tank barrels of oil initially in place. A = Area (acres), h = thickness (ft), φ = porosity, Sw = water saturation, Bo = formation volume factor (rb/stb)." },
-      { name: "Original Gas in Place (OGIP)", eq: "G = 43560 * A * h * φ * (1 - Sw) / Bg", desc: "Calculates standard cubic feet of gas initially in place. Bg = gas formation volume factor (rcf/scf)." }
+      { name: "Original Oil in Place (OOIP)", eq: "N = 7758 * A * h * φ * (1 - Sw) / Bo", desc: "Kinakalkula ang stock tank barrels ng langis na nakaimbak. A = Lugar (acres), h = kapal (ft), φ = porosity, Sw = water saturation, Bo = formation volume factor (rb/stb)." },
+      { name: "Original Gas in Place (OGIP)", eq: "G = 43560 * A * h * φ * (1 - Sw) / Bg", desc: "Kinakalkula ang standard cubic feet ng gas na nakaimbak. Bg = gas formation volume factor (rcf/scf)." }
     ]
   },
   {
-    category: "Fundamental Rock Properties",
-    description: "Basic petrophysical relationships.",
+    category: "Mga Pangunahing Katangian ng Bato",
+    description: "Mga pangunahing relasyon sa petrophysics.",
     formulas: [
-      { name: "Total Porosity", eq: "φ = Vp / Vb = (Vb - Vg) / Vb", desc: "Ratio of pore volume (Vp) to bulk volume (Vb). Vg is grain volume." },
+      { name: "Kabuuang Porosity", eq: "φ = Vp / Vb = (Vb - Vg) / Vb", desc: "Ratio ng pore volume (Vp) sa bulk volume (Vb). Ang Vg ay ang grain volume." },
       { name: "Darcy's Law (Linear Flow)", eq: "q = - (k * A / μ) * (dP / dx)", desc: "q = flow rate, k = permeability, A = cross-sectional area, μ = viscosity, dP/dx = pressure gradient." },
-      { name: "Isothermal Compressibility", eq: "c = -(1/V) * (dV / dp)T", desc: "Fractional change in volume per unit change in pressure at constant temperature." }
+      { name: "Isothermal Compressibility", eq: "c = -(1/V) * (dV / dp)T", desc: "Bahagyang pagbabago ng volume sa bawat unit na pagbabago ng pressure sa pare-parehong temperatura." }
     ]
   },
   {
-    category: "Capillary Pressure & Fluid Distribution",
-    description: "Equations governing fluid interfaces in porous media.",
+    category: "Capillary Pressure at Distribusyon ng Fluid",
+    description: "Mga equation na namamahala sa mga interface ng fluid sa porous media.",
     formulas: [
-      { name: "Capillary Pressure (General)", eq: "Pc = Pnw - Pw", desc: "Difference in pressure across the interface between non-wetting (Pnw) and wetting (Pw) phases." },
+      { name: "Capillary Pressure (Pangkalahatan)", eq: "Pc = Pnw - Pw", desc: "Pagkakaiba ng pressure sa pagitan ng non-wetting (Pnw) at wetting (Pw) na mga phase." },
       { name: "Laplace Equation", eq: "Pc = (2 * σ * cos θ) / r", desc: "σ = interfacial tension, θ = contact angle, r = capillary radius." },
-      { name: "Free Water Level to Pc", eq: "Pc = (ρw - ρnw) * g * h", desc: "Relates capillary pressure to height (h) above the free water level and density differences." }
+      { name: "Free Water Level hanggang Pc", eq: "Pc = (ρw - ρnw) * g * h", desc: "Iniuugnay ang capillary pressure sa taas (h) sa itaas ng free water level at pagkakaiba ng density." }
     ]
   },
   {
-    category: "Well Log Interpretation",
-    description: "Standard equations for interpreting open-hole logs.",
+    category: "Interpretasyon ng Well Log",
+    description: "Mga pamantayang equation para sa pag-interpret ng open-hole logs.",
     formulas: [
       { name: "Archie's Equation (Water Saturation)", eq: "Sw^n = (a * Rw) / (φ^m * Rt)", desc: "Sw = water saturation, a = tortuosity factor, m = cementation exponent, n = saturation exponent, Rw = formation water resistivity, Rt = true formation resistivity." },
-      { name: "Formation Factor (F)", eq: "F = a / φ^m = Ro / Rw", desc: "Ratio of resistivity of 100% water saturated rock (Ro) to water resistivity (Rw)." },
-      { name: "Volume of Shale (Gamma Ray)", eq: "Vsh = (GRlog - GRmin) / (GRmax - GRmin)", desc: "Linear calculation of shale volume from Gamma Ray log." },
+      { name: "Formation Factor (F)", eq: "F = a / φ^m = Ro / Rw", desc: "Ratio ng resistivity ng 100% water saturated rock (Ro) sa water resistivity (Rw)." },
+      { name: "Volume ng Shale (Gamma Ray)", eq: "Vsh = (GRlog - GRmin) / (GRmax - GRmin)", desc: "Linear na kalkulasyon ng shale volume mula sa Gamma Ray log." },
       { name: "Density Porosity", eq: "φd = (ρma - ρb) / (ρma - ρfl)", desc: "ρma = matrix density, ρb = bulk density log reading, ρfl = fluid density." }
     ]
   }
@@ -49,10 +49,10 @@ export default function Formulas() {
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-serif font-bold tracking-tight mb-4 flex items-center gap-3">
               <Sigma className="h-10 w-10 text-amber-500" />
-              Formula Sheet
+              Sheet ng mga Formula
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed">
-              A quick reference guide for essential petrophysical and reservoir engineering equations.
+              Mabilis na sanggunian para sa mahahalagang equation sa petrophysics at reservoir engineering.
             </p>
           </div>
         </div>

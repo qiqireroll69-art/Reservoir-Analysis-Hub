@@ -29,28 +29,38 @@ export default function Search() {
 
   const getHrefForType = (res: any) => {
     switch (res.type) {
-      case 'topic':
-      case 'definition':
-        return `/chapter/${res.chapterId}${res.sectionId ? `#${res.sectionId}` : ''}`;
-      case 'formula':
-        return `/formulas`;
-      case 'glossary':
-        return `/glossary?q=${encodeURIComponent(res.title)}`;
-      default:
-        return `/`;
+      case 'topic': return `/chapter/${res.chapterId}`;
+      case 'formula': return '/formulas';
+      case 'glossary': return '/glossary';
+      default: return '/';
+    }
+  };
+
+  const getTypeLabel = (type: string) => {
+    switch (type) {
+      case 'topic': return 'Paksa';
+      case 'formula': return 'Formula';
+      case 'glossary': return 'Talasalitaan';
+      case 'definition': return 'Kahulugan';
+      default: return type;
     }
   };
 
   return (
     <Layout>
       <div className="bg-slate-900 text-white py-12 border-b border-slate-800">
-        <div className="container mx-auto px-4 md:px-8 max-w-4xl">
-          <h1 className="text-3xl font-serif font-bold tracking-tight mb-2">
-            Search Results
-          </h1>
-          <p className="text-slate-300">
-            {query ? `Showing results for "${query}"` : "Enter a search term in the navigation bar."}
-          </p>
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="max-w-3xl">
+            <h1 className="text-3xl md:text-4xl font-serif font-bold tracking-tight mb-2 flex items-center gap-3">
+              <SearchIcon className="h-8 w-8 text-amber-500" />
+              Mga Resulta ng Paghahanap
+            </h1>
+            {query && (
+              <p className="text-slate-300">
+                Naghahanap para sa: <span className="text-amber-400 font-semibold">"{query}"</span>
+              </p>
+            )}
+          </div>
         </div>
       </div>
 
@@ -58,53 +68,52 @@ export default function Search() {
         {!query ? (
           <div className="text-center py-24 text-muted-foreground">
             <SearchIcon className="h-16 w-16 mx-auto mb-4 opacity-20" />
-            <p className="text-lg">Please enter a search term.</p>
+            <p className="text-xl font-serif">Maglagay ng search query sa navigation bar</p>
           </div>
         ) : isLoading ? (
           <div className="space-y-4">
-            {[1, 2, 3, 4].map(i => (
-              <Skeleton key={i} className="h-28 w-full" />
-            ))}
+            {[1, 2, 3].map(i => <Skeleton key={i} className="h-28 w-full" />)}
           </div>
         ) : !results || results.results.length === 0 ? (
           <div className="text-center py-24 text-muted-foreground">
             <SearchIcon className="h-16 w-16 mx-auto mb-4 opacity-20" />
-            <h2 className="text-2xl font-serif font-bold mb-2 text-foreground">No results found</h2>
-            <p>We couldn't find anything matching "{query}". Try checking your spelling or use more general terms.</p>
+            <p className="text-xl font-serif mb-2">Walang nahanap na resulta</p>
+            <p className="text-sm">Subukan ang ibang keyword o tingnan ang <Link href="/glossary" className="text-primary hover:underline">Talasalitaan</Link></p>
           </div>
         ) : (
-          <div className="space-y-4">
-            <p className="text-sm font-medium text-muted-foreground mb-6">Found {results.results.length} results</p>
-            
-            {results.results.map((res, idx) => (
-              <Link key={idx} href={getHrefForType(res)}>
-                <Card className="hover:border-primary/50 hover:shadow-md transition-all cursor-pointer group mb-4">
-                  <CardContent className="p-6 flex gap-4">
-                    <div className="mt-1 p-2 bg-muted rounded-md text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary transition-colors shrink-0">
-                      {getIconForType(res.type)}
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground bg-muted px-2 py-0.5 rounded-sm">
-                          {res.type}
-                        </span>
-                        {res.chapterTitle && (
-                          <span className="text-xs text-primary font-medium">
-                            Chapter {res.chapterId}: {res.chapterTitle}
+          <div>
+            <p className="text-sm text-muted-foreground mb-6">
+              Nahanap ang <strong>{results.results.length}</strong> resulta para sa "{query}"
+            </p>
+            <div className="space-y-4">
+              {results.results.map((res: any, idx: number) => (
+                <Link key={idx} href={getHrefForType(res)}>
+                  <Card className="hover:border-primary/50 hover:shadow-md transition-all cursor-pointer group">
+                    <CardContent className="p-6 flex gap-4">
+                      <div className="shrink-0 text-primary p-2 bg-primary/10 rounded-md h-fit mt-0.5">
+                        {getIconForType(res.type)}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs font-medium px-2 py-0.5 bg-muted text-muted-foreground rounded uppercase tracking-wider">
+                            {getTypeLabel(res.type)}
                           </span>
+                          {res.chapterId && (
+                            <span className="text-xs text-primary font-medium">Kabanata {res.chapterId}</span>
+                          )}
+                        </div>
+                        <h3 className="font-bold text-lg font-serif group-hover:text-primary transition-colors mb-1 truncate">
+                          {res.title}
+                        </h3>
+                        {res.excerpt && (
+                          <p className="text-sm text-muted-foreground line-clamp-2 leading-relaxed">{res.excerpt}</p>
                         )}
                       </div>
-                      <h3 className="text-xl font-bold font-serif group-hover:text-primary transition-colors mb-2">
-                        {res.title}
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        ...{res.excerpt}...
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
           </div>
         )}
       </div>

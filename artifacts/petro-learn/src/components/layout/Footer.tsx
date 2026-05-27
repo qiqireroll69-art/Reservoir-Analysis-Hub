@@ -8,27 +8,27 @@ export function Footer() {
           <div className="md:col-span-2">
             <h3 className="font-serif font-bold text-lg mb-4">PetroLearn</h3>
             <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
-              A serious, beautifully crafted learning platform for petroleum engineering students. 
-              Master reservoir petrophysics and hydrocarbon phase analysis with precision and clarity.
+              Isang seryoso at maingat na ginawang learning platform para sa mga estudyante ng petroleum engineering.
+              Paunlarin ang iyong kaalaman sa reservoir petrophysics at hydrocarbon phase analysis nang may katumpakan at kalinawan.
             </p>
           </div>
           
           <div>
-            <h4 className="font-semibold text-sm mb-4 uppercase tracking-wider text-primary">Resources</h4>
+            <h4 className="font-semibold text-sm mb-4 uppercase tracking-wider text-primary">Mga Kagamitan</h4>
             <ul className="space-y-3">
               <li>
                 <Link href="/chapters" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  All Chapters
+                  Lahat ng Kabanata
                 </Link>
               </li>
               <li>
                 <Link href="/formulas" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Formula Sheet
+                  Sheet ng mga Formula
                 </Link>
               </li>
               <li>
                 <Link href="/glossary" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Glossary of Terms
+                  Talasalitaan
                 </Link>
               </li>
             </ul>
@@ -39,12 +39,12 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link href="/bookmarks" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Bookmarks
+                  Mga Bookmark
                 </Link>
               </li>
               <li>
                 <Link href="/quiz/1" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Quizzes
+                  Mga Quiz
                 </Link>
               </li>
             </ul>
@@ -52,9 +52,9 @@ export function Footer() {
         </div>
         
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} PetroLearn. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} PetroLearn. Lahat ng karapatan ay nakalaan.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <Link href="/about" className="hover:text-primary transition-colors">About</Link>
+            <Link href="/about" className="hover:text-primary transition-colors">Tungkol Sa</Link>
           </div>
         </div>
       </div>

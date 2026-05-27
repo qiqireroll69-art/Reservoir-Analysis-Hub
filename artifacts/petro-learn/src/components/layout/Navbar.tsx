@@ -24,10 +24,10 @@ export function Navbar() {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/chapters", label: "Chapters" },
-    { href: "/formulas", label: "Resources" },
+    { href: "/chapters", label: "Mga Kabanata" },
+    { href: "/formulas", label: "Mga Kagamitan" },
     { href: "/quiz/1", label: "Quiz" },
-    { href: "/about", label: "About" },
+    { href: "/about", label: "Tungkol Sa" },
   ];
 
   return (
@@ -65,7 +65,7 @@ export function Navbar() {
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
             <Input
               type="search"
-              placeholder="Search concepts, formulas..."
+              placeholder="Maghanap ng konsepto, formula..."
               className="w-full bg-muted/50 pl-9 rounded-full focus-visible:ring-primary h-9"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -77,7 +77,7 @@ export function Navbar() {
             size="icon"
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
             className="rounded-full"
-            aria-label="Toggle Theme"
+            aria-label="Baguhin ang Tema"
           >
             <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
             <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
@@ -104,7 +104,7 @@ export function Navbar() {
                   <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                   <Input
                     type="search"
-                    placeholder="Search..."
+                    placeholder="Maghanap..."
                     className="w-full bg-muted pl-9 rounded-md h-9"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
@@ -127,10 +127,10 @@ export function Navbar() {
                   ))}
                   <div className="h-px bg-border my-2" />
                   <Link href="/bookmarks" className="text-lg font-medium text-muted-foreground hover:text-primary">
-                    My Bookmarks
+                    Mga Bookmark
                   </Link>
                   <Link href="/glossary" className="text-lg font-medium text-muted-foreground hover:text-primary">
-                    Glossary
+                    Talasalitaan
                   </Link>
                 </nav>
               </div>
