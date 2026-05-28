@@ -70,6 +70,9 @@ export interface QuestionFeedback {
   correctAnswer: string;
   isCorrect: boolean;
   explanation: string;
+  whyWrong?: string;
+  chapterReference?: string;
+  suggestedTopic?: string;
 }
 
 export interface QuizResult {

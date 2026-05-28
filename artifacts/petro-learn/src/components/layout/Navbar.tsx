@@ -1,24 +1,105 @@
 import { Link, useLocation } from "wouter";
-import { BookOpen, Search, Menu, Moon, Sun } from "lucide-react";
+import { BookOpen, Search, Menu, Moon, Sun, BookOpen as BookOpenIcon, Sigma, FileText, BookA, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useTheme } from "@/components/ThemeProvider";
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
 
+type Suggestion = {
+  title: string;
+  chapterId: number | null;
+  type: string;
+};
+
 export function Navbar() {
   const [location, setLocation] = useLocation();
   const { theme, setTheme } = useTheme();
   const [searchQuery, setSearchQuery] = useState("");
+  const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [activeSuggestion, setActiveSuggestion] = useState(-1);
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const searchRef = useRef<HTMLDivElement>(null);
+
+  const fetchSuggestions = useCallback(async (q: string) => {
+    if (q.length < 2) {
+      setSuggestions([]);
+      setShowSuggestions(false);
+      return;
+    }
+    try {
+      const resp = await fetch(`/api/search/suggestions?q=${encodeURIComponent(q)}`);
+      if (resp.ok) {
+        const data = await resp.json();
+        setSuggestions(data.suggestions || []);
+        setShowSuggestions(true);
+      }
+    } catch {
+      setSuggestions([]);
+    }
+  }, []);
+
+  const handleSearchChange = (value: string) => {
+    setSearchQuery(value);
+    setActiveSuggestion(-1);
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => fetchSuggestions(value), 220);
+  };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    if (searchQuery.trim()) {
-      setLocation(`/search?q=${encodeURIComponent(searchQuery)}`);
+    const q = searchQuery.trim();
+    if (q) {
+      setShowSuggestions(false);
+      setSuggestions([]);
+      setLocation(`/search?q=${encodeURIComponent(q)}`);
+    }
+  };
+
+  const handleSuggestionClick = (suggestion: Suggestion) => {
+    setSearchQuery(suggestion.title);
+    setShowSuggestions(false);
+    setSuggestions([]);
+    setLocation(`/search?q=${encodeURIComponent(suggestion.title)}`);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (!showSuggestions || suggestions.length === 0) return;
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setActiveSuggestion(prev => Math.min(prev + 1, suggestions.length - 1));
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setActiveSuggestion(prev => Math.max(prev - 1, -1));
+    } else if (e.key === "Enter" && activeSuggestion >= 0) {
+      e.preventDefault();
+      handleSuggestionClick(suggestions[activeSuggestion]);
+    } else if (e.key === "Escape") {
+      setShowSuggestions(false);
+    }
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
+        setShowSuggestions(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const getSuggestionIcon = (type: string) => {
+    switch (type) {
+      case 'formula': return <Sigma className="h-3.5 w-3.5 text-purple-500" />;
+      case 'glossary': return <BookA className="h-3.5 w-3.5 text-green-500" />;
+      case 'definition': return <FileText className="h-3.5 w-3.5 text-orange-500" />;
+      default: return <BookOpenIcon className="h-3.5 w-3.5 text-blue-500" />;
     }
   };
 
@@ -61,16 +142,69 @@ export function Navbar() {
         </nav>
 
         <div className="flex flex-1 md:flex-none items-center justify-end gap-4">
-          <form onSubmit={handleSearch} className="relative w-full max-w-sm hidden sm:block">
-            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-            <Input
-              type="search"
-              placeholder="Maghanap ng konsepto, formula..."
-              className="w-full bg-muted/50 pl-9 rounded-full focus-visible:ring-primary h-9"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-          </form>
+          {/* Desktop search with autocomplete */}
+          <div ref={searchRef} className="relative w-full max-w-sm hidden sm:block">
+            <form onSubmit={handleSearch}>
+              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground z-10" />
+              <Input
+                type="search"
+                placeholder="Maghanap ng konsepto, formula..."
+                className="w-full bg-muted/50 pl-9 pr-8 rounded-full focus-visible:ring-primary h-9"
+                value={searchQuery}
+                onChange={(e) => handleSearchChange(e.target.value)}
+                onKeyDown={handleKeyDown}
+                onFocus={() => {
+                  if (suggestions.length > 0) setShowSuggestions(true);
+                }}
+                autoComplete="off"
+              />
+              {searchQuery && (
+                <button
+                  type="button"
+                  className="absolute right-2.5 top-2.5 text-muted-foreground hover:text-foreground transition-colors"
+                  onClick={() => { setSearchQuery(""); setSuggestions([]); setShowSuggestions(false); }}
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              )}
+            </form>
+
+            {/* Autocomplete dropdown */}
+            {showSuggestions && suggestions.length > 0 && (
+              <div className="absolute top-full mt-1 left-0 right-0 bg-popover border border-border rounded-xl shadow-lg overflow-hidden z-50">
+                <div className="py-1">
+                  {suggestions.map((s, i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      className={`w-full flex items-center gap-2.5 px-3 py-2.5 text-left hover:bg-accent transition-colors text-sm ${
+                        i === activeSuggestion ? 'bg-accent' : ''
+                      }`}
+                      onMouseDown={(e) => { e.preventDefault(); handleSuggestionClick(s); }}
+                    >
+                      <span className="shrink-0">{getSuggestionIcon(s.type)}</span>
+                      <span className="flex-1 truncate font-medium">{s.title}</span>
+                      {s.chapterId && (
+                        <span className="shrink-0 text-xs text-muted-foreground">
+                          Kab. {s.chapterId}
+                        </span>
+                      )}
+                    </button>
+                  ))}
+                  <div className="px-3 py-2 border-t border-border/50">
+                    <button
+                      type="button"
+                      className="text-xs text-primary hover:underline flex items-center gap-1"
+                      onMouseDown={(e) => { e.preventDefault(); if (searchQuery.trim()) { setShowSuggestions(false); setLocation(`/search?q=${encodeURIComponent(searchQuery.trim())}`); } }}
+                    >
+                      <Search className="h-3 w-3" />
+                      Tingnan ang lahat ng resulta para sa "{searchQuery}"
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
 
           <Button
             variant="ghost"
@@ -107,7 +241,7 @@ export function Navbar() {
                     placeholder="Maghanap..."
                     className="w-full bg-muted pl-9 rounded-md h-9"
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onChange={(e) => handleSearchChange(e.target.value)}
                   />
                 </form>
 

@@ -1,0 +1,68 @@
+Create a fully functional search bar for the website that is connected to the actual lesson content from Chapters 1–7 of “Reservoir Petrophysics with Hydrocarbon Phase Analysis.”
+
+The search feature should not simply detect keywords without context. Instead, it must intelligently search and retrieve information directly from the chapter contents and display meaningful results related to the searched term.
+
+For example:
+
+If a user searches “Porosity,” the search should:
+show the definition,
+identify which chapter discusses it,
+display related explanations,
+show related formulas or concepts,
+and provide clickable links that redirect the user to the exact lesson section/page where the topic appears.
+
+The search system should:
+
+index all chapter contents,
+scan headings, subtopics, definitions, formulas, and lesson text,
+and provide relevant educational results instead of empty or useless responses.
+
+Include:
+
+autocomplete suggestions,
+keyword highlighting,
+and “No results found” handling with recommendations for related topics.
+
+Example:
+Searching:
+
+“Bubble Point Pressure”
+“Permeability”
+“PVT Analysis”
+“Fluid Saturation”
+
+should immediately show lesson references from their respective chapters.
+
+IMPORTANT:
+The search feature must dynamically update whenever new lesson content is added to the chapters.
+
+QUIZ ERROR ANALYSIS FEATURE (VERY IMPORTANT)
+
+Improve the quiz system by adding an “Error Analysis” feature after answering quiz questions.
+
+When a user answers incorrectly:
+
+explain why the answer is wrong,
+identify the misconception or mistake,
+provide the correct explanation,
+and reference the chapter/topic where the concept is discussed.
+
+The explanation should be educational, not just “Correct” or “Incorrect.”
+
+Example:
+If the user answers a porosity question incorrectly:
+
+explain the correct concept of porosity,
+clarify the misunderstanding,
+and direct the student back to the related lesson section.
+
+For every quiz question:
+
+include:
+Correct Answer
+Explanation
+Why the chosen answer is incorrect
+Related Chapter Reference
+Suggested Review Topic
+
+The goal is to make the quizzes function as learning tools rather than simple assessments.

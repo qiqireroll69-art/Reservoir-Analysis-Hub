@@ -13,6 +13,59 @@ import {
 
 const router: IRouter = Router();
 
+const CHAPTER_TITLES_FULL: Record<number, string> = {
+  1: "Kabanata 1 — Panimula sa Reservoir Petrophysics",
+  2: "Kabanata 2 — Mga Pangunahing Kaalaman sa Reservoir Petrophysics",
+  3: "Kabanata 3 — Fluid Saturation, Wettability at Capillary Pressure",
+  4: "Kabanata 4 — Interpretasyon ng Well Logs",
+  5: "Kabanata 5 — Mga PVT Properties at Phase Behavior ng Hydrocarbon",
+  6: "Kabanata 6 — Integrasyon ng Petrophysics at Phase Behavior",
+  7: "Kabanata 7 — Aplikasyon sa Reservoir Engineering",
+};
+
+function inferSuggestedTopic(question: string, chapterId: number): string {
+  const q = question.toLowerCase();
+  if (q.includes("porosity") || q.includes("porosity")) return "Porosity (φ) at Pore Volume";
+  if (q.includes("permeability") || q.includes("darcy")) return "Permeability at Darcy's Law";
+  if (q.includes("wettab")) return "Wettability at Contact Angle";
+  if (q.includes("capillary") || q.includes("capillar")) return "Capillary Pressure at Young-Laplace Equation";
+  if (q.includes("saturation") || q.includes("saturasyon")) return "Fluid Saturation at Archie's Equation";
+  if (q.includes("gamma ray") || q.includes("gr log")) return "Gamma Ray Log at Shale Indicator";
+  if (q.includes("archie") || q.includes("resistivity")) return "Archie's Equations at Resistivity Log";
+  if (q.includes("density log") || q.includes("neutron")) return "Density at Neutron Porosity Logs";
+  if (q.includes("well log") || q.includes("log interpretation")) return "Well Log Integration at Payzone Identification";
+  if (q.includes("bubble point") || q.includes("bubble")) return "Bubble Point Pressure at Oil Reservoir Depletion";
+  if (q.includes("dew point") || q.includes("dew")) return "Dew Point Pressure at Gas Condensate";
+  if (q.includes("pvt") || q.includes("z-factor") || q.includes("z factor")) return "PVT Properties at Gas Compressibility Factor";
+  if (q.includes("bo ") || q.includes("formation volume factor") || q.includes("fvf")) return "Oil Formation Volume Factor (Bo)";
+  if (q.includes("gas condensate") || q.includes("condensate") || q.includes("retrograde")) return "Gas Condensate at Retrograde Condensation";
+  if (q.includes("wet gas")) return "Wet Gas (Rich Gas) at Natural Gas Liquids";
+  if (q.includes("dry gas")) return "Dry Gas (Lean Gas) at Methane";
+  if (q.includes("black oil")) return "Black Oil — Mga Katangian at PVT Properties";
+  if (q.includes("volatile")) return "Volatile Oil — Critical Region at Phase Behavior";
+  if (q.includes("phase") || q.includes("phase diagram") || q.includes("envelope")) return "Phase Diagram at Reservoir Fluid Classification";
+  if (q.includes("material balance") || q.includes("mbe")) return "Material Balance Equation";
+  if (q.includes("stoiip") || q.includes("ooip") || q.includes("reserves") || q.includes("in place")) return "Volumetric Reserves Estimation (STOIIP/GIIP)";
+  if (q.includes("recovery factor") || q.includes("recovery")) return "Recovery Factor at Drive Mechanisms";
+  if (q.includes("clay") || q.includes("shale")) return "Epekto ng Clay sa Reservoir Quality";
+  if (q.includes("relative permeability") || q.includes("kr")) return "Relative Permeability at Multiphase Flow";
+  if (q.includes("net pay") || q.includes("cutoff")) return "Net Pay Determination at Cutoff Values";
+  if (q.includes("nmr") || q.includes("nuclear magnetic")) return "NMR Log at Pore Size Distribution";
+  if (q.includes("sonic") || q.includes("acoustic")) return "Sonic Log at Acoustic Velocity";
+  if (q.includes("compressibility") || q.includes("rock compress")) return "Rock Compressibility";
+  if (q.includes("decline curve") || q.includes("arps")) return "Decline Curve Analysis";
+  const defaults: Record<number, string> = {
+    1: "Panimula sa Reservoir Petrophysics at Phase Behavior",
+    2: "Mga Pangunahing Katangian ng Bato: Porosity at Permeability",
+    3: "Fluid Saturation, Wettability, at Capillary Pressure",
+    4: "Well Log Interpretation at Archie's Equations",
+    5: "PVT Properties at Hydrocarbon Phase Behavior",
+    6: "Integrasyon ng Petrophysics at Phase Behavior",
+    7: "Aplikasyon sa Reservoir Engineering",
+  };
+  return defaults[chapterId] ?? "Suriin ang kabanatang ito";
+}
+
 function formatQuestion(row: typeof quizQuestionsTable.$inferSelect) {
   return {
     id: row.id,
@@ -34,6 +87,9 @@ function formatResult(row: typeof quizResultsTable.$inferSelect) {
     correctAnswer: string;
     isCorrect: boolean;
     explanation: string;
+    whyWrong?: string;
+    chapterReference?: string;
+    suggestedTopic?: string;
   }[];
   return {
     id: row.id,
@@ -107,7 +163,8 @@ router.post("/quiz/:chapterId/submit", async (req, res): Promise<void> => {
     const isCorrect =
       answer.answer.trim().toLowerCase() === q.correctAnswer.trim().toLowerCase();
     if (isCorrect) score++;
-    return {
+
+    const baseFeedback = {
       questionId: q.id,
       question: q.question,
       userAnswer: answer.answer,
@@ -115,6 +172,20 @@ router.post("/quiz/:chapterId/submit", async (req, res): Promise<void> => {
       isCorrect,
       explanation: q.explanation,
     };
+
+    if (!isCorrect) {
+      const suggestedTopic = inferSuggestedTopic(q.question, q.chapterId);
+      const chapterReference = CHAPTER_TITLES_FULL[q.chapterId] ?? `Kabanata ${q.chapterId}`;
+      const whyWrong = `Ang iyong sagot na "${answer.answer}" ay hindi tumpak para sa konseptong ito. ${q.explanation} Ang tamang sagot ay: "${q.correctAnswer}".`;
+      return {
+        ...baseFeedback,
+        whyWrong,
+        chapterReference,
+        suggestedTopic,
+      };
+    }
+
+    return baseFeedback;
   });
 
   const total = questions.length;
@@ -131,7 +202,6 @@ router.post("/quiz/:chapterId/submit", async (req, res): Promise<void> => {
     })
     .returning();
 
-  // Update best quiz score in progress
   const existingProgress = await db
     .select()
     .from(chapterProgressTable)

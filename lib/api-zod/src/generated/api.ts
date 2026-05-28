@@ -138,7 +138,10 @@ export const SubmitQuizResponse = zod.object({
   "userAnswer": zod.string(),
   "correctAnswer": zod.string(),
   "isCorrect": zod.boolean(),
-  "explanation": zod.string()
+  "explanation": zod.string(),
+  "whyWrong": zod.string().optional(),
+  "chapterReference": zod.string().optional(),
+  "suggestedTopic": zod.string().optional()
 })),
   "submittedAt": zod.string()
 })
@@ -163,7 +166,10 @@ export const GetQuizHistoryResponseItem = zod.object({
   "userAnswer": zod.string(),
   "correctAnswer": zod.string(),
   "isCorrect": zod.boolean(),
-  "explanation": zod.string()
+  "explanation": zod.string(),
+  "whyWrong": zod.string().optional(),
+  "chapterReference": zod.string().optional(),
+  "suggestedTopic": zod.string().optional()
 })),
   "submittedAt": zod.string()
 })

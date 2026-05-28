@@ -1,0 +1,1 @@
+- [Search & Quiz Features](search-quiz-features.md) — comprehensive search index lives in search.ts; quiz error analysis is computed dynamically (no DB migration needed); wouter useLocation does not include query strings, use window.location.search for URL params.
