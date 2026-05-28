@@ -1419,6 +1419,12 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
             ],
           },
         ],
+        realVideo: {
+          label: "Volatile Oil — Lecture Video",
+          src: "/volatile-oil.mp4",
+          description:
+            "Detalyadong pagtingin sa Volatile Oil reservoir systems: mga katangian ng fluid, mataas na GOR, mabilis na liquid shrinkage, at kung paano ito nakaposisyon sa critical region ng PT phase diagram.",
+        },
       },
       {
         id: "sec-5-5",
