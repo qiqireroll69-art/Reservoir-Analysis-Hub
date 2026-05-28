@@ -46,6 +46,7 @@ type Section = {
   subsections?: Subsection[];
   noteBox?: { title: string; items: string[] };
   videoAfter?: { label: string; description: string };
+  realVideo?: { label: string; src: string; description: string };
 };
 
 type ChapterData = {
@@ -1100,6 +1101,49 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
         ],
       },
       {
+        id: "sec-4-8",
+        title: "Payzone Identification",
+        content: [
+          "Ang payzone identification ay ang panghuling layunin ng lahat ng well log interpretation — ang pagsasama ng lahat ng petrophysical indicator (GR, resistivity, porosity, water saturation) para matukoy nang tumpak kung aling mga interval ang may sapat na kalidad ng reservoir at sapat na hydrocarbon saturation para maging net pay.",
+          "Sa pamamagitan ng maingat na pagsusuri ng bawat log response nang magkasabay, maaaring matukoy ng isang petrophysicist ang mga zone ng langis at gas, i-distinguish ang mga ito mula sa mga water zone at shale interval, at matukoy ang mga net pay cutoff na angkop sa uri ng reservoir.",
+        ],
+        subsections: [
+          {
+            id: "sec-4-8-a",
+            title: "Pangkalahatang Proseso ng Pagtukoy",
+            content: [],
+            list: [
+              {
+                term: "Hakbang 1 — Pagtukoy ng Lithology",
+                description:
+                  "Gamit ang GR log, ihiwalay ang mga sand/carbonate interval (mababang GR) mula sa mga shale (mataas na GR). Ang mga shale ay awtomatikong hindi kasama sa net pay reservoir.",
+              },
+              {
+                term: "Hakbang 2 — Pagtukoy ng Porosity",
+                description:
+                  "Gamitin ang density at/o neutron log para kalkulahin ang porosity ng mga non-shale interval. Ang mga zone na mas mababa sa porosity cutoff ay itinuturing na tight rock at hindi kasama.",
+              },
+              {
+                term: "Hakbang 3 — Pagtukoy ng Fluid Type",
+                description:
+                  "Gamit ang resistivity log at Archie's equation, kalkulahin ang Sw para sa bawat zone. Ang mataas na resistivity + mababang Sw = hydrocarbon indicator. Ang neutron-density crossover ay nagpapatunay ng gas.",
+              },
+              {
+                term: "Hakbang 4 — Paglalapat ng Mga Cutoff",
+                description:
+                  "Ilapat ang mga porosity, Sw, at Vsh cutoff para matukoy ang final net pay. Ang kabuuan ng net pay thickness ang direktang ginagamit sa OOIP/GIIP calculation.",
+              },
+            ],
+          },
+        ],
+        realVideo: {
+          label: "Payzone Identification",
+          src: "/videos/payzone.mp4",
+          description:
+            "Demonstrasyon ng payzone identification gamit ang well log integration — pagsasama ng GR, resistivity, at porosity log para matukoy ang mga net pay interval.",
+        },
+      },
+      {
         id: "sec-4-7",
         title: "Pagtukoy ng Net Pay at Mga Cutoff Value",
         content: [
@@ -2136,6 +2180,30 @@ function VideoCard({ label, description }: { label: string; description: string 
   );
 }
 
+function RealVideoCard({ label, src, description }: { label: string; src: string; description: string }) {
+  return (
+    <div className="my-8 rounded-xl overflow-hidden border border-border shadow-md bg-card">
+      <video
+        className="w-full aspect-video bg-black"
+        controls
+        preload="metadata"
+        src={src}
+      >
+        Hindi sinusuportahan ng iyong browser ang HTML5 video.
+      </video>
+      <div className="p-4 flex items-start gap-3">
+        <div className="shrink-0 p-2 bg-primary/10 rounded-md text-primary mt-0.5">
+          <PlayCircle className="h-5 w-5" />
+        </div>
+        <div>
+          <p className="font-semibold text-foreground">{label}</p>
+          <p className="text-sm text-muted-foreground mt-0.5">{description}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function NoteBox({ title, items }: { title: string; items: string[] }) {
   return (
     <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5 my-6">
@@ -2399,6 +2467,15 @@ export default function Chapter() {
                     <VideoCard
                       label={section.videoAfter.label}
                       description={section.videoAfter.description}
+                    />
+                  )}
+
+                  {/* Real embedded video */}
+                  {section.realVideo && (
+                    <RealVideoCard
+                      label={section.realVideo.label}
+                      src={section.realVideo.src}
+                      description={section.realVideo.description}
                     />
                   )}
                 </section>

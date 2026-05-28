@@ -1,0 +1,2 @@
+artifacts/petro-learn/public/videos/payzone.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/payzone_1779971154309.mp4 filter=lfs diff=lfs merge=lfs -text
