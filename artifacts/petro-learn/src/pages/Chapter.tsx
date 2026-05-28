@@ -1330,7 +1330,59 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
               },
             ],
           },
+          {
+            id: "sec-5-3-b",
+            title: "Identification of Oil Reservoir Systems",
+            content: [
+              "Ang wastong pag-identify ng uri ng oil reservoir system ay kritikal sa pagpapasya ng tamang PVT model, production strategy, at facilities design. Ginagamit ang kumbinasyon ng field observations, laboratory PVT data, at well log analysis para ma-classify ang isang reservoir fluid bago pa man magsimula ang full-scale development.",
+              "Ang pangunahing mga indicator ng isang Black Oil system ay makikita sa surface separator data, laboratory analysis, at reservoir pressure-temperature conditions. Ang wastong classification ay nagtatakda ng antas ng kumplikasyon ng PVT modeling na kakailanganin.",
+            ],
+            list: [
+              {
+                term: "GOR at Surface Separator Observations",
+                description:
+                  "Ang Black Oil ay nagpapakita ng mababang GOR (< 2,000 scf/STB) sa initial production. Ang patuloy na mababang GOR sa panahon ng produksyon ay nagkukumpirma ng black oil system, bago tinatawid ang bubble point. Ang mataas at mabilis na tumataas na GOR ay nagpapahiwatig ng volatile oil o mas magaang na fluid.",
+              },
+              {
+                term: "API Gravity at Kulay ng Produced Crude",
+                description:
+                  "Ang black oil ay may API gravity na 15–45°, at ang kulay ng crude sa tank ay itim, dark brown, o malalim na berde. Ang magaang at maliwanag (amber, light brown) na kulay ay nagpapahiwatig ng volatile oil o condensate — hindi black oil.",
+              },
+              {
+                term: "Reservoir Temperature vs. Critical Temperature",
+                description:
+                  "Ang temperature ng black oil reservoir ay malayo (sa kaliwa ng) critical temperature ng mixture sa PT diagram — karaniwang Tres < 0.9 × Tc. Kapag ang Tres ay malapit sa Tc, mas malamang ang volatile oil. Ang tatlong-fold na pagkakaiba sa pagitan ng Tres at Tc ay nagpapatibay ng black oil classification.",
+              },
+              {
+                term: "Laboratory PVT Confirmation",
+                description:
+                  "Ang Constant Composition Expansion (CCE) at Differential Liberation (DL) tests ay nagbibigay ng direktang sukat ng Bo, Rs, μo, at bubble point pressure. Para sa black oil: ang Bo curve ay makinis at medyo flat sa itaas ng bubble point; ang Rs ay lumalaki nang dahan-dahan. Ang mabilis na pagtaas ng Bo at Rs ay nagpapahiwatig ng volatile behavior.",
+              },
+              {
+                term: "Mud Log at Drilling Observations",
+                description:
+                  "Sa panahon ng drilling, ang mga cutting at gas chromatography data mula sa mud logging ay nagpapakita ng hydrocarbon composition. Ang dominanyo ng C5+ fraction sa laban ng C1–C4 ay nagpapahiwatig ng black oil system. Ang mataas na C1/C5+ ratio ay nagpapahiwatig ng gas condensate o gas system.",
+              },
+            ],
+            noteBox: {
+              title: "Quick Reference: Black Oil vs. Volatile Oil Identification",
+              items: [
+                "GOR < 2,000 scf/STB → Black Oil; GOR 2,000–100,000 scf/STB → Volatile Oil",
+                "API 15–45° at itim/dark brown na kulay → Black Oil; API 40–60° at amber/light → Volatile Oil",
+                "Bo 1.1–1.8 res bbl/STB → Black Oil; Bo > 1.8 res bbl/STB → Volatile Oil",
+                "Reservoir temp malayo sa critical temp → Black Oil; malapit sa critical temp → Volatile Oil",
+                "CCE test: makinis at flat Bo curve → Black Oil characteristic",
+                "Mud log: predominant C5+ sa cutting gas → Black Oil indicator",
+              ],
+            },
+          },
         ],
+        realVideo: {
+          label: "Black Oil Systems — Lecture Video",
+          src: "/videos/Black_oil_1780002100113.mp4",
+          description:
+            "Komprehensibong pagtingin sa Black Oil reservoir systems: mga katangian ng fluid, PVT behavior, phase diagram analysis, at kung paano i-identify ang Black Oil kumpara sa ibang uri ng reservoir fluid gamit ang GOR, API gravity, at laboratory data.",
+        },
       },
       {
         id: "sec-5-4",
