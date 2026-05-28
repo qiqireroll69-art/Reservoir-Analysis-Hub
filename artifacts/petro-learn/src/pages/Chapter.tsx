@@ -949,11 +949,6 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
             ],
           },
         ],
-        videoAfter: {
-          label: "Lecture Video",
-          description:
-            "Panimula sa Well Logging — Mga Uri ng Tool, Mga Paraan ng Pagkuha, at ang Wireline Process",
-        },
       },
       {
         id: "sec-4-2",
@@ -996,11 +991,6 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
             ],
           },
         ],
-        videoAfter: {
-          label: "Karagdagang Video",
-          description:
-            "Pagbabasa ng Resistivity Logs — Pagkilala ng mga Hydrocarbon Zone vs. Water Zone at Pag-unawa sa mga Invasion Profile",
-        },
       },
       {
         id: "sec-4-4",
