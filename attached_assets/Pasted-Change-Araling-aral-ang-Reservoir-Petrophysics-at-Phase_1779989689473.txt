@@ -1,0 +1,47 @@
+Change "Araling-aral ang Reservoir Petrophysics at Phase Analysis" to "Reservoir Petrophysics at Hydrocarbon Phase Analysis"
+Change "Isang tumpak at komprehensibong learning platform para sa mga estudyante ng engineering. Pag-aralan ang mga katangian ng bato, fluid saturation, well logging, at PVT behavior." to "Isang komprehensibong learning platform para sa mga estudyante ng petroleum engineering. Ating tuklasin ang mga katangian ng bato, fluid saturation, well logging, at PVT behavior."
+Change every "PetroLearn" on the website into "PETROTuKLAS"
+
+Additionally, add these information about Gas condensate, wet gas, and dry gas, in chapter 5.
+3. GAS CONDENSATE (Gas na Nagiging Likido)
+Mga Importanteng Salita at Kahulugan
+Gas Condensate (Retrograde Gas): Isang uri ng reservoir fluid na nasa anyong gas habang nasa ilalim ng reservoir, ngunit kapag bumaba ang presyur ay nagiging likido o condensate. 
+Dew Point Pressure: Ang presyur kung saan nagsisimulang mag-condense o maging likido ang gas habang bumababa ang pressure ng reservoir. 
+Retrograde Condensation: Proseso kung saan ang gas ay nagiging likido habang bumababa ang pressure, kabaligtaran ng karaniwang inaasahan na pagsingaw lamang. 
+Condensate Banking: Pag-ipon ng likido malapit sa balon na maaaring humarang sa pagdaloy ng gas at magpababa ng produksyon. 
+High API Gravity: Mataas ang API gravity ng condensate kaya ito ay magaan at malinaw kumpara sa ordinaryong langis. 
+Mga Katangian (Characteristics)
+Gas sa Reservoir: Sa ilalim ng mataas na presyur at temperatura, ang fluid ay purong gas lamang sa reservoir. 
+Pagbuo ng Likido sa Reservoir: Kapag bumaba ang pressure sa ibaba ng dew point, nagsisimulang mabuo ang likido sa loob mismo ng reservoir. 
+Mataas na Gas Production: Mas maraming gas ang nalilikha kaysa likido, ngunit mahalaga pa rin ang condensate dahil mataas ang halaga nito. 
+Problema sa Produksyon: Ang naipong condensate sa paligid ng balon ay maaaring magpabagal sa daloy ng gas kaya gumagamit minsan ng gas reinjection upang mapanatili ang pressure. 
+Kulay: Ang condensate ay karaniwang malinaw, mapusyaw na dilaw, orange, o light amber. 
+4. WET GAS (Basang Gas o Rich Gas)
+Mga Importanteng Salita at Kahulugan
+Wet Gas / Rich Gas: Natural gas na may kasamang mabibigat na hydrocarbons tulad ng ethane, propane, butane, at condensable liquids. 
+Natural Gas Liquids (NGLs): Mga liquid hydrocarbons na nakukuha mula sa wet gas tulad ng propane at butane. 
+Separator: Kagamitan sa ibabaw (surface equipment) kung saan hinihiwalay ang gas at liquid hydrocarbons. 
+Rich Gas: Tawag sa wet gas dahil marami itong heavy hydrocarbons kumpara sa dry gas. 
+Constant GOR: Mataas ngunit halos hindi nagbabagong gas-oil ratio habang tumatagal ang produksyon. 
+Mga Katangian (Characteristics)
+Gas Lamang sa Reservoir: Hindi nagkakaroon ng liquid sa loob ng reservoir kahit bumaba ang pressure. 
+Pagbuo ng Likido sa Surface: Kapag dinala sa surface separator, saka lamang nabubuo ang condensate o liquid hydrocarbons. 
+Maraming Heavy Hydrocarbons: May mataas na dami ng ethane, propane, butane, at pentane kaya mas “rich” ang gas. 
+Mataas na Heating Value: Dahil maraming hydrocarbons, mas mataas ang energy content nito kumpara sa dry gas. 
+Kondisyon sa Ibabaw: Nangangailangan ng processing plants o cryogenic separation upang maihiwalay ang mga liquid hydrocarbons. 
+5. DRY GAS (Tuyong Gas)
+Mga Importanteng Salita at Kahulugan
+Dry Gas: Natural gas na halos methane lamang at kakaunti o halos walang liquid hydrocarbons. 
+Methane (CH₄): Pangunahing component ng dry gas at pangunahing pinagmumulan ng fuel energy. 
+Lean Gas: Isa pang tawag sa dry gas dahil kakaunti ang heavy hydrocarbon content nito. 
+Single-Phase Gas: Nananatiling gas lamang mula reservoir hanggang surface. 
+No Condensate Formation: Walang nabubuong likido sa reservoir at maging sa surface separator. 
+Mga Katangian (Characteristics)
+Purong Gas Production: Halos methane lamang ang nailalabas kaya walang oil o condensate na kasama. 
+Pinakasimpleng Uri ng Reservoir Fluid: Mas madaling hulaan at i-handle kumpara sa volatile oil o condensate reservoirs.
+Walang Liquid Formation: Hindi nagiging likido kahit bumaba ang pressure dahil nasa labas ng phase envelope ang kondisyon nito. 
+Mataas na Mobility: Dahil mababa ang lagkit (viscosity), mabilis dumaloy ang gas sa porous rocks. 
+Kondisyon sa Ibabaw: Kadalasan simpleng dehydration lamang ang kailangan bago ito ipadala sa pipelines. 
+
+
+Remove the video preview in every other chapter except number 4, because chapter 4 is the only one i uploaded.

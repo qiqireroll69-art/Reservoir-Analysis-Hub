@@ -1270,11 +1270,6 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
             ],
           },
         ],
-        videoAfter: {
-          label: "Lecture Video",
-          description:
-            "Mga PVT Properties at Phase Behavior — Panimula sa Pressure-Temperature Phase Diagram para sa mga Reservoir Fluid System",
-        },
       },
       {
         id: "sec-5-2",
@@ -1300,11 +1295,6 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
             ],
           },
         ],
-        videoAfter: {
-          label: "Demonstrasyon ng Phase Behavior",
-          description:
-            "Visualization ng Phase Envelope — Pressure-Temperature Diagram para sa Black Oil, Volatile Oil, Gas Condensate, at Dry Gas System",
-        },
       },
       {
         id: "sec-5-3",
@@ -1387,26 +1377,138 @@ const CHAPTER_CONTENT: Record<number, ChapterData> = {
         subsections: [
           {
             id: "sec-5-5-a",
-            title: "Gas Condensate",
+            title: "Gas Condensate (Gas na Nagiging Likido)",
             content: [
               "Ang isang gas condensate reservoir ay nagsisimula sa itaas ng dew point nito bilang isang single-phase gas. Ang temperatura ng reservoir ay nasa pagitan ng critical temperature at ng cricondentherm. Habang bumababa ang pressure sa panahon ng produksyon, tinatawid ang dew point at nag-co-condense ang likidong hydrocarbon sa reservoir — retrograde condensation. Ang condensate na ito ay madalas na mayaman sa mahahalagang likido (pentane, hexane, at mas mabibigat) ngunit maaaring mahirap mabawi kapag na-drop out na ito sa pore space.",
               "Ang surface-separated condensate (tinatawag ding 'white oil' o 'lease condensate') mula sa mga gas condensate well ay karaniwang may API gravity na mas mataas sa 60° at halos transparent na hitsura. Ang gas na ginagawa ay naglalaman ng mahahalagang intermediate component na kinukuha sa gas plant.",
             ],
+            list: [
+              {
+                term: "Gas Condensate (Retrograde Gas)",
+                description:
+                  "Isang uri ng reservoir fluid na nasa anyong gas habang nasa ilalim ng reservoir, ngunit kapag bumaba ang presyur ay nagiging likido o condensate.",
+              },
+              {
+                term: "Dew Point Pressure",
+                description:
+                  "Ang presyur kung saan nagsisimulang mag-condense o maging likido ang gas habang bumababa ang pressure ng reservoir.",
+              },
+              {
+                term: "Retrograde Condensation",
+                description:
+                  "Proseso kung saan ang gas ay nagiging likido habang bumababa ang pressure, kabaligtaran ng karaniwang inaasahan na pagsingaw lamang.",
+              },
+              {
+                term: "Condensate Banking",
+                description:
+                  "Pag-ipon ng likido malapit sa balon na maaaring humarang sa pagdaloy ng gas at magpababa ng produksyon.",
+              },
+              {
+                term: "High API Gravity",
+                description:
+                  "Mataas ang API gravity ng condensate kaya ito ay magaan at malinaw kumpara sa ordinaryong langis.",
+              },
+            ],
+            noteBox: {
+              title: "Mga Katangian ng Gas Condensate",
+              items: [
+                "Gas sa Reservoir: Sa ilalim ng mataas na presyur at temperatura, ang fluid ay purong gas lamang sa reservoir.",
+                "Pagbuo ng Likido sa Reservoir: Kapag bumaba ang pressure sa ibaba ng dew point, nagsisimulang mabuo ang likido sa loob mismo ng reservoir.",
+                "Mataas na Gas Production: Mas maraming gas ang nalilikha kaysa likido, ngunit mahalaga pa rin ang condensate dahil mataas ang halaga nito.",
+                "Problema sa Produksyon: Ang naipong condensate sa paligid ng balon ay maaaring magpabagal sa daloy ng gas kaya gumagamit minsan ng gas reinjection upang mapanatili ang pressure.",
+                "Kulay: Ang condensate ay karaniwang malinaw, mapusyaw na dilaw, orange, o light amber.",
+              ],
+            },
           },
           {
             id: "sec-5-5-b",
-            title: "Wet Gas at Dry Gas",
+            title: "Wet Gas (Basang Gas o Rich Gas)",
             content: [
               "Ang mga wet gas reservoir ay nasa kanan ng cricondentherm sa phase diagram. Ang reservoir fluid ay single-phase gas sa buong depletion (walang retrograde condensation sa reservoir), ngunit ang mga kondisyon ng separator ay nasa loob ng phase envelope, na gumagawa ng liquid condensate sa surface. Ang liquid content ng wet gas ay karaniwang ipinahayag bilang gallons ng likido bawat libong standard cubic feet (GPM).",
+            ],
+            list: [
+              {
+                term: "Wet Gas / Rich Gas",
+                description:
+                  "Natural gas na may kasamang mabibigat na hydrocarbons tulad ng ethane, propane, butane, at condensable liquids.",
+              },
+              {
+                term: "Natural Gas Liquids (NGLs)",
+                description:
+                  "Mga liquid hydrocarbons na nakukuha mula sa wet gas tulad ng propane at butane.",
+              },
+              {
+                term: "Separator",
+                description:
+                  "Kagamitan sa ibabaw (surface equipment) kung saan hinihiwalay ang gas at liquid hydrocarbons.",
+              },
+              {
+                term: "Rich Gas",
+                description:
+                  "Tawag sa wet gas dahil marami itong heavy hydrocarbons kumpara sa dry gas.",
+              },
+              {
+                term: "Constant GOR",
+                description:
+                  "Mataas ngunit halos hindi nagbabagong gas-oil ratio habang tumatagal ang produksyon.",
+              },
+            ],
+            noteBox: {
+              title: "Mga Katangian ng Wet Gas",
+              items: [
+                "Gas Lamang sa Reservoir: Hindi nagkakaroon ng liquid sa loob ng reservoir kahit bumaba ang pressure.",
+                "Pagbuo ng Likido sa Surface: Kapag dinala sa surface separator, saka lamang nabubuo ang condensate o liquid hydrocarbons.",
+                "Maraming Heavy Hydrocarbons: May mataas na dami ng ethane, propane, butane, at pentane kaya mas 'rich' ang gas.",
+                "Mataas na Heating Value: Dahil maraming hydrocarbons, mas mataas ang energy content nito kumpara sa dry gas.",
+                "Kondisyon sa Ibabaw: Nangangailangan ng processing plants o cryogenic separation upang maihiwalay ang mga liquid hydrocarbons.",
+              ],
+            },
+          },
+          {
+            id: "sec-5-5-c",
+            title: "Dry Gas (Tuyong Gas)",
+            content: [
               "Ang dry gas (pangunahin methane) ay may phase envelope na ganap na nasa kaliwa at ibaba ng reservoir conditions. Walang likidong nabubuo sa anumang punto ng proseso ng produksyon. Ang dry gas ay pinakasimpleng fluid na i-model at pinakamababang halaga bawat unit ng heating content, ngunit pinakamadaling i-process. Ang reservoir engineering ng mga dry gas reservoir ay gumagamit lamang ng material balance at gas well deliverability methods.",
             ],
+            list: [
+              {
+                term: "Dry Gas",
+                description:
+                  "Natural gas na halos methane lamang at kakaunti o halos walang liquid hydrocarbons.",
+              },
+              {
+                term: "Methane (CH₄)",
+                description:
+                  "Pangunahing component ng dry gas at pangunahing pinagmumulan ng fuel energy.",
+              },
+              {
+                term: "Lean Gas",
+                description:
+                  "Isa pang tawag sa dry gas dahil kakaunti ang heavy hydrocarbon content nito.",
+              },
+              {
+                term: "Single-Phase Gas",
+                description:
+                  "Nananatiling gas lamang mula reservoir hanggang surface.",
+              },
+              {
+                term: "No Condensate Formation",
+                description:
+                  "Walang nabubuong likido sa reservoir at maging sa surface separator.",
+              },
+            ],
+            noteBox: {
+              title: "Mga Katangian ng Dry Gas",
+              items: [
+                "Purong Gas Production: Halos methane lamang ang nailalabas kaya walang oil o condensate na kasama.",
+                "Pinakasimpleng Uri ng Reservoir Fluid: Mas madaling hulaan at i-handle kumpara sa volatile oil o condensate reservoirs.",
+                "Walang Liquid Formation: Hindi nagiging likido kahit bumaba ang pressure dahil nasa labas ng phase envelope ang kondisyon nito.",
+                "Mataas na Mobility: Dahil mababa ang lagkit (viscosity), mabilis dumaloy ang gas sa porous rocks.",
+                "Kondisyon sa Ibabaw: Kadalasan simpleng dehydration lamang ang kailangan bago ito ipadala sa pipelines.",
+              ],
+            },
           },
         ],
-        videoAfter: {
-          label: "PVT Analysis Walkthrough",
-          description:
-            "PVT Laboratory Analysis — Flash Liberation, Differential Liberation, at Separator Test para sa Reservoir Fluid Characterization",
-        },
       },
       {
         id: "sec-5-6",
@@ -2350,22 +2452,6 @@ export default function Chapter() {
               </p>
             </header>
 
-            {/* Pangunahing Lecture Video Placeholder */}
-            <Card className="mb-10 bg-slate-900 border-slate-800 overflow-hidden relative group cursor-pointer aspect-video flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-tr from-slate-900 via-slate-800 to-amber-900/20 opacity-80 mix-blend-overlay"></div>
-              <div className="relative z-10 flex flex-col items-center gap-4 text-white p-6 text-center transform group-hover:scale-105 transition-transform duration-500">
-                <div className="bg-white/10 p-4 rounded-full backdrop-blur-sm border border-white/20 group-hover:bg-amber-500/20 group-hover:border-amber-500/50 transition-colors">
-                  <PlayCircle className="h-12 w-12 text-white group-hover:text-amber-500 transition-colors" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-xl font-serif">Lecture Video</h3>
-                  <p className="text-sm text-slate-300">
-                    Kabanata {chapterId} — {chapterData.title}
-                  </p>
-                  <p className="text-xs text-slate-400 mt-1">Malapit nang makuha ang video</p>
-                </div>
-              </div>
-            </Card>
 
             {/* Mga Seksyon ng Kabanata */}
             <div className="space-y-14 mb-12">

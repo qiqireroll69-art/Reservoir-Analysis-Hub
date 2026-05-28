@@ -66,10 +66,10 @@ export default function Home() {
             Komprehensibong Kurikulum sa Petroleum Engineering
           </div>
           <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-4xl leading-tight mb-6 animate-in slide-in-from-bottom-6 duration-700">
-            Araling-aral ang Reservoir Petrophysics at Phase Analysis
+            Reservoir Petrophysics at Hydrocarbon Phase Analysis
           </h1>
           <p className="text-lg md:text-xl text-slate-300 max-w-2xl mb-10 leading-relaxed animate-in slide-in-from-bottom-8 duration-1000">
-            Isang tumpak at komprehensibong learning platform para sa mga estudyante ng engineering. Pag-aralan ang mga katangian ng bato, fluid saturation, well logging, at PVT behavior.
+            Isang komprehensibong learning platform para sa mga estudyante ng petroleum engineering. Ating tuklasin ang mga katangian ng bato, fluid saturation, well logging, at PVT behavior.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in duration-1000 delay-300">
             <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold text-base h-12 px-8" asChild>

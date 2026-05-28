@@ -11,7 +11,7 @@ export default function About() {
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-serif font-bold tracking-tight mb-6">
-              Tungkol sa PetroLearn
+              Tungkol sa PETROTuKLAS
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed">
               Pinagsasama ang akademikong teorya at praktikal na aplikasyon sa industriya ng reservoir petrophysics at hydrocarbon phase analysis.
@@ -24,7 +24,7 @@ export default function About() {
         <div className="prose prose-slate dark:prose-invert prose-lg max-w-none prose-headings:font-serif">
           <h2>Ang Aming Misyon</h2>
           <p>
-            Ang PetroLearn ay binuo upang magbigay sa mga estudyante ng petroleum engineering at mga baguhang propesyonal ng isang mahigpit, accessible, at magandang dinisenyo na platform para sa pag-aralan ng petrophysics. Naniniwala kami na ang mga kumplikadong prinsipyo ng engineering ay hindi nangangailangan ng lumang at mahirap gamitin na software.
+            Ang PETROTuKLAS ay binuo upang magbigay sa mga estudyante ng petroleum engineering at mga baguhang propesyonal ng isang mahigpit, accessible, at magandang dinisenyo na platform para sa pag-aralan ng petrophysics. Naniniwala kami na ang mga kumplikadong prinsipyo ng engineering ay hindi nangangailangan ng lumang at mahirap gamitin na software.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8 my-12 not-prose">

@@ -6,7 +6,7 @@ export function Footer() {
       <div className="container mx-auto py-12 px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <h3 className="font-serif font-bold text-lg mb-4">PetroLearn</h3>
+            <h3 className="font-serif font-bold text-lg mb-4">PETROTuKLAS</h3>
             <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
               Isang seryoso at maingat na ginawang learning platform para sa mga estudyante ng petroleum engineering.
               Paunlarin ang iyong kaalaman sa reservoir petrophysics at hydrocarbon phase analysis nang may katumpakan at kalinawan.
@@ -52,7 +52,7 @@ export function Footer() {
         </div>
         
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} PetroLearn. Lahat ng karapatan ay nakalaan.</p>
+          <p>© {new Date().getFullYear()} PETROTuKLAS. Lahat ng karapatan ay nakalaan.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <Link href="/about" className="hover:text-primary transition-colors">Tungkol Sa</Link>
           </div>

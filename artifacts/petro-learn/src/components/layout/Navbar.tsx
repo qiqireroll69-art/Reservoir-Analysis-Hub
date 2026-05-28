@@ -39,7 +39,7 @@ export function Navbar() {
               <BookOpen className="h-5 w-5" />
             </div>
             <span className="font-serif font-bold text-xl tracking-tight hidden sm:inline-block">
-              PetroLearn
+              PETROTuKLAS
             </span>
           </Link>
         </div>
@@ -96,7 +96,7 @@ export function Navbar() {
                     <BookOpen className="h-5 w-5" />
                   </div>
                   <span className="font-serif font-bold text-xl tracking-tight">
-                    PetroLearn
+                    PETROTuKLAS
                   </span>
                 </div>
                 
