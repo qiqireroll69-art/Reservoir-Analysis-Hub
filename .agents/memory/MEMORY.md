@@ -1,1 +1,2 @@
 - [Search & Quiz Features](search-quiz-features.md) — comprehensive search index lives in search.ts; quiz error analysis is computed dynamically (no DB migration needed); wouter useLocation does not include query strings, use window.location.search for URL params.
+- [Quiz DB Setup](quiz-db-setup.md) — quiz_questions table must be seeded manually via lib/db/seed-quiz.mjs; run `pnpm --filter @workspace/db push` first to create tables, then `node lib/db/seed-quiz.mjs` to populate 70 questions across 7 chapters.

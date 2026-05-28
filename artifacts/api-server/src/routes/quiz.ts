@@ -23,6 +23,109 @@ const CHAPTER_TITLES_FULL: Record<number, string> = {
   7: "Kabanata 7 — Aplikasyon sa Reservoir Engineering",
 };
 
+function generateWhyWrong(
+  userAnswer: string,
+  correctAnswer: string,
+  question: string,
+  explanation: string
+): string {
+  const ua = userAnswer.toLowerCase().trim();
+  const ca = correctAnswer.toLowerCase().trim();
+  const q = question.toLowerCase();
+
+  // ── Formula inversion (user flipped numerator/denominator) ──────────────
+  const isFormulaQuestion = q.includes("formula") || q.includes("equation") || q.includes("law") || q.includes("kalkulahin");
+  if (isFormulaQuestion) {
+    // Detect if both answers contain a division but look like inverses
+    const userHasDiv = userAnswer.includes("/") || userAnswer.includes("÷");
+    const corrHasDiv = correctAnswer.includes("/") || correctAnswer.includes("÷");
+    if (userHasDiv && corrHasDiv && ua !== ca) {
+      return `Ang iyong sagot ay nagpapakita ng isang karaniwang pagkakamali: ang pagkakamali sa pagkakasunod-sunod ng numerator at denominator sa formula. Mahalagang tandaan kung aling quantity ang "hinati" sa isa pa. ${explanation}`;
+    }
+    return `Ang napili mong formula ay hindi tama para sa konseptong ito. Tandaan na ang bawat variable sa equation ay may tiyak na papel — hindi maaaring i-rearrange nang walang algebraic basis. ${explanation}`;
+  }
+
+  // ── Definition / concept confusion ─────────────────────────────────────
+  if (q.includes("ano ang") || q.includes("kahulugan") || q.includes("ibig sabihin") || q.includes("what is")) {
+    // Check if user picked something that sounds related but is different
+    const relatedPairs: [string, string, string][] = [
+      ["porosity", "permeability", "Ang porosity ay tungkol sa pore SPACE (dami ng butas sa bato), samantalang ang permeability ay tungkol sa flow CAPACITY (kakayahang mag-daloy ng fluid). Magkaugnay sila ngunit magkaibang konsepto."],
+      ["permeability", "porosity", "Ang permeability ay nagpapakita kung GAANO KADALI dumadaloy ang fluids, hindi kung GAANO KALAKI ang pore space. Ang mataas na porosity ay hindi laging nangangahulugang mataas na permeability."],
+      ["bubble point", "dew point", "Ang bubble point ay para sa LIQUID (oil) na nagsisimulang mag-release ng gas; ang dew point naman ay para sa GAS na nagsisimulang mag-condense ng liquid. Magkaparehong prinsipyo ngunit magkaibang reservoir fluid."],
+      ["dew point", "bubble point", "Ang dew point ay para sa GAS CONDENSATE system; ang bubble point naman ay para sa OIL RESERVOIR system. Ang pagkalito sa dalawa ay isang karaniwang pagkakamali."],
+      ["total porosity", "effective porosity", "Ang Total Porosity ay kasama ang LAHAT ng pores (kabilang ang isolated at clay-bound); ang Effective Porosity ay ang interconnected pores lamang na may kakayahang mag-flow. Para sa reservoir engineering, ang effective porosity ang ginagamit."],
+      ["primary porosity", "secondary porosity", "Ang Primary Porosity ay nabuo KASABAY ng deposition ng bato (intergranular). Ang Secondary Porosity ay nabuo PAGKATAPOS ng deposition sa pamamagitan ng dissolution, fracturing, o dolomitization."],
+      ["absolute permeability", "relative permeability", "Ang Absolute Permeability ay sinusukat sa single-fluid condition (100% saturated). Ang Relative Permeability ay ginagamit kapag may DALAWA O HIGIT pang fluids — ito ay dimensionless ratio."],
+      ["water-wet", "oil-wet", "Sa water-wet rock, ang TUBIG ang kumakapit sa grain surfaces (wetting phase). Sa oil-wet rock, ang OIL ang kumakapit sa grains. Ang wettability ay malaking epekto sa fluid distribution at recovery."],
+      ["bo ", "rs ", "Ang Bo (Formation Volume Factor) ay nagrerepresenta ng VOLUME CHANGE ng oil mula reservoir patungong surface. Ang Rs (Solution GOR) ay nagrerepresenta ng DAMI NG GAS na dissolved sa oil. Magkaibang units at layunin."],
+      ["stoiip", "giip", "Ang STOIIP ay para sa OIL (gamit ang 7758 bbl/acre-ft at Bo). Ang GIIP ay para sa GAS (gamit ang 43,560 cu ft/acre-ft at Bg). Magkaibang conversion factors ang ginagamit."],
+      ["recovery factor", "stoiip", "Ang STOIIP ay ang TOTAL na langis sa reservoir (hindi lahat nito ma-produce). Ang Recovery Factor ay ang FRACTION ng STOIIP na maaaring ma-produce. Ang reserves = RF × STOIIP."],
+      ["productivity index", "flow rate", "Ang Productivity Index (PI) ay hindi lang ang flow rate — ito ay ang flow rate PER UNIT PRESSURE DRAWDOWN (q / ΔP). Mas accurately na nagpapakita ito ng kakayahan ng balon."],
+    ];
+    for (const [concept, confused, msg] of relatedPairs) {
+      if (ua.includes(concept) && (ca.includes(confused) || q.includes(confused))) {
+        return msg;
+      }
+      if (ua.includes(confused) && ca.includes(concept)) {
+        return msg;
+      }
+    }
+  }
+
+  // ── Saturation / percentage calculations ─────────────────────────────
+  if (q.includes("saturation") || q.includes("saturasyon") || q.includes("kung ano") && q.includes("cc")) {
+    if (ua.includes("0.4") || ua.includes("40%") || ua.includes("0.167") || ua.includes("0.83")) {
+      return `Mukhang may error sa iyong calculation. Para sa saturation, gamitin ang formula na Sf = Vf / Vp (fluid volume divided by PORE volume, hindi bulk volume). Siguraduhing ginamit mo ang tamang denominator. ${explanation}`;
+    }
+    return `Ang tamang formula ay Sw + So + Sg = 1.0 — ang kabuuan ng lahat ng saturations ay palaging 1. Kung dalawa ang alam mo, ang ikatlo ay 1 minus ang dalawa. ${explanation}`;
+  }
+
+  // ── Calculation errors (numerical answers) ───────────────────────────
+  if (/^\d/.test(userAnswer.trim()) || userAnswer.trim().startsWith("0.")) {
+    return `Ang iyong numerical na sagot ay hindi tama. Suriin ang iyong calculation — tiyaking ginamit mo ang tamang formula, tamang units, at tamang order ng operasyon. ${explanation}`;
+  }
+
+  // ── "None of the above" / "Walang pagkakaiba" traps ─────────────────
+  if (ua.includes("walang pagkakaiba") || ua.includes("parehong") || ua.includes("walang epekto") || ua.includes("constant")) {
+    return `Ang sagot na "walang pagkakaiba" o "constant" ay isang karaniwang trap sa reservoir petrophysics. Ang karamihan sa mga properties ay nagbabago depende sa pressure, saturation, at temperatura. ${explanation}`;
+  }
+
+  // ── Mobility / efficiency confusion ─────────────────────────────────
+  if (q.includes("mobility") || q.includes("efficiency") || q.includes("recovery")) {
+    if (ua.includes("mas mababa") || ua.includes("bumababa") || ua.includes("mas mataas") || ua.includes("tumataas")) {
+      return `Ang direksyon ng trend (tumataas o bumababa) ay dapat na base sa pisikal na prinsipyo. Para sa mobility at recovery, mahalagang maunawaan ang relasyon ng permeability, viscosity, at saturation. ${explanation}`;
+    }
+  }
+
+  // ── Drive mechanism confusion ────────────────────────────────────────
+  if (q.includes("drive") || q.includes("mechanism") || q.includes("recovery factor")) {
+    const driveMap: [string, string][] = [
+      ["solution gas", "Ang Solution Gas Drive ay galing sa DISSOLVED gas na lumalabas sa oil — ito ay limitado at nagdudulot ng pagtaas ng GOR. Hindi ito ang pinaka-efficient na drive."],
+      ["gas cap", "Ang Gas Cap Drive ay galing sa EXPANSION ng free gas cap sa itaas ng oil — mas matagal na pressure support kaysa solution gas drive ngunit hindi pa rin pinaka-efficient."],
+      ["water drive", "Ang Water Drive ay galing sa aquifer pressure support — ito ang pinaka-efficient dahil ang tubig ay incompressible at nagbibigay ng stable na pressure."],
+      ["rock", "Ang Rock/Fluid Expansion drive ay ang pinakamahina — nagbibigay lamang ng 1–5% recovery. Nangyayari ito sa highly undersaturated reservoirs."],
+    ];
+    for (const [drive, msg] of driveMap) {
+      if (ua.includes(drive)) {
+        return msg;
+      }
+    }
+  }
+
+  // ── GOR trend confusion ──────────────────────────────────────────────
+  if (q.includes("gor") || q.includes("gas-oil ratio")) {
+    return `Ang GOR trend sa solution gas drive ay sumusunod sa pressure behavior: constant sa itaas ng bubble point, pagkatapos ay patuloy na tumataas habang bumababa ang presyon at lumalabas ang gas. Hindi ito constant o bumababa. ${explanation}`;
+  }
+
+  // ── Wettability impact confusion ─────────────────────────────────────
+  if (q.includes("wettab") || q.includes("oil-wet") || q.includes("water-wet")) {
+    return `Ang wettability ay nakakaapekto sa kung SAAN nagtatayo ang bawat fluid sa loob ng pores. Ang fluid na "wets" ang rock (wetting phase) ay kumakapit sa grain surfaces at pumupuno ng pinakamaliit na pores. Ito ay malaking epekto sa relative permeability at recovery. ${explanation}`;
+  }
+
+  // ── Default educational message ──────────────────────────────────────
+  return `Ang iyong sagot na "${userAnswer}" ay nagpapakita ng isang karaniwang misconception sa konseptong ito. ${explanation} Suriin ang kaugnay na lesson para mas maunawaan ang pundamental na prinsipyo.`;
+}
+
 function inferSuggestedTopic(question: string, chapterId: number): string {
   const q = question.toLowerCase();
   if (q.includes("porosity") || q.includes("porosity")) return "Porosity (φ) at Pore Volume";
@@ -176,7 +279,7 @@ router.post("/quiz/:chapterId/submit", async (req, res): Promise<void> => {
     if (!isCorrect) {
       const suggestedTopic = inferSuggestedTopic(q.question, q.chapterId);
       const chapterReference = CHAPTER_TITLES_FULL[q.chapterId] ?? `Kabanata ${q.chapterId}`;
-      const whyWrong = `Ang iyong sagot na "${answer.answer}" ay hindi tumpak para sa konseptong ito. ${q.explanation} Ang tamang sagot ay: "${q.correctAnswer}".`;
+      const whyWrong = generateWhyWrong(answer.answer, q.correctAnswer, q.question, q.explanation);
       return {
         ...baseFeedback,
         whyWrong,
