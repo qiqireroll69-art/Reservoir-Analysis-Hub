@@ -1,0 +1,54 @@
+Fix the existing “Talasalitaan” (Vocabulary) feature inside the “Mga Kabanata” section of the website “Reservoir Petrophysics with Hydrocarbon Phase Analysis.”
+
+CURRENT ISSUE:
+
+The “Talasalitaan” link/button already exists in the “Mga Kabanata” section.
+However, when it is clicked, nothing is displayed (no content loads, no modal/page opens, no vocabulary appears).
+
+MAIN REQUIREMENT:
+
+Fix the click event so that when “Talasalitaan” is pressed, it properly opens and displays a full vocabulary/glossary view.
+
+EXPECTED BEHAVIOR:
+When the user clicks “Talasalitaan,” it should:
+
+Open a dedicated vocabulary page OR modal/overlay (depending on existing architecture)
+Display a FULL and COMPLETE glossary related to the website topic
+Show organized vocabulary entries (not empty state)
+
+VOCABULARY CONTENT REQUIREMENT:
+The vocabulary must be “full-blown,” meaning it should include comprehensive petroleum engineering terms related to:
+
+Reservoir Petrophysics
+Hydrocarbon Phase Behavior
+Porosity and Permeability
+Fluid Saturation
+PVT Analysis
+Black Oil and Volatile Oil Systems
+Reservoir rock and fluid properties
+Phase diagrams and related concepts
+
+Each entry must include:
+
+Term
+Clear academic definition (simple but correct)
+Relevance to petroleum engineering context
+Optional chapter reference (if available)
+
+IMPORTANT:
+
+The vocabulary content should NOT be empty or placeholder-based.
+It should automatically pull from existing site content OR generate a complete structured glossary based on the website’s chapters.
+It must feel like a fully developed learning resource, not a blank page.
+
+TECHNICAL FIX REQUIREMENT:
+
+Debug why the click event is not rendering content (likely broken routing, missing state update, or untriggered modal/page render).
+Ensure the event listener or navigation correctly triggers content display.
+Do NOT remove or redesign the existing “Mga Kabanata” section.
+Only fix what is necessary so the feature works properly.
+
+USER EXPERIENCE GOAL:
+
+Clicking “Talasalitaan” should immediately show a complete, scrollable vocabulary section.
+It should feel like an integrated study tool inside the website.
